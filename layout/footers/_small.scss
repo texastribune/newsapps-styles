@@ -1,4 +1,4 @@
-$bp-footer: media(min-width 768px);
+$bp-footer: new-breakpoint(min-width 768px);
 
 .tribune-footer {
   background-color: rgb(17, 17, 17);
@@ -20,6 +20,11 @@ $bp-footer: media(min-width 768px);
       font-size: .75em;
       margin: 0 0 1em;
     }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
   .first-nav {
