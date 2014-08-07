@@ -1,0 +1,18 @@
+a {
+  color: $href-teal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  background-color: $hr-gray;
+  border: 0 none;
+  height: 2px;
+
+  &.slim {
+    height: 1px;
+  }
+}

@@ -1,3 +1,5 @@
+$bp-banner: media(min-width 768px);
+
 .banner {
   background-color: lighten($masthead-black, 15%);
   display: table;
@@ -25,7 +27,7 @@
       line-height: 1.15;
       text-shadow: rgb(0, 0, 0) 3px 3px 0;
 
-      @include media($desktop) {
+      @include media($bp-banner) {
         font-size: 3.5em;
       }
     }
