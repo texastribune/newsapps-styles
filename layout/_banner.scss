@@ -1,4 +1,4 @@
-$bp-banner: media(min-width 768px);
+$bp-banner: new-breakpoint(min-width 768px);
 
 .banner {
   background-color: lighten($masthead-black, 15%);
