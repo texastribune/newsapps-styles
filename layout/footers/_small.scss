@@ -1,0 +1,76 @@
+$bp-footer: media(min-width 768px);
+
+.tribune-footer {
+  background-color: rgb(17, 17, 17);
+  color: $footer-offwhite;
+  margin: 2em 0 0;
+  padding: .125em 0 0;
+  text-align: center;
+
+  @include media($bp-footer) {
+    padding: 0;
+    text-align: none;
+  }
+
+  nav {
+    font-size: .875em;
+
+    @include media($bp-footer) {
+      float: left;
+      font-size: .75em;
+      margin: 0 0 1em;
+    }
+  }
+
+  .first-nav {
+    color: rgb(170, 170, 170);
+
+    @include media($bp-footer) {
+      float: left;
+    }
+
+    a {
+      color: rgb(170, 170, 170);
+    }
+
+    li {
+      padding: 0;
+    }
+  }
+
+  .last-nav {
+    @include media($bp-footer) {
+      float: right;
+    }
+
+    a {
+      color: $footer-offwhite;
+    }
+
+    .donor-item {
+      padding-right: 0;
+
+      a {
+        color: $href-teal;
+        font-weight: 800;
+      }
+    }
+  }
+
+  li {
+    margin: .75em 0;
+
+    @include media($bp-footer) {
+      border-left: 1px solid $footer-offwhite;
+      display: inline;
+      float: left;
+      margin: 0;
+      padding: 0 .5em;
+
+      &:first-child {
+        border: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}

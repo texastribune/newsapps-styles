@@ -1,0 +1,10 @@
+{
+  "name": "newsapps-styles",
+  "version": "0.1.0",
+  "main": "main.scss",
+  "private": true,
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0"
+  }
+}
