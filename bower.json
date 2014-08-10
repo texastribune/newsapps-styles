@@ -1,6 +1,6 @@
 {
   "name": "newsapps-styles",
-  "version": "0.4alpha.0",
+  "version": "0.4.0",
   "main": "main.scss",
   "private": true,
   "dependencies": {
