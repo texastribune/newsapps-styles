@@ -362,3 +362,71 @@ th {
     content: "";
     display: table;
     clear: both; }
+
+/* Base styles for HTML elements */
+body {
+  color: #282828;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-rendering: optimizelegibility; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+a {
+  color: #008990;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+hr {
+  background-color: #bbbbbb;
+  border: 0 none;
+  height: 2px;
+  margin-bottom: 2em; }
+  hr.thin {
+    height: 1px; }
+  hr.yellow {
+    background-color: #ffc200; }
+
+button,
+.button {
+  color: #282828;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  letter-spacing: .03rem;
+  vertical-align: middle;
+  background-color: #ffc200;
+  border-radius: 3px;
+  border: none;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box; }
+  button:hover:not(:disabled),
+  .button:hover:not(:disabled) {
+    background-color: #ffc81a;
+    cursor: pointer; }
+  button:active:not(:disabled), button:focus:not(:disabled),
+  .button:active:not(:disabled),
+  .button:focus:not(:disabled) {
+    background-color: #e1ac05;
+    cursor: pointer; }
+  button:disabled,
+  .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+  button:disabled,
+  .button:disabled {
+    background-color: #c2c2c2;
+    cursor: default; }
