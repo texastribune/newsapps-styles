@@ -12,6 +12,7 @@
    <ul>
      <li><a href="#base-html">Base HTML Styles</a></li>
      <li><a href="#masthead">Masthead</a></li>
+     <li><a href="#lead-banner">Project Header, Lead Art</a></li>
    </ul>
 
  <div id="base-html">
@@ -38,7 +39,8 @@
 
 
  <div id="masthead">
-  <pre>
+ <h2>Masthead</h2>
+ <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
     <code>
       &lt;header class="masthead"&gt;
         &lt;div class="container"&gt;
@@ -50,14 +52,20 @@
         &lt;/div&gt;
       &lt;/header&gt;   
     </code>
-  </pre>
-<!--   <div class="banner">
-    <div class="grand-header-image"></div>
-    <header class="grand-header content-block">
-      <h1><a href="/">Texas Hospitals Explorer</a></h1>
-      <p>Find and compare quality of care</p>
-    </header>
-  </div> -->
+ </div>
+
+ <div id="lead-banner">
+   <h2>Project Header, Lead Art</h2>
+   <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+   <code>
+       &lt;div class="banner"&gt;
+        &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+        &lt;header class="grand-header"&gt;
+          &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+          &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
+        &lt;/header&gt;
+      &lt;/div&gt;
+   </code>
  </div>
 
 </body>
