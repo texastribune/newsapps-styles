@@ -9,13 +9,13 @@
 
 <h1>Hello!</h1>
 
-   <ul>
-     <li><a href="#base-html">Base HTML Styles</a></li>
-     <li><a href="#masthead">Masthead</a></li>
-     <li><a href="#lead-banner">Project Header, Lead Art</a></li>
-   </ul>
+  <ul>
+    <li><a href="#base-html">Base HTML Styles</a></li>
+    <li><a href="#masthead">Masthead</a></li>
+    <li><a href="#lead-banner">Project Header, Lead Art</a></li>
+  </ul>
 
- <div id="base-html">
+<div id="base-html">
   <h2>Base HTML Styles</h2>
   <p>The basic html styles can be found in in the base_theme file.</p>
 
@@ -35,38 +35,147 @@
   <hr>
   <hr class="thin">
   <hr class="yellow">
- </div>
+</div>
 
 
- <div id="masthead">
- <h2>Masthead</h2>
- <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
-    <code>
-      &lt;header class="masthead"&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="branding"&gt;
-            &lt;a href="http://www.texastribune.org/"&gt;
-              &lt;img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png"&gt;
-            &lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/header&gt;   
-    </code>
- </div>
+<div id="masthead">
+  <h2>Masthead</h2>
+  <header class="masthead">
+   <div class="container">
+    <div class="branding">
+      <a href="http://www.texastribune.org/">
+       <img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png">
+      </a>
+    </div>
+   </div>
+  </header>
+  <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
 
- <div id="lead-banner">
-   <h2>Project Header, Lead Art</h2>
-   <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+  <pre>
    <code>
-       &lt;div class="banner"&gt;
-        &lt;div class="grand-header-image"&gt;&lt;/div&gt;
-        &lt;header class="grand-header"&gt;
-          &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
-          &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
-        &lt;/header&gt;
+    &lt;header class="masthead"&gt;
+      &lt;div class="container"&gt;
+       &lt;div class="branding"&gt;
+        &lt;a href="http://www.texastribune.org/"&gt;
+          &lt;img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png"&gt;
+        &lt;/a&gt;
+       &lt;/div&gt;
       &lt;/div&gt;
+    &lt;/header&gt;  
    </code>
- </div>
+  </pre>
+</div>
+
+<div id="lead-banner">
+  <h2>Project Header, Lead Art</h2>
+  <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+  <h3>Basic Banner:</h3>
+  <div class="banner">
+   <div class="grand-header-image"></div>
+   <header class="grand-header">
+    <h1><a href="/">Project Title</a></h1>
+    <p>Zingy subtitle to hook 'em in</p>
+   </header>
+  </div>
+
+  <pre>
+    <code>
+     &lt;div class="banner"&gt;
+      &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+      &lt;header class="grand-header"&gt;
+       &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+       &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+   </code>
+  </pre>
+
+  <h3>Banner with Navigation Buttons: </h3>
+  <div class="banner">
+    <div class="grand-header-image"></div>
+    <header class="grand-header">
+      <h1><a href="/">Project Title</a></h1>
+      <p>Zingy subtitle to hook 'em in</p>
+      <!-- Static navigation bar -->
+      <div id="nav-bar" class="nav-bar">
+        <ul>
+         <li>
+          <a href="">
+            <div class="nav-link">
+             Story 1
+            </div>
+          </a>
+         </li>
+         <li>
+          <a href="">
+            <div class="nav-link">
+             Story 2
+            </div>
+          </a>
+         </li>
+         <li>
+          <a href="">
+            <div class="nav-link">
+             Story 3
+            </div>
+          </a>
+         </li>
+         <li class="selected">
+          <a href="">
+            <div class="nav-link">
+             Story 4
+            </div>
+          </a>
+         </li>
+        </ul>
+      </div>
+    </header>
+  </div>
+  <pre>
+    <code>
+        &lt;div class="banner"&gt;
+          &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+          &lt;header class="grand-header content-block"&gt;
+            &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+            &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
+            &lt;!-- Static navigation bar --&gt;
+            &lt;div id="nav-bar" class="nav-bar"&gt;
+              &lt;ul&gt;
+               &lt;li&gt;
+                &lt;a href=""&gt;
+                  &lt;div class="nav-link"&gt;
+                   Story 1
+                  &lt;/div&gt;
+                &lt;/a&gt;
+               &lt;/li&gt;
+               &lt;li&gt;
+                &lt;a href=""&gt;
+                  &lt;div class="nav-link"&gt;
+                   Story 2
+                  &lt;/div&gt;
+                &lt;/a&gt;
+               &lt;/li&gt;
+               &lt;li&gt;
+                &lt;a href=""&gt;
+                  &lt;div class="nav-link"&gt;
+                   Story 3
+                  &lt;/div&gt;
+                &lt;/a&gt;
+               &lt;/li&gt;
+               &lt;li class="selected"&gt;
+                &lt;a href=""&gt;
+                  &lt;div class="nav-link"&gt;
+                   Story 4
+                  &lt;/div&gt;
+                &lt;/a&gt;
+               &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/header&gt;
+        &lt;/div&gt;
+    </code>
+  </pre>
+</div>
 
 </body>
 </html>

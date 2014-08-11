@@ -57,3 +57,50 @@
     top: 0;
   }
 }
+
+//Static nav-bar styles
+.nav-bar {
+  color: rgb(255, 255, 255);
+  font-family: $base-sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  position: static;
+  text-align: center;
+
+  .selected {
+    background: $button-selected-teal;
+  }
+
+  ul {
+    display: block;
+    list-style-type: none;
+    margin-top: 2em;
+    max-width: 1088px;
+    width: 100%;
+
+    li {
+      border: 1px solid;
+      color: rgb(255, 255, 255);
+
+      &:active {
+        background: $button-hover-teal;
+      }
+
+      &:hover {
+        background: $button-hover-teal;     
+      }
+
+    }
+
+    .nav-link {
+      font-weight: bold;
+      margin: .75em 0;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    } 
+  }
+}

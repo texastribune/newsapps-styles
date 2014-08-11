@@ -448,3 +448,91 @@ dd {
 dt,
 dd {
   line-height: 1.4; }
+
+.masthead {
+  background-color: #111111;
+  width: 100%; }
+  .masthead .branding {
+    padding: .75em 0 .375em;
+    text-align: center;
+    width: 100%; }
+    .masthead .branding .trib-logo {
+      height: 1.625em; }
+
+.banner {
+  background-color: #373737;
+  display: table;
+  height: 225px;
+  margin: 0 0 1.5em;
+  position: relative;
+  width: 100%; }
+  .banner .grand-header {
+    display: table-cell;
+    padding: 0 1.25em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 1.25em;
+    margin-right: 1.25em; }
+    .banner .grand-header a {
+      color: white; }
+    .banner .grand-header h1 {
+      color: white;
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 2.5em;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: .25em;
+      text-shadow: black 3px 3px 0; }
+      @media screen and (min-width: 768px) {
+        .banner .grand-header h1 {
+          font-size: 3.5em; } }
+    .banner .grand-header p {
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 1.25em;
+      letter-spacing: .0625em;
+      line-height: 1.15;
+      text-shadow: black 2px 2px 0; }
+      @media screen and (min-width: 768px) {
+        .banner .grand-header p {
+          font-size: 1.5em; } }
+  .banner .grand-header-image {
+    background-image: url("http://placekitten.com/1558/225");
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.nav-bar {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  position: static;
+  text-align: center; }
+  .nav-bar .selected {
+    background: rgba(0, 137, 144, 0.5); }
+  .nav-bar ul {
+    display: block;
+    list-style-type: none;
+    margin-top: 2em;
+    max-width: 1088px;
+    width: 100%; }
+    .nav-bar ul li {
+      border: 1px solid;
+      color: white; }
+      .nav-bar ul li:active {
+        background: #008990; }
+      .nav-bar ul li:hover {
+        background: #008990; }
+    .nav-bar ul .nav-link {
+      font-weight: bold;
+      margin: .75em 0;
+      width: 100%; }
+    .nav-bar ul a {
+      text-decoration: none; }
