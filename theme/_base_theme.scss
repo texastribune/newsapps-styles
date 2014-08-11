@@ -1,9 +1,21 @@
+/* Base styles for HTML elements */
+
 body {
-  // color: $bodytext-black;
+  color: $bodytext-black;
   font-family: $base-sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 a {
@@ -13,4 +25,58 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+hr {
+  background-color: $line-gray;
+  border: 0 none;
+  height: 2px;
+  @include white-space(2);
+
+  &.thin {
+    height: 1px;
+  }
+
+  &.yellow {
+    background-color: $tribune-yellow;
+  }
+}
+
+button,
+.button {
+  color: $bodytext-black;
+  display: inline-block;
+  font-family: $base-sans-serif;
+  letter-spacing: .03rem;
+  vertical-align: middle;
+  @include button(flat, $tribune-yellow);
+
+  &:disabled {
+    background-color: darken($glossary-gray, 20%);
+    cursor: default;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+dl {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  font-weight: 300;
+  margin: 0;
+}
+
+dt,
+dd {
+  line-height: 1.4;
 }
