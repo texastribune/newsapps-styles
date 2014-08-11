@@ -1,0 +1,16 @@
+body {
+  // color: $bodytext-black;
+  font-family: $base-sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-rendering: optimizelegibility;
+}
+
+a {
+  color: $href-teal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
