@@ -3,3 +3,16 @@
 .container {
   @include outer-container;
 }
+
+//Add left/right margin to any element
+.content-block {
+  @include content-block;
+}
+
+.content-block-full {
+  @include content-block-full;
+}
+
+.row {
+  @include row();
+}

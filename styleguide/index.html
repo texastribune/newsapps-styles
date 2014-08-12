@@ -16,7 +16,7 @@
       <li><a href="#lead-banner">Project Header, Lead Art</a></li>
     </ul>
 
-  <div id="base-html">
+  <div id="base-html" class="content-block">
     <h2>Base HTML Styles</h2>
     <p>The basic html styles can be found in in the base_theme file.</p>
 
@@ -39,24 +39,28 @@
   </div>
 
 </div>
-<div id="grid-specs" class="container">
+
+<div id="grid-specs" class="container content-block">
   <h2>Grid Specs</h2>
   <p>To include an element in a responsive grid design, add the class .container to the parent-most element. Do not put a .container inside another .container.</p>
-  <p>The grid layout is located in layout/layout.</p>
-</div>
-<div id="masthead" class="container">
-  <h2>Masthead</h2>
+  <p>The grid layout files are located in layout/grid.</p>
+  <p>Add the class .content-block to ensure that an element does not bump against the edge of the screen on smaller devices. </p>
 </div>
 
-<header class="masthead">
- <div class="container">
-  <div class="branding">
-    <a href="http://www.texastribune.org/">
-     <img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png">
-    </a>
+<div class="container">
+  <div id="masthead" class="content-block">
+    <h2>Masthead</h2>
   </div>
- </div>
-</header>
+</div>
+  <header class="masthead">
+   <div class="container">
+    <div class="branding">
+      <a href="http://www.texastribune.org/">
+       <img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png">
+      </a>
+    </div>
+   </div>
+  </header>
 
 <div class="container">
   <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
@@ -74,11 +78,12 @@
    </code>
   </pre>
 </div>
-
-<div id="lead-banner" class="container">
-  <h2>Project Header, Lead Art</h2>
-  <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
-  <h3>Basic Banner</h3>
+<div class="container">
+  <div id="lead-banner">
+    <h2>Project Header, Lead Art</h2>
+    <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+    <h3>Basic Banner</h3>
+  </div>
 </div>
 <div class="banner">
  <div class="grand-header-image"></div>
@@ -103,6 +108,7 @@
   <h3>Banner with Navigation Buttons</h3>
   <p>Preferred height for this banner style is 448px. Styles located at layout/headers/nav-bar.</p>
 </div>
+
 <div class="banner">
   <div class="grand-header-image"></div>
   <header class="grand-header">
@@ -143,6 +149,7 @@
     </div>
   </header>
 </div>
+
 <div class="container">
   <pre>
     <code>
@@ -189,5 +196,6 @@
     </code>
   </pre>
 </div>
+
 </body>
 </html>
