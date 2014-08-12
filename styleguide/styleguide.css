@@ -377,6 +377,9 @@ th {
   margin-left: 1.25em;
   margin-right: 1.25em; }
 
+/* Basic Style Mixins */
+/* Grid Mixins */
+/* Grid Settings */
 @media screen and (max-width: 480px) {
   .content-block-full {
     margin-left: 0;
@@ -423,7 +426,7 @@ th {
       font-weight: 800;
       line-height: 1.15;
       text-shadow: black 3px 3px 0;
-      margin-bottom: 1em; }
+      margin-bottom: 0.5em; }
       @media screen and (min-width: 768px) {
         .banner .grand-header h1 {
           font-size: 3.5em; } }
@@ -434,7 +437,7 @@ th {
       letter-spacing: .0625em;
       line-height: 1.15;
       text-shadow: black 2px 2px 0;
-      margin-bottom: 2em; }
+      margin-bottom: 1em; }
       @media screen and (min-width: 768px) {
         .banner .grand-header p {
           font-size: 1.5em; } }
@@ -505,9 +508,7 @@ th {
         .nav-bar ul li:last-child {
           margin-right: 0; }
         .nav-bar ul li:nth-child(4n) {
-          margin-right: 0; }
-        .nav-bar ul li:nth-child(4n+1) {
-          clear: left; } }
+          margin-right: 0; } }
 
 /* Base Theme for HTML elements */
 body {

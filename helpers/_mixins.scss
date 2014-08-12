@@ -1,12 +1,27 @@
+/* Basic Style Mixins */
+
 @mixin white-space($margin) {
   margin-bottom: $margin+em;
 }
 
-%container {
-  @include outer-container;
+/* Grid Mixins */
+
+@mixin list-grid ($bp, $col-width, $number-li) {
+  //Creates a grid for list items
+  //$bp = breakpoint
+  //$col-width is the number of span-columns wide
+  //$number-li is the total number of list items
+  ul {
+    @include span-columns($col-width);
+    @include pad(0);
+    
+    li {
+      @include span-columns($col-width of $col-width);
+      @include media($bp) {
+        @include span-columns($col-width / $number-li of $col-width);
+        @include omega($number-li+n);
+      }
+    }
+  }
 }
 
-%content-block {
-  margin-left: 1.25em; // 20px left
-  margin-right: 1.25em; // 20px right
-}

@@ -1,17 +1,12 @@
 /* Grid Settings */
 
-%container {
-  @include outer-container;
-}
-
 .container {
   @extend %container;
 }
 
 //Add left/right margin to any element
 .content-block {
-  margin-left: 1.25em; // 20px left
-  margin-right: 1.25em; // 20px right
+  @extend %content-block;
 }
 
 .content-block-full {
