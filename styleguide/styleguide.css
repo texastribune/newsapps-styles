@@ -363,6 +363,7 @@ th {
     display: table;
     clear: both; }
 
+/* Tribune Masthead */
 .masthead {
   background-color: #111111;
   width: 100%; }
@@ -373,6 +374,7 @@ th {
     .masthead .branding .trib-logo {
       height: 1.5em; }
 
+/* Header Banner */
 .banner {
   background-color: #373737;
   display: table;
@@ -420,6 +422,7 @@ th {
     right: 0;
     top: 0; }
 
+/* Static Nav-Bar */
 .nav-bar {
   color: white;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -449,6 +452,7 @@ th {
     .nav-bar ul a {
       text-decoration: none; }
 
+/* Base Theme for HTML elements */
 body {
   color: #282828;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;

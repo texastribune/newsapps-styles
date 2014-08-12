@@ -6,51 +6,55 @@
   <link rel="stylesheet" href="styleguide.css">
 </head>
 <body>
+<div class="container">
+  <h1>Hello!</h1>
 
-<h1>Hello!</h1>
+    <ul>
+      <li><a href="#base-html">Base HTML Styles</a></li>
+      <li><a href="#masthead">Masthead</a></li>
+      <li><a href="#lead-banner">Project Header, Lead Art</a></li>
+    </ul>
 
-  <ul>
-    <li><a href="#base-html">Base HTML Styles</a></li>
-    <li><a href="#masthead">Masthead</a></li>
-    <li><a href="#lead-banner">Project Header, Lead Art</a></li>
-  </ul>
+  <div id="base-html">
+    <h2>Base HTML Styles</h2>
+    <p>The basic html styles can be found in in the base_theme file.</p>
 
-<div id="base-html">
-  <h2>Base HTML Styles</h2>
-  <p>The basic html styles can be found in in the base_theme file.</p>
+    <h1>This is an H1</h1>
+    <h2>This is an H2</h2>
+    <h3>This is an H3</h3>
+    <h4>This is an H4</h4>
+    <h5>This is an H5</h5>
+    <h6>This is an H6</h6>
+    <p>This is a paragraph.</p>
 
-  <h1>This is an H1</h1>
-  <h2>This is an H2</h2>
-  <h3>This is an H3</h3>
-  <h4>This is an H4</h4>
-  <h5>This is an H5</h5>
-  <h6>This is an H6</h6>
-  <p>This is a paragraph.</p>
+    <button>Button Tag</button>
 
-  <button>Button Tag</button>
+    <div class="button">Div.Button</div>
 
-  <div class="button">Div.Button</div>
+    <p>Here are examples of HR tags. The basic HR tag is 2px wide and gray. Add the class "thin" to make it 1px wide and the class "yellow" to make it classic Tribune yellow. It includes 2rem white-space.</p>
+    <hr>
+    <hr class="thin">
+    <hr class="yellow">
+  </div>
 
-  <p>Here are examples of HR tags. The basic HR tag is 2px wide and gray. Add the class "thin" to make it 1px wide and the class "yellow" to make it classic Tribune yellow. It includes 2rem white-space.</p>
-  <hr>
-  <hr class="thin">
-  <hr class="yellow">
 </div>
 
-
-<div id="masthead">
+<div id="masthead" class="container">
   <h2>Masthead</h2>
-  <header class="masthead">
-   <div class="container">
-    <div class="branding">
-      <a href="http://www.texastribune.org/">
-       <img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png">
-      </a>
-    </div>
-   </div>
-  </header>
-  <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
+</div>
 
+<header class="masthead">
+ <div class="container">
+  <div class="branding">
+    <a href="http://www.texastribune.org/">
+     <img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png">
+    </a>
+  </div>
+ </div>
+</header>
+
+<div class="container">
+  <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
   <pre>
    <code>
     &lt;header class="masthead"&gt;
@@ -66,18 +70,19 @@
   </pre>
 </div>
 
-<div id="lead-banner">
+<div id="lead-banner" class="container">
   <h2>Project Header, Lead Art</h2>
   <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
-  <h3>Basic Banner:</h3>
-  <div class="banner">
-   <div class="grand-header-image"></div>
-   <header class="grand-header">
-    <h1><a href="/">Project Title</a></h1>
-    <p>Zingy subtitle to hook 'em in</p>
-   </header>
-  </div>
-
+  <h3>Basic Banner</h3>
+</div>
+<div class="banner">
+ <div class="grand-header-image"></div>
+ <header class="grand-header">
+  <h1><a href="/">Project Title</a></h1>
+  <p>Zingy subtitle to hook 'em in</p>
+ </header>
+</div>
+<div class="container">
   <pre>
     <code>
      &lt;div class="banner"&gt;
@@ -92,46 +97,48 @@
 
   <h3>Banner with Navigation Buttons</h3>
   <p>Preferred height for this banner style is 448px. Styles located at layout/headers/nav-bar.</p>
-  <div class="banner">
-    <div class="grand-header-image"></div>
-    <header class="grand-header">
-      <h1><a href="/">Project Title</a></h1>
-      <p>Zingy subtitle to hook 'em in</p>
-      <!-- Static navigation bar -->
-      <div id="nav-bar" class="nav-bar">
-        <ul>
-         <li>
-          <a href="">
-            <div class="nav-link">
-             Story 1
-            </div>
-          </a>
-         </li>
-         <li>
-          <a href="">
-            <div class="nav-link">
-             Story 2
-            </div>
-          </a>
-         </li>
-         <li>
-          <a href="">
-            <div class="nav-link">
-             Story 3
-            </div>
-          </a>
-         </li>
-         <li class="selected">
-          <a href="">
-            <div class="nav-link">
-             Story 4
-            </div>
-          </a>
-         </li>
-        </ul>
-      </div>
-    </header>
-  </div>
+</div>
+<div class="banner">
+  <div class="grand-header-image"></div>
+  <header class="grand-header">
+    <h1><a href="/">Project Title</a></h1>
+    <p>Zingy subtitle to hook 'em in</p>
+    <!-- Static navigation bar -->
+    <div id="nav-bar" class="nav-bar">
+      <ul>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 1
+          </div>
+        </a>
+       </li>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 2
+          </div>
+        </a>
+       </li>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 3
+          </div>
+        </a>
+       </li>
+       <li class="selected">
+        <a href="">
+          <div class="nav-link">
+           Story 4
+          </div>
+        </a>
+       </li>
+      </ul>
+    </div>
+  </header>
+</div>
+<div class="container">
   <pre>
     <code>
         &lt;div class="banner"&gt;
@@ -177,6 +184,5 @@
     </code>
   </pre>
 </div>
-
 </body>
 </html>
