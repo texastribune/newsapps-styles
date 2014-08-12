@@ -9,8 +9,8 @@
 @mixin list-grid ($bp, $col-width, $number-li) {
   //Creates a grid for list items
   //$bp = breakpoint
-  //$col-width is the number of span-columns wide
-  //$number-li is the total number of list items
+  //$col-width = the number of span-columns in your grid
+  //$number-li = the number of list items
   ul {
     @include span-columns($col-width);
     @include pad(0);

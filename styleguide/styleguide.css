@@ -376,6 +376,11 @@ th {
   margin-left: 1.25em;
   margin-right: 1.25em; }
 
+@media screen and (max-width: 480px) {
+  .content-block-full {
+    margin-left: 0;
+    margin-right: 0; } }
+
 /* Basic Style Mixins */
 /* Grid Mixins */
 /* Tribune Masthead */
