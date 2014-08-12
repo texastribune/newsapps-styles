@@ -26,11 +26,27 @@ $bp-banner: new-breakpoint(min-width 768px);
       font-weight: 800;
       line-height: 1.15;
       text-shadow: rgb(0, 0, 0) 3px 3px 0;
+      @include white-space(1);
 
       @include media($bp-banner) {
         font-size: 3.5em;
       }
     }
+
+    p {
+      color: $white;
+      font-family: $base-sans-serif;
+      font-size: 1.25em;
+      letter-spacing: .0625em;
+      line-height: 1.15;
+      text-shadow: rgb(0, 0, 0) 2px 2px 0;
+      @include white-space(2);
+
+      @include media($bp-banner) {
+        font-size: 1.5em;
+      }
+    }
+
   }
 
   .grand-header-image {
