@@ -1,4 +1,6 @@
-//Static nav-bar styles
+/* Static Nav-Bar */
+
+//Basic Styles
 .nav-bar {
   color: $white;
   font-family: $base-sans-serif;
@@ -8,7 +10,8 @@
   position: static;
   text-align: center;
 
-  .selected {
+  //Add to active story page
+  .selected { 
     background: $button-selected-teal;
   }
 
