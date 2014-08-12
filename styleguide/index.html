@@ -46,7 +46,7 @@
   <p>The grid layout files are located in layout/grid.</p>
   <p>To include an element in a responsive grid design, add the class .container to the parent-most element. Do not put a .container inside another .container.</p>
   <h3>Content-Block</h3>
-  <p>Add the class .content-block to ensure that an element does not bump against the edge of the screen on smaller devices. </p>
+  <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, and the class .content-block-full to add 20px left/. </p>
   <p>The mixin content-block is also added to certain theme styles to ensure elements always have left/right margin on smaller screens.</p>
 </div>
 </div>
@@ -109,9 +109,10 @@
   </pre>
 
   <h3>Banner with Navigation Buttons</h3>
-  <p>Preferred height for this banner style is 448px. Styles located at layout/headers/nav-bar.</p>
+  <p>Preferred height for this banner style is 448px. Styles located at layout/headers/banner/nav-bar.</p>
 </div>
 
+<!-- TODO: Fix alignment of buttons -->
 <div class="banner">
   <div class="grand-header-image"></div>
   <header class="grand-header">

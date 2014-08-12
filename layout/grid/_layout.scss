@@ -1,7 +1,11 @@
 /* Grid Settings */
 
-.container {
+%container {
   @include outer-container;
+}
+
+.container {
+  @extend %container;
 }
 
 //Add left/right margin to any element
@@ -20,3 +24,5 @@
 .row {
   @include row();
 }
+
+

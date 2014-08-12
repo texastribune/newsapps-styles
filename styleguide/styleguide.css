@@ -478,6 +478,34 @@ th {
     .nav-bar ul a {
       text-decoration: none; }
 
+.nav-bar ul {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 0; }
+  .nav-bar ul:last-child {
+    margin-right: 0; }
+  .nav-bar ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nav-bar ul li:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .nav-bar ul li {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        .nav-bar ul li:last-child {
+          margin-right: 0; }
+        .nav-bar ul li:nth-child(4n) {
+          margin-right: 0; }
+        .nav-bar ul li:nth-child(4n+1) {
+          clear: left; } }
+
 /* Base Theme for HTML elements */
 body {
   color: #282828;

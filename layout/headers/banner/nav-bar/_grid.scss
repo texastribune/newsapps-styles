@@ -1,0 +1,15 @@
+.nav-bar {
+  ul {
+    @include span-columns(12);
+    @include pad(0);
+    
+    li {
+      @include span-columns(12 of 12);
+      @include media($desktop) {
+        @include span-columns(3 of 12);
+        @include omega(4n);
+      }
+    }
+  }
+}
+
