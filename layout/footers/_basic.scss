@@ -1,7 +1,7 @@
 $bp-footer: new-breakpoint(min-width 768px);
 
-.tribune-footer {
-  background-color: rgb(17, 17, 17);
+.footer {
+  background-color: $masthead-black;
   color: $footer-offwhite;
   margin: 2em 0 0;
   padding: .125em 0 0;
