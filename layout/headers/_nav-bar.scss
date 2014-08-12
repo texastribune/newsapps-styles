@@ -1,0 +1,47 @@
+//Static nav-bar styles
+.nav-bar {
+  font: 500 0.8em Helvetica;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  text-align: center;
+  position: static;
+  .selected {
+    background: $lt_teal;
+  }
+  ul {
+    display: block;
+    list-style-type: none;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 1088px;
+    li {
+      color: $white;
+      border: 1px solid;
+      img {
+        display: none;
+        @include media($desktop) {
+          display: block;
+          max-width: 100%;
+          width: 100%;
+          margin-top:0;
+        }
+      }
+      &:active {
+        background: $dk_teal;
+      }
+      &:hover {
+        background: $dk_teal;     
+      }
+
+    }
+    .nav-link {
+      // color: $dk_gray;
+      font-weight: bold;
+      width: 100%;
+      margin: 0.75em 0;
+    }
+    a {
+      text-decoration: none;
+    } 
+  }
+}

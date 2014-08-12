@@ -1,19 +1,16 @@
-// Base Tribune Colors
+// Tribune Colors
 $tribune-yellow: rgb(255, 194, 0);
-$bodytext-black: rgb(40, 40, 40);
+$teal: rgb(0, 137, 144);
+
+// Shades of Gray
 $masthead-black: rgb(17, 17, 17);
-$href-teal: rgb(0, 137, 144);
-
-$hr-gray: rgb(187, 187, 187); 
-$footer-offwhite: rgb(238, 238, 238);
-
-// shades of gray
-$lt-gray: rgb(207, 204, 199);
-$dk-gray: rgb(102, 102, 102);
-$glossary-gray: rgb(245, 245, 245); 
+$bodytext-black: rgb(40, 40, 40);
 $line-gray: rgb(187, 187, 187);
-$eee: rgb(238, 238, 238);
+$footer-offwhite: rgb(238, 238, 238);
+$glossary-gray: rgb(245, 245, 245); 
 
-$button-selected-teal: rgba(0, 137, 144, .5);
-$button-hover-teal: rgb(0, 137, 144);
-
+//Base Themes
+$href-teal: $teal;
+$hr-gray: $line-gray; 
+$button-selected-teal: transparentize($teal, .5);
+$button-hover-teal: $teal;
