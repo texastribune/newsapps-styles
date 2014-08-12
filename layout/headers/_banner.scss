@@ -5,7 +5,7 @@ $bp-banner: new-breakpoint(min-width 768px);
 .banner {
   background-color: lighten($masthead-black, 15%);
   display: table;
-  height: $banner-height;
+  height: $banner-height; //Set $banner-height in helpers/variables
   margin: 0 0 1.5em;
   position: relative;
   width: 100%;
@@ -21,6 +21,7 @@ $bp-banner: new-breakpoint(min-width 768px);
       color: rgb(255, 255, 255);
     }
 
+    //Project Title
     h1 {
       color: rgb(255, 255, 255);
       font-family: $base-serif;
@@ -35,6 +36,7 @@ $bp-banner: new-breakpoint(min-width 768px);
       }
     }
 
+    //Project Subtitle
     p {
       color: $white;
       font-family: $base-sans-serif;
@@ -52,7 +54,7 @@ $bp-banner: new-breakpoint(min-width 768px);
   }
 
   .grand-header-image {
-    background-image: url($grand-header-image-url);
+    background-image: url($grand-header-image-url); //Set $grand-header-image-url in helpers/variables
     background-position: center center;
     background-size: cover;
     bottom: 0;
