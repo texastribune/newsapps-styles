@@ -354,11 +354,10 @@ td,
 th {
   padding: 0; }
 
-.container {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .container:after {
+/* Grid Settings */
+.row {
+  display: block; }
+  .row:after {
     content: "";
     display: table;
     clear: both; }
@@ -379,19 +378,6 @@ th {
 
 /* Basic Style Mixins */
 /* Grid Mixins */
-/* Grid Settings */
-@media screen and (max-width: 480px) {
-  .content-block-full {
-    margin-left: 0;
-    margin-right: 0; } }
-
-.row {
-  display: block; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
-
 /* Tribune Masthead */
 .masthead {
   background-color: #111111;
@@ -480,9 +466,6 @@ th {
       width: 100%; }
     .nav-bar ul a {
       text-decoration: none; }
-
-.wrapper {
-  width: 100%; }
 
 .nav-bar ul {
   float: left;

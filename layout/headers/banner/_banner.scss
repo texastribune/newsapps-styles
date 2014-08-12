@@ -3,7 +3,7 @@
 .banner {
   background-color: lighten($masthead-black, 15%);
   display: table;
-  height: 225px; //Set $banner-height in helpers/variables
+  height: $banner-height; //Set $banner-height in helpers/variables
   margin: 0 0 1.5em;
   position: relative;
   width: 100%;
@@ -29,7 +29,7 @@
       text-shadow: rgb(0, 0, 0) 3px 3px 0;
       @include white-space(.5);
 
-      @include media($desktop) {
+      @include media($default-768) {
         font-size: 3.5em;
       }
     }
@@ -44,7 +44,7 @@
       text-shadow: rgb(0, 0, 0) 2px 2px 0;
       @include white-space(1);
 
-      @include media($desktop) {
+      @include media($default-768) {
         font-size: 1.5em;
       }
     }

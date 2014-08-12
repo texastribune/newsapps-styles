@@ -10,10 +10,10 @@
 }
 
 .content-block-full {
-  @include media($mobile) {
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // @include media($mobile) {
+  //   margin-left: 0;
+  //   margin-right: 0;
+  // }
 }
 
 .row {

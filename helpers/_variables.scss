@@ -1,8 +1,8 @@
 // Responsive-design Breakpoints
-$desktop: new-breakpoint(min-width 768px 12);
-$mobile: new-breakpoint(max-width 480px);
-$mobile-min: new-breakpoint(min-width 481px);
+$default-768: new-breakpoint(min-width 768px);
+$default-480: new-breakpoint(max-width 480px);
 
 // Lead-Banner Settings
 $banner-height: 225px;
 $grand-header-image-url: '';
+

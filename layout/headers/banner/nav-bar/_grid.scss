@@ -1,8 +1,10 @@
+$bp-nav-bar: $default-768;
+
 .wrapper {
   @extend %container;
 }
 
 .nav-bar {
-  @include list-grid ($desktop, 12, 4);
+  @include list-grid ($bp-nav-bar, 12, 4);
 }
 
