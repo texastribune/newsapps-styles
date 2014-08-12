@@ -364,11 +364,11 @@ th {
     clear: both; }
 
 /* Grid Settings */
-.container {
+.container, .wrapper {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .container:after {
+  .container:after, .wrapper:after {
     content: "";
     display: table;
     clear: both; }
@@ -477,6 +477,9 @@ th {
       width: 100%; }
     .nav-bar ul a {
       text-decoration: none; }
+
+.wrapper {
+  width: 100%; }
 
 .nav-bar ul {
   float: left;

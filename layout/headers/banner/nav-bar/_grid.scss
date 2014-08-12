@@ -1,3 +1,8 @@
+.wrapper {
+  @extend %container;
+  width: 100%;
+}
+
 .nav-bar {
   ul {
     @include span-columns(12);
