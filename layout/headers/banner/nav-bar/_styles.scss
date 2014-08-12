@@ -1,12 +1,10 @@
-/* Static Nav-Bar */
-
 //Basic Styles
 .nav-bar {
   color: $white;
   font-family: $base-sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 1.2em;
+  line-height: 1.2;
   position: static;
   text-align: center;
 
@@ -46,3 +44,5 @@
     } 
   }
 }
+
+

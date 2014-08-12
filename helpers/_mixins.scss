@@ -1,17 +1,6 @@
 @mixin white-space($margin) {
-  margin-bottom: $margin+rem;
+  margin-bottom: $margin+em;
 }
 
-// Grid layout mixins
-@mixin content-block {
-  margin-left: 1.25em; // 20px left
-  margin-right: 1.25em; // 20px right
-}
 
-@mixin content-block-full {
-  @include media($mobile) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
 

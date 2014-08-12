@@ -27,7 +27,7 @@
       font-weight: 800;
       line-height: 1.15;
       text-shadow: rgb(0, 0, 0) 3px 3px 0;
-      // @include white-space(.25);
+      @include white-space(1);
 
       @include media($desktop) {
         font-size: 3.5em;
@@ -42,7 +42,7 @@
       letter-spacing: .0625em;
       line-height: 1.15;
       text-shadow: rgb(0, 0, 0) 2px 2px 0;
-      @include white-space(1.5);
+      @include white-space(2);
 
       @include media($desktop) {
         font-size: 1.5em;

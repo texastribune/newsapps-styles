@@ -6,11 +6,15 @@
 
 //Add left/right margin to any element
 .content-block {
-  @include content-block;
+  margin-left: 1.25em; // 20px left
+  margin-right: 1.25em; // 20px right
 }
 
 .content-block-full {
-  @include content-block-full;
+  @include media($mobile) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .row {

@@ -363,6 +363,32 @@ th {
     display: table;
     clear: both; }
 
+/* Grid Settings */
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.content-block {
+  margin-left: 1.25em;
+  margin-right: 1.25em; }
+
+@media screen and (max-width: 480px) {
+  .content-block-full {
+    margin-left: 0;
+    margin-right: 0; } }
+
+.row {
+  display: block; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 /* Tribune Masthead */
 .masthead {
   background-color: #111111;
@@ -397,7 +423,7 @@ th {
       font-weight: 800;
       line-height: 1.15;
       text-shadow: black 3px 3px 0;
-      margin-bottom: 1rem; }
+      margin-bottom: 1em; }
       @media screen and (min-width: 768px) {
         .banner .grand-header h1 {
           font-size: 3.5em; } }
@@ -408,7 +434,7 @@ th {
       letter-spacing: .0625em;
       line-height: 1.15;
       text-shadow: black 2px 2px 0;
-      margin-bottom: 2rem; }
+      margin-bottom: 2em; }
       @media screen and (min-width: 768px) {
         .banner .grand-header p {
           font-size: 1.5em; } }
@@ -428,7 +454,7 @@ th {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 1.2em;
+  line-height: 1.2;
   position: static;
   text-align: center; }
   .nav-bar .selected {
@@ -479,7 +505,7 @@ hr {
   background-color: #bbbbbb;
   border: 0 none;
   height: 2px;
-  margin-bottom: 2rem; }
+  margin-bottom: 2em; }
   hr.thin {
     height: 1px; }
   hr.yellow {
