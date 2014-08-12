@@ -363,11 +363,11 @@ th {
     clear: both; }
 
 /* Grid Settings */
-.container, .wrapper {
+.container, .wrapper, .footer-container {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .container:after, .wrapper:after {
+  .container:after, .wrapper:after, .footer-container:after {
     content: "";
     display: table;
     clear: both; }
@@ -550,6 +550,7 @@ th {
           border: 0;
           padding-left: 0; } }
 
+/* News Apps Footer */
 .footer {
   background-color: #111111;
   color: white;
@@ -629,6 +630,15 @@ th {
     @media screen and (min-width: 768px) {
       .footer .donate {
         padding: 0 0 1em; } }
+
+@media screen and (min-width: 768px) {
+  .footer-container div {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .footer-container div:last-child {
+      margin-right: 0; } }
 
 /* Base Theme for HTML elements */
 body {

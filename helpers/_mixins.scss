@@ -25,3 +25,11 @@
   }
 }
 
+@mixin div-grid ($bp, $col-width, $number-div) {
+  @include media($bp) {
+    div {
+      @include span-columns($col-width / $number-div of $col-width);
+    }
+  }
+}
+
