@@ -1,7 +1,3 @@
-@mixin white-space($margin) {
-  margin-bottom: $margin+em;
-}
-
 %container {
   @include outer-container;
 }

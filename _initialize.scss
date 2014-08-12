@@ -3,9 +3,11 @@
 @import 'base/scaffold';
 
 @import 'helpers/variables';
+@import 'helpers/placeholders';
 @import 'helpers/colors';
 @import 'helpers/functions';
 @import 'helpers/mixins';
+
 
 @import 'layout/grid/layout';
 @import 'layout/headers/masthead/masthead';
