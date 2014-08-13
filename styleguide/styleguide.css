@@ -731,3 +731,80 @@ dd {
     width: 23.23176%; }
     .footer-container div:last-child {
       margin-right: 0; } }
+
+/* Share Buttons */
+.share-row {
+  margin-bottom: 1em; }
+  @media screen and (min-width: 768px) {
+    .share-row {
+      border-bottom: 1px solid #cccccc;
+      border-top: 1px solid #cccccc; } }
+  .share-row a {
+    color: #777777; }
+    .share-row a:hover {
+      color: #111111;
+      text-decoration: none; }
+
+.share-cell {
+  border-bottom: 1px solid #cccccc;
+  font-size: .8em;
+  padding: .75em 0;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .share-cell {
+      border-bottom: 0;
+      border-left: 1px solid #cccccc; } }
+  .share-cell.first-share {
+    border-top: 1px solid #cccccc; }
+    @media screen and (min-width: 768px) {
+      .share-cell.first-share {
+        border-top: 0;
+        border-left: 0; } }
+  .share-cell i {
+    padding: 0; }
+  @media screen and (min-width: 768px) {
+    .share-cell {
+      float: left;
+      width: 50%; } }
+
+.shareline h3 {
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid #cccccc; }
+.shareline p {
+  color: #666666;
+  font: 400 0.9em Helvetica;
+  line-height: 1.4em; }
+.shareline ul {
+  list-style-type: none;
+  padding-left: 0; }
+  .shareline ul li {
+    border-bottom: 1px solid #cccccc;
+    margin: auto; }
+.shareline a {
+  text-decoration: none; }
+  .shareline a:active {
+    color: #111111; }
+  .shareline a:hover {
+    color: #111111; }
+.shareline .fa {
+  color: #666;
+  font-size: 1.5em;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: left;
+  padding: 0 0.6em 0 0; }
+  .shareline .fa:active {
+    color: #111111; }
+  .shareline .fa:hover {
+    color: #111111; }
+.shareline .fa-twitter:before {
+  content: "\f099";
+  border-right: 1px solid #ccc;
+  padding-right: 0.5em; }
+.shareline .fa-facebook:before {
+  content: "\f09a"; }

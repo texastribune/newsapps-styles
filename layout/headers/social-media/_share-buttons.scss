@@ -1,6 +1,10 @@
+/* Share Buttons */
+
 $bp-share-buttons: $default-768;
 
 .share-row {
+  margin-bottom: 1em;
+  
   @include media($bp-share-buttons) {
     border-bottom: 1px solid rgb(204, 204, 204);
     border-top: 1px solid rgb(204, 204, 204);

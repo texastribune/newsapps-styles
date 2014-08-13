@@ -1,0 +1,55 @@
+.shareline {
+    h3 {
+      padding-bottom: 0.75em;
+      border-bottom: 1px solid rgb(204, 204, 204);
+    }
+    p {
+      color: $text-gray;
+      font: 400 0.9em Helvetica;
+      line-height: 1.4em;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        border-bottom: 1px solid rgb(204, 204, 204);
+        margin: auto;
+      }
+    }
+    a {
+      text-decoration: none;
+      &:active {
+        color: rgb(17, 17, 17);
+      }
+      &:hover {
+        color: rgb(17, 17, 17);
+      }
+    }
+    .fa {
+      color: #666;
+      font-size: 1.5em;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      float: left;
+      padding: 0 0.6em 0 0;
+      &:active {
+        color: rgb(17, 17, 17);
+      }
+      &:hover {
+        color: rgb(17, 17, 17);
+      }
+    }
+    .fa-twitter:before {
+      content: "\f099";
+      border-right: 1px solid #ccc;
+      padding-right: 0.5em;
+    }
+    .fa-facebook:before {
+      content: "\f09a";
+    }
+  }
