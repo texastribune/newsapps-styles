@@ -1,4 +1,6 @@
 .shareline {
+  @extend %content-block;
+
   h3 {
     border-bottom: 1px solid $border-gray;
     color: $bodytext-black;
@@ -55,7 +57,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    // padding: 0 .6em;
+    margin-bottom: 1em;
 
     &:active {
       color: $share-button-black;

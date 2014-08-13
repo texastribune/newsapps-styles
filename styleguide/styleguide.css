@@ -372,7 +372,7 @@ th {
     display: table;
     clear: both; }
 
-.content-block {
+.content-block, .shareline {
   margin-left: 1.25em;
   margin-right: 1.25em; }
 
@@ -808,7 +808,8 @@ dd {
   font-size: 1.5em;
   font-style: normal;
   font-weight: normal;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 1em; }
   .shareline .fa:active {
     color: #111111; }
   .shareline .fa:hover {
