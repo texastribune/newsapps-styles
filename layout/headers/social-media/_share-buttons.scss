@@ -6,8 +6,8 @@ $bp-share-buttons: $default-768;
   margin-bottom: 1em;
   
   @include media($bp-share-buttons) {
-    border-bottom: 1px solid rgb(204, 204, 204);
-    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid $border-gray;
+    border-top: 1px solid $border-gray;
   }
 
   a {
@@ -21,18 +21,18 @@ $bp-share-buttons: $default-768;
 }
 
 .share-cell {
-  border-bottom: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid $border-gray;
   font-size: .8em;
   padding: .75em 0;
   text-align: center;
 
   @include media($bp-share-buttons) {
     border-bottom: 0;
-    border-left: 1px solid rgb(204, 204, 204);
+    border-left: 1px solid $border-gray;
   }
 
   &.first-share {
-    border-top: 1px solid rgb(204, 204, 204);
+    border-top: 1px solid $border-gray;
 
     @include media($bp-share-buttons) {
       border-top: 0;

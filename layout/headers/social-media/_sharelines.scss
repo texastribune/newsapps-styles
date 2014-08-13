@@ -1,7 +1,7 @@
 .shareline {
     h3 {
-      padding-bottom: 0.75em;
-      border-bottom: 1px solid rgb(204, 204, 204);
+      padding-bottom: .75em;
+      border-bottom: 1px solid $border-gray;
     }
     p {
       color: $text-gray;
@@ -12,7 +12,7 @@
       list-style-type: none;
       padding-left: 0;
       li {
-        border-bottom: 1px solid rgb(204, 204, 204);
+        border-bottom: 1px solid $border-gray;
         margin: auto;
       }
     }
