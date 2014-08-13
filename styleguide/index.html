@@ -7,6 +7,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
+<!-- Table of Contents -->
 <div class="container">
   <h1>Hello!</h1>
 
@@ -18,7 +19,10 @@
       <li><a href="#footer">Footer</a></li>
       <li><a href="#social-media">Social Media</a></li>
     </ul>
+</div>
 
+<!-- Base HTML Styles -->
+<div id="base-html" class="container">
   <div id="base-html" class="content-block">
     <h2>Base HTML Styles</h2>
     <p>The basic html styles can be found in in the base_theme file.</p>
@@ -40,21 +44,24 @@
     <hr class="thin">
     <hr class="yellow">
   </div>
-
 </div>
 
+<!-- Grid Specs -->
 <div id="grid-specs" class="container">
-<div class="content-block">
-  <h2>Grid Specs</h2>
-  <p>The grid layout files are located in base/scaffold.</p>
-  <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
-  <h3>Content-Block</h3>
-  <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, or add "@extend %content-block" to the parent-most element's styles. </p>
+  <div class="content-block">
+    <h2>Grid Specs</h2>
+    <p>The grid layout files are located in base/scaffold.</p>
+    <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
+    <h3>Content-Block</h3>
+    <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, or add "@extend %content-block" to the parent-most element's styles. </p>
+  </div>
 </div>
-</div>
-<div class="container">
-  <div id="masthead" class="content-block">
+
+<!-- Masthead -->
+<div id="masthead" class="container">
+  <div class="content-block">
     <h2>Masthead</h2>
+    <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
   </div>
 </div>
   <header class="masthead">
@@ -66,30 +73,34 @@
     </div>
    </div>
   </header>
-
 <div class="container">
-  <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
-  <pre>
-   <code>
-    &lt;header class="masthead"&gt;
-      &lt;div class="container"&gt;
-       &lt;div class="branding"&gt;
-        &lt;a href="http://www.texastribune.org/"&gt;
-          &lt;img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png"&gt;
-        &lt;/a&gt;
-       &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;  
-   </code>
-  </pre>
+  <div class="content-block">
+    <pre>
+     <code>
+      &lt;header class="masthead"&gt;
+        &lt;div class="container"&gt;
+         &lt;div class="branding"&gt;
+          &lt;a href="http://www.texastribune.org/"&gt;
+            &lt;img class="trib-logo" alt="The Texas Tribune" src="/img/tt-logo-white.png"&gt;
+          &lt;/a&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/header&gt;  
+     </code>
+    </pre>
+  </div>
 </div>
-<div class="container">
-  <div id="lead-banner">
+
+<!-- Project Header, Lead Art -->
+<div id="lead-banner" class="container">
+  <div class="content-block">
     <h2>Project Header, Lead Art</h2>
     <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
     <h3>Basic Banner</h3>
   </div>
 </div>
+
+<!-- Basic Banner -->
 <div class="banner">
  <div class="grand-header-image"></div>
  <header class="grand-header">
@@ -98,22 +109,25 @@
  </header>
 </div>
 <div class="container">
-  <pre>
-    <code>
-     &lt;div class="banner"&gt;
-      &lt;div class="grand-header-image"&gt;&lt;/div&gt;
-      &lt;header class="grand-header"&gt;
-       &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
-       &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
-      &lt;/header&gt;
-    &lt;/div&gt;
-   </code>
-  </pre>
+  <div class="content-block">
+    <pre>
+      <code>
+       &lt;div class="banner"&gt;
+        &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+        &lt;header class="grand-header"&gt;
+         &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+         &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
+        &lt;/header&gt;
+       &lt;/div&gt;
+     </code>
+    </pre>
 
-  <h3>Banner with Navigation Buttons</h3>
-  <p>Preferred height for this banner style is 448px. Styles located at layout/headers/banner/nav-bar.</p>
+    <h3>Banner with Navigation Buttons</h3>
+    <p>Preferred height for this banner style is 448px. Styles located at layout/headers/banner/nav-bar.</p>
+  </div>
 </div>
 
+<!-- Banner with Nav-Bar -->
 <div class="banner">
   <div class="grand-header-image"></div>
   <header class="grand-header">
@@ -156,63 +170,67 @@
     </div>
   </header>
 </div>
-
 <div class="container">
-  <pre>
-    <code>
-        &lt;div class="banner"&gt;
-          &lt;div class="grand-header-image"&gt;&lt;/div&gt;
-          &lt;header class="grand-header content-block"&gt;
-            &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
-            &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
-            &lt;!-- Static navigation bar --&gt;
-            &lt;div class="wrapper"&gt;
-              &lt;div id="nav-bar" class="nav-bar"&gt;
-                &lt;ul&gt;
-                 &lt;li&gt;
-                  &lt;a href=""&gt;
-                    &lt;div class="nav-link"&gt;
-                     Story 1
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                 &lt;/li&gt;
-                 &lt;li&gt;
-                  &lt;a href=""&gt;
-                    &lt;div class="nav-link"&gt;
-                     Story 2
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                 &lt;/li&gt;
-                 &lt;li&gt;
-                  &lt;a href=""&gt;
-                    &lt;div class="nav-link"&gt;
-                     Story 3
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                 &lt;/li&gt;
-                 &lt;li class="selected"&gt;
-                  &lt;a href=""&gt;
-                    &lt;div class="nav-link"&gt;
-                     Story 4
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                 &lt;/li&gt;
-                &lt;/ul&gt;
+  <div class="content-block">
+    <pre>
+      <code>
+          &lt;div class="banner"&gt;
+            &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+            &lt;header class="grand-header content-block"&gt;
+              &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+              &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
+              &lt;!-- Static navigation bar --&gt;
+              &lt;div class="wrapper"&gt;
+                &lt;div id="nav-bar" class="nav-bar"&gt;
+                  &lt;ul&gt;
+                   &lt;li&gt;
+                    &lt;a href=""&gt;
+                      &lt;div class="nav-link"&gt;
+                       Story 1
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                   &lt;/li&gt;
+                   &lt;li&gt;
+                    &lt;a href=""&gt;
+                      &lt;div class="nav-link"&gt;
+                       Story 2
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                   &lt;/li&gt;
+                   &lt;li&gt;
+                    &lt;a href=""&gt;
+                      &lt;div class="nav-link"&gt;
+                       Story 3
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                   &lt;/li&gt;
+                   &lt;li class="selected"&gt;
+                    &lt;a href=""&gt;
+                      &lt;div class="nav-link"&gt;
+                       Story 4
+                      &lt;/div&gt;
+                    &lt;/a&gt;
+                   &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/header&gt;
-        &lt;/div&gt;
-    </code>
-  </pre>
+            &lt;/header&gt;
+          &lt;/div&gt;
+      </code>
+    </pre>
+  </div>
 </div>
-<div class="container">
-  <div id="footer" class="content-block">
+
+<!-- Footers -->
+<div id="footer" class="container">
+  <div class="content-block">
     <h2>Footer</h2>
     <p>These styles are located in layout/footers. There are two main footer options: Basic and News Apps.</p>
     <h3>Basic</h3>
   </div>
 </div>
 
+<!-- Basic Footer -->
 <footer class="footer">
   <div class="container">
     <div class="content-block">
@@ -235,10 +253,8 @@
     </div>
   </div>
 </footer>
-
 <div class="container">
   <div class="content-block">
-
     <pre>
       <code>
         &lt;footer class="footer"&gt;
@@ -265,8 +281,14 @@
         &lt;/footer&gt;
       </code>
     </pre>
-  <h3>News Apps</h3>
-  <p>Don't forget to add FontAwesome to your header! &lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;&lt;/p&gt;</p>
+  </div>
+</div>
+
+<!-- News Apps Footer -->
+<div class="container">
+  <div class="content-block">
+    <h3>News Apps</h3>
+    <p>Don't forget to add FontAwesome to your header! &lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;&lt;/p&gt;</p>
   </div>
 </div>
 <footer class="footer">
@@ -347,6 +369,8 @@
     </pre>
   </div>
 </div>
+
+<!-- Social Media -->
 <div id="social-media" class="container">
   <div class="content-block">
     <h2>Social Media</h2>
@@ -364,7 +388,7 @@
             <i class="fa fa-facebook"></i> Recommend
           </div>
         </a>
-    </div>
+      </div>
     <pre>
       <code>
         &lt;div class="row share-row"&gt;
@@ -381,62 +405,62 @@
         &lt;/div&gt;
       </code>
     </pre>
-  </div>
-  <h3>Sharelines</h3>
-  <p>For that little sumthin' extra...</p>
-  <p>You'll need to encode the URLs, which you can easily do on the console using encodeURI('http...');</p>
-  <div class="shareline">
     <h3>Sharelines</h3>
-    <ul>
-      <li>
-        <a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
-        <i class="fa fa-twitter"></i>
-        </a>
-        <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
-        <i class="fa fa-facebook"></i>
-        </a>
-        <p>The Politics of Prevention: How Texas lawmakers have changed women's access to care
-        </p>
-      </li>
-      <li>
-        <a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
-        <i class="fa fa-twitter"></i>
-        </a>
-        <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
-        <i class="fa fa-facebook"></i>
-        </a>
-        <p>Check out Texas Tribune's series on how state politics have affected women's access to care in Texas</p>
-      </li>
-    </ul>
+    <p>For that little sumthin' extra...</p>
+    <p>You'll need to encode the URLs, which you can easily do on the console using encodeURI('http...');</p>
+    <div class="shareline">
+      <h3>Sharelines</h3>
+      <ul>
+        <li>
+          <a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>The Politics of Prevention: How Texas lawmakers have changed women's access to care
+          </p>
+        </li>
+        <li>
+          <a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>Check out Texas Tribune's series on how state politics have affected women's access to care in Texas</p>
+        </li>
+      </ul>
+    </div>
+    <pre>
+      <code>
+        &lt;div class="shareline"&gt;
+          &lt;h3&gt;Sharelines&lt;/h3&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank"&gt;
+              &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank"&gt;
+              &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;p&gt;The Politics of Prevention: How Texas lawmakers have changed women's access to care
+              &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank"&gt;
+              &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank"&gt;
+              &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+              &lt;/a&gt;
+              &lt;p&gt;Check out Texas Tribune's series on how state politics have affected women's access to care in Texas&lt;/p&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
   </div>
-  <pre>
-    <code>
-      &lt;div class="shareline"&gt;
-        &lt;h3&gt;Sharelines&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank"&gt;
-            &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
-            &lt;/a&gt;
-            &lt;a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank"&gt;
-            &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
-            &lt;/a&gt;
-            &lt;p&gt;The Politics of Prevention: How Texas lawmakers have changed women's access to care
-            &lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank"&gt;
-            &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
-            &lt;/a&gt;
-            &lt;a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank"&gt;
-            &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
-            &lt;/a&gt;
-            &lt;p&gt;Check out Texas Tribune's series on how state politics have affected women's access to care in Texas&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    </code>
-  </pre>
 </div>
 
 </div>
