@@ -13,11 +13,8 @@ $bp-footer: $default-768;
   }
 
   nav {
-    font-size: .875em;
-
     @include media($bp-footer) {
       float: left;
-      font-size: .75em;
       margin: 0 0 1em;
     }
   }
@@ -39,6 +36,7 @@ $bp-footer: $default-768;
     }
 
     li {
+      font-size: .875em;
       padding: 0;
     }
   }

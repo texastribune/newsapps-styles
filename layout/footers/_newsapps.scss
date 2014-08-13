@@ -1,3 +1,14 @@
+/* News Apps Footer */
+
+$bp-footer: $default-768;
+
+// Grid
+.footer-container {
+  @extend %container;
+  @include div-grid($bp-footer, 12, 4, 2);
+}
+
+// Styles
 .footer {
   background-color: $masthead-black;
   color: $white;
@@ -100,7 +111,7 @@
       &:last-child {
         background-color: $tribune-yellow;
         border-radius: 3px;
-        color: rgb(34, 34, 34);
+        color: $bodytext-black;
         font: 700 .5em Helvetica;
         letter-spacing: 1px;
         line-height: 1.4em;

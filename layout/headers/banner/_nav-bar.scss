@@ -1,5 +1,16 @@
+/* Static Nav-Bar */
+
+$bp-nav-bar: $default-768;
+
+// Grid
+.wrapper {
+  @extend %container;
+}
+
 //Basic Styles
+
 .nav-bar {
+  @include list-grid ($bp-nav-bar, 12, 4);
   color: $white;
   font-family: $base-sans-serif;
   font-weight: 500;
@@ -44,5 +55,3 @@
     } 
   }
 }
-
-

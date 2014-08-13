@@ -12,8 +12,8 @@
 
 @import 'layout/headers/masthead/masthead';
 @import 'layout/headers/banner/banner';
-@import 'layout/headers/banner/nav-bar/nav-bar';
+@import 'layout/headers/banner/nav-bar';
 @import 'layout/footers/basic';
-@import 'layout/footers/newsapps/newsapps';
-@import 'layout/headers/social-media/share-buttons';
-@import 'layout/headers/social-media/sharelines';
+@import 'layout/footers/newsapps';
+@import 'layout/components/social-media/share-buttons';
+@import 'layout/components/social-media/sharelines';
