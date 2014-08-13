@@ -1,5 +1,3 @@
-$bp-footer: $default-768;
-
 .footer {
   background-color: $masthead-black;
   color: $white;
@@ -100,8 +98,8 @@ $bp-footer: $default-768;
 
     li {
       &:last-child {
-        border-radius: 3px;
         background-color: $tribune-yellow;
+        border-radius: 3px;
         color: rgb(34, 34, 34);
         font: 700 .5em Helvetica;
         letter-spacing: 1px;

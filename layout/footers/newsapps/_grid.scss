@@ -1,9 +1,5 @@
 $bp-footer: $default-768;
 
-// .footer {
-//   @extend %container;
-// }
-
 .footer-container {
   @extend %container;
   @include div-grid($bp-footer, 12, 4);

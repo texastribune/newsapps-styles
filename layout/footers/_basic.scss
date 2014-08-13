@@ -1,4 +1,4 @@
-$bp-footer: new-breakpoint(min-width 768px);
+$bp-footer: $default-768;
 
 .footer {
   background-color: $masthead-black;
