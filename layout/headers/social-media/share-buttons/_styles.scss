@@ -1,0 +1,47 @@
+$bp-share-buttons: $default-768;
+
+.share-row {
+  @include media($bp-share-buttons) {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    border-top: 1px solid rgb(204, 204, 204);
+  }
+
+  a {
+    color: rgb(119, 119, 119);
+
+    &:hover {
+      color: rgb(17, 17, 17);
+      text-decoration: none;
+    }
+  }
+}
+
+.share-cell {
+  border-bottom: 1px solid rgb(204, 204, 204);
+  font-size: .8em;
+  padding: .75em 0;
+  text-align: center;
+
+  @include media($bp-share-buttons) {
+    border-bottom: 0;
+    border-left: 1px solid rgb(204, 204, 204);
+  }
+
+  &.first-share {
+    border-top: 1px solid rgb(204, 204, 204);
+
+    @include media($bp-share-buttons) {
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+
+  i {
+    padding: 0;
+  }
+
+  @include media($bp-share-buttons) {
+    float: left;
+    width: 50%;
+  }
+}
