@@ -1,55 +1,80 @@
 .shareline {
-    h3 {
-      padding-bottom: .75em;
+  h3 {
+    border-bottom: 1px solid $border-gray;
+    color: $bodytext-black;
+    font-family: $base-sans-serif;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    margin-top: 1em;
+    padding-bottom: .75em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $text-gray;
+    font-family: $base-sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 1em 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
       border-bottom: 1px solid $border-gray;
-    }
-    p {
-      color: $text-gray;
-      font: 400 0.9em Helvetica;
-      line-height: 1.4em;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      li {
-        border-bottom: 1px solid $border-gray;
-        margin: auto;
-      }
-    }
-    a {
-      text-decoration: none;
-      &:active {
-        color: rgb(17, 17, 17);
-      }
-      &:hover {
-        color: rgb(17, 17, 17);
-      }
-    }
-    .fa {
-      color: #666;
-      font-size: 1.5em;
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      float: left;
-      padding: 0 0.6em 0 0;
-      &:active {
-        color: rgb(17, 17, 17);
-      }
-      &:hover {
-        color: rgb(17, 17, 17);
-      }
-    }
-    .fa-twitter:before {
-      content: "\f099";
-      border-right: 1px solid #ccc;
-      padding-right: 0.5em;
-    }
-    .fa-facebook:before {
-      content: "\f09a";
+      margin: auto;
     }
   }
+
+  a {
+    text-decoration: none;
+
+    &:active {
+      color: $share-button-black;
+    }
+
+    &:hover {
+      color: $share-button-black;
+    }
+  }
+
+  .fa {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    display: inline-block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    // padding: 0 .6em;
+
+    &:active {
+      color: $share-button-black;
+    }
+
+    &:hover {
+      color: $share-button-black;
+    }
+  }
+
+  .fa-twitter:before {
+    border-right: 1px solid #ccc;
+    content: '\f099';
+    padding-right: .5em;
+  }
+
+  .fa-facebook:before {
+    content: '\f09a';
+    padding: 0 .5em;
+  }
+
+}

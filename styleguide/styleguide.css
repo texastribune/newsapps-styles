@@ -768,12 +768,24 @@ dd {
       width: 50%; } }
 
 .shareline h3 {
-  padding-bottom: 0.75em;
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid #cccccc;
+  color: #282828;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: .875em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  margin-top: 1em;
+  padding-bottom: .75em;
+  text-align: left;
+  text-transform: uppercase; }
 .shareline p {
   color: #666666;
-  font: 400 0.9em Helvetica;
-  line-height: 1.4em; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: .9em;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 1em 0; }
 .shareline ul {
   list-style-type: none;
   padding-left: 0; }
@@ -787,24 +799,24 @@ dd {
   .shareline a:hover {
     color: #111111; }
 .shareline .fa {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   color: #666;
-  font-size: 1.5em;
   display: inline-block;
+  float: left;
   font-family: FontAwesome;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  float: left;
-  padding: 0 0.6em 0 0; }
+  line-height: 1; }
   .shareline .fa:active {
     color: #111111; }
   .shareline .fa:hover {
     color: #111111; }
 .shareline .fa-twitter:before {
-  content: "\f099";
   border-right: 1px solid #ccc;
-  padding-right: 0.5em; }
+  content: '\f099';
+  padding-right: .5em; }
 .shareline .fa-facebook:before {
-  content: "\f09a"; }
+  content: '\f09a';
+  padding: 0 .5em; }

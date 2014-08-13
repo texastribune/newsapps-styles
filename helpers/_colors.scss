@@ -4,7 +4,7 @@ $teal: rgb(0, 137, 144);
 
 // Shades of Gray
 $black: rgb(0, 0, 0);
-$masthead-black: rgb(17, 17, 17);
+$tribune-black: rgb(17, 17, 17);
 $bodytext-black: rgb(40, 40, 40);
 $text-gray: rgb(102, 102, 102);
 $line-gray: rgb(187, 187, 187);
@@ -13,8 +13,10 @@ $footer-offwhite: rgb(238, 238, 238);
 $glossary-gray: rgb(245, 245, 245);
 $white: rgb(255, 255, 255); 
 
-//Base Themes
+//Color extensions
+$button-hover-teal: $teal;
+$button-selected-teal: transparentize($teal, .5);
 $href-teal: $teal;
 $hr-gray: $line-gray; 
-$button-selected-teal: transparentize($teal, .5);
-$button-hover-teal: $teal;
+$masthead-black: $tribune-black;
+$share-button-black: $tribune-black;

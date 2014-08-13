@@ -14,7 +14,7 @@ $bp-share-buttons: $default-768;
     color: rgb(119, 119, 119);
 
     &:hover {
-      color: rgb(17, 17, 17);
+      color: $share-button-black;
       text-decoration: none;
     }
   }
