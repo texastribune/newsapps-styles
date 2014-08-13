@@ -6,12 +6,17 @@ $bp-footer: $default-768;
   font-size: .75em;
   margin-top: 1em;
 
+  @include media($bp-footer) {
+    line-height: 1.1em;
+  }
+
   .logo {
     margin-top: 1em;
     width: 120px;
   }
 
   .footer-container {
+    margin: auto;
     text-align: center;
 
     div {
@@ -19,37 +24,45 @@ $bp-footer: $default-768;
         text-align: left;
       }
     }
-  }
 
-  ul {
-    list-style: none;
-    margin-top: 2em;
-    padding: 0;
+    ul {
+      list-style: none;
+      margin-top: 2em;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: .5em;
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
 
     a {
-      color: $footer-offwhite;
+      color: rgb(221, 221, 221);
       text-decoration: none;
 
       &:active {
-        color: $footer-offwhite;
+        color: $white;
         text-decoration: underline;
       }
 
       &:hover {
-        color: $footer-offwhite;
+        color: $white;
         text-decoration: underline;
       }
     }
+  }
 
-    li {
-      margin-bottom: .5em;
-    }     
+  a.donate-link {
+    color: $teal;
   }
 
   .icon {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: $footer-offwhite;
+    color: $white;
     display: inline-block;
     font-family: FontAwesome;
     font-size: 1.5em;
@@ -63,54 +76,42 @@ $bp-footer: $default-768;
     }
 
     &:active {
-      color: $href-teal;
+      color: $teal;
     }
 
     &:hover {
-      color: $href-teal;
+      color: $teal;
     }
-  }
 
-  .internal-links {
-    li {
-      &:last-child {
-        a {
-          color: $href-teal;
-        }
-      }
-    }
   }
 
   .donate {
-    background: $href-teal;
-    color: $footer-offwhite;
+    background: $teal;
+    color: $white;
     font-family: Helvetica;
     padding: .25em 0;
-    
+
     ul {
-      border-bottom: 1px solid $footer-offwhite;
       font-size: 1.65em;
-      letter-spacing: .03;
-      line-height: .9;
+      letter-spacing: .03em;
+      line-height: .9em;
       margin: 1.5em 1.5em .75em;
     }
 
     li {
       &:last-child {
-        background-color: $tribune-yellow;
         border-radius: 3px;
+        background-color: $tribune-yellow;
         color: rgb(34, 34, 34);
-        font-family: $base-sans-serif;
-        font-size: .5em;
-        font-weight: 700;
+        font: 700 .5em Helvetica;
         letter-spacing: 1px;
         line-height: 1.4em;
         margin: 1em 0 1.5em;
         padding: .25em 0;
         text-align: center;
         text-transform: uppercase;
-        }
       }
+    }
 
     a {
       &:active {
@@ -127,3 +128,4 @@ $bp-footer: $default-768;
     }
   }
 }
+

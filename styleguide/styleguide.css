@@ -363,11 +363,11 @@ th {
     clear: both; }
 
 /* Grid Settings */
-.container, .wrapper, .footer-container {
+.container, .footer-container {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .container:after, .wrapper:after, .footer-container:after {
+  .container:after, .footer-container:after {
     content: "";
     display: table;
     clear: both; }
@@ -383,263 +383,6 @@ th {
 
 /* Basic Style Mixins */
 /* Grid Mixins */
-/* Tribune Masthead */
-.masthead {
-  background-color: #111111;
-  width: 100%; }
-  .masthead .branding {
-    padding: .75em 0 .375em;
-    text-align: center;
-    width: 100%; }
-    .masthead .branding .trib-logo {
-      height: 1.5em; }
-
-/* Header Banner */
-.banner {
-  background-color: #373737;
-  display: table;
-  height: 225px;
-  margin: 0 0 1.5em;
-  position: relative;
-  width: 100%; }
-  .banner .grand-header {
-    display: table-cell;
-    padding: 0 1.25em;
-    position: relative;
-    text-align: center;
-    vertical-align: middle; }
-    .banner .grand-header a {
-      color: white; }
-    .banner .grand-header h1 {
-      color: white;
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-      font-size: 2.5em;
-      font-weight: 800;
-      line-height: 1.15;
-      text-shadow: black 3px 3px 0;
-      margin-bottom: 0.5em; }
-      @media screen and (min-width: 768px) {
-        .banner .grand-header h1 {
-          font-size: 3.5em; } }
-    .banner .grand-header p {
-      color: white;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-size: 1.25em;
-      letter-spacing: .0625em;
-      line-height: 1.15;
-      text-shadow: black 2px 2px 0;
-      margin-bottom: 1em; }
-      @media screen and (min-width: 768px) {
-        .banner .grand-header p {
-          font-size: 1.5em; } }
-  .banner .grand-header-image {
-    background-image: url("");
-    background-position: center center;
-    background-size: cover;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0; }
-
-/* Static Nav-Bar */
-.nav-bar {
-  color: white;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  position: static;
-  text-align: center; }
-  .nav-bar .selected {
-    background: rgba(0, 137, 144, 0.5); }
-  .nav-bar ul {
-    display: block;
-    list-style-type: none;
-    max-width: 1088px;
-    width: 100%; }
-    .nav-bar ul li {
-      border: 1px solid;
-      color: white; }
-      .nav-bar ul li:active {
-        background: #008990; }
-      .nav-bar ul li:hover {
-        background: #008990; }
-    .nav-bar ul .nav-link {
-      font-weight: bold;
-      margin: .75em 0;
-      width: 100%; }
-    .nav-bar ul a {
-      text-decoration: none; }
-
-.nav-bar ul {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  padding: 0; }
-  .nav-bar ul:last-child {
-    margin-right: 0; }
-  .nav-bar ul li {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .nav-bar ul li:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 768px) {
-      .nav-bar ul li {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%; }
-        .nav-bar ul li:last-child {
-          margin-right: 0; }
-        .nav-bar ul li:nth-child(4n) {
-          margin-right: 0; } }
-
-.footer {
-  background-color: #111111;
-  color: #eeeeee;
-  margin: 2em 0 0;
-  padding: .125em 0 0;
-  text-align: center; }
-  @media screen and (min-width: 768px) {
-    .footer {
-      padding: 0;
-      text-align: none; } }
-  .footer nav {
-    font-size: .875em; }
-    @media screen and (min-width: 768px) {
-      .footer nav {
-        float: left;
-        font-size: .75em;
-        margin: 0 0 1em; } }
-  .footer ul {
-    list-style: none;
-    padding: 0; }
-  .footer .first-nav {
-    color: #aaaaaa; }
-    @media screen and (min-width: 768px) {
-      .footer .first-nav {
-        float: left; } }
-    .footer .first-nav a {
-      color: #aaaaaa; }
-    .footer .first-nav li {
-      padding: 0; }
-  @media screen and (min-width: 768px) {
-    .footer .last-nav {
-      float: right; } }
-  .footer .last-nav a {
-    color: #eeeeee; }
-  .footer .last-nav .donor-item {
-    padding-right: 0; }
-    .footer .last-nav .donor-item a {
-      color: #008990;
-      font-weight: 800; }
-  .footer li {
-    margin: .75em 0; }
-    @media screen and (min-width: 768px) {
-      .footer li {
-        border-left: 1px solid #eeeeee;
-        display: inline;
-        float: left;
-        margin: 0;
-        padding: 0 .5em; }
-        .footer li:first-child {
-          border: 0;
-          padding-left: 0; } }
-
-/* News Apps Footer */
-.footer {
-  background-color: #111111;
-  color: white;
-  font-size: .75em;
-  margin-top: 1em; }
-  .footer .logo {
-    margin-top: 1em;
-    width: 120px; }
-  .footer .footer-container {
-    text-align: center; }
-    @media screen and (min-width: 768px) {
-      .footer .footer-container div {
-        text-align: left; } }
-  .footer ul {
-    list-style: none;
-    margin-top: 2em;
-    padding: 0; }
-    .footer ul a {
-      color: #eeeeee;
-      text-decoration: none; }
-      .footer ul a:active {
-        color: #eeeeee;
-        text-decoration: underline; }
-      .footer ul a:hover {
-        color: #eeeeee;
-        text-decoration: underline; }
-    .footer ul li {
-      margin-bottom: .5em; }
-  .footer .icon {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    color: #eeeeee;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 1.5em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-right: .5em; }
-    @media screen and (min-width: 768px) {
-      .footer .icon {
-        text-align: left; } }
-    .footer .icon:active {
-      color: #008990; }
-    .footer .icon:hover {
-      color: #008990; }
-  .footer .internal-links li:last-child a {
-    color: #008990; }
-  .footer .donate {
-    background: #008990;
-    color: #eeeeee;
-    font-family: Helvetica;
-    padding: .25em 0; }
-    .footer .donate ul {
-      border-bottom: 1px solid #eeeeee;
-      font-size: 1.65em;
-      letter-spacing: .03;
-      line-height: .9;
-      margin: 1.5em 1.5em .75em; }
-    .footer .donate li:last-child {
-      background-color: #ffc200;
-      border-radius: 3px;
-      color: #222222;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-size: .5em;
-      font-weight: 700;
-      letter-spacing: 1px;
-      line-height: 1.4em;
-      margin: 1em 0 1.5em;
-      padding: .25em 0;
-      text-align: center;
-      text-transform: uppercase; }
-    .footer .donate a:active {
-      text-decoration: none; }
-    .footer .donate a:hover {
-      text-decoration: none; }
-    @media screen and (min-width: 768px) {
-      .footer .donate {
-        padding: 0 0 1em; } }
-
-@media screen and (min-width: 768px) {
-  .footer-container div {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .footer-container div:last-child {
-      margin-right: 0; } }
-
 /* Base Theme for HTML elements */
 body {
   color: #282828;
@@ -726,3 +469,209 @@ dd {
 dt,
 dd {
   line-height: 1.4; }
+
+/* Tribune Masthead */
+.masthead {
+  background-color: #111111;
+  width: 100%; }
+  .masthead .branding {
+    padding: .75em 0 .375em;
+    text-align: center;
+    width: 100%; }
+    .masthead .branding .trib-logo {
+      height: 1.5em; }
+
+/* Header Banner */
+.banner {
+  background-color: #373737;
+  display: table;
+  height: 225px;
+  margin: 0 0 1.5em;
+  position: relative;
+  width: 100%; }
+  .banner .grand-header {
+    display: table-cell;
+    padding: 0 1.25em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle; }
+    .banner .grand-header a {
+      color: white; }
+    .banner .grand-header h1 {
+      color: white;
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 2.5em;
+      font-weight: 800;
+      line-height: 1.15;
+      text-shadow: black 3px 3px 0;
+      margin-bottom: 0.5em; }
+      @media screen and (min-width: 768px) {
+        .banner .grand-header h1 {
+          font-size: 3.5em; } }
+    .banner .grand-header p {
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 1.25em;
+      letter-spacing: .0625em;
+      line-height: 1.15;
+      text-shadow: black 2px 2px 0;
+      margin-bottom: 1em; }
+      @media screen and (min-width: 768px) {
+        .banner .grand-header p {
+          font-size: 1.5em; } }
+  .banner .grand-header-image {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.footer {
+  background-color: #111111;
+  color: #eeeeee;
+  margin: 2em 0 0;
+  padding: .125em 0 0;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      padding: 0;
+      text-align: none; } }
+  .footer nav {
+    font-size: .875em; }
+    @media screen and (min-width: 768px) {
+      .footer nav {
+        float: left;
+        font-size: .75em;
+        margin: 0 0 1em; } }
+  .footer ul {
+    list-style: none;
+    padding: 0; }
+  .footer .first-nav {
+    color: #aaaaaa; }
+    @media screen and (min-width: 768px) {
+      .footer .first-nav {
+        float: left; } }
+    .footer .first-nav a {
+      color: #aaaaaa; }
+    .footer .first-nav li {
+      padding: 0; }
+  @media screen and (min-width: 768px) {
+    .footer .last-nav {
+      float: right; } }
+  .footer .last-nav a {
+    color: #eeeeee; }
+  .footer .last-nav .donor-item {
+    padding-right: 0; }
+    .footer .last-nav .donor-item a {
+      color: #008990;
+      font-weight: 800; }
+  .footer li {
+    margin: .75em 0; }
+    @media screen and (min-width: 768px) {
+      .footer li {
+        border-left: 1px solid #eeeeee;
+        display: inline;
+        float: left;
+        margin: 0;
+        padding: 0 .5em; }
+        .footer li:first-child {
+          border: 0;
+          padding-left: 0; } }
+
+/* News Apps Footer */
+.footer {
+  background-color: #111111;
+  color: white;
+  font-size: .75em;
+  margin-top: 1em; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      line-height: 1.1em; } }
+  .footer .logo {
+    margin-top: 1em;
+    width: 120px; }
+  .footer .footer-container {
+    margin: auto;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .footer .footer-container div {
+        text-align: left; } }
+    .footer .footer-container ul {
+      list-style: none;
+      margin-top: 2em;
+      padding: 0; }
+    .footer .footer-container li {
+      list-style: none;
+      margin-bottom: .5em;
+      width: 100%;
+      border: 0;
+      padding: 0; }
+    .footer .footer-container a {
+      color: #dddddd;
+      text-decoration: none; }
+      .footer .footer-container a:active {
+        color: white;
+        text-decoration: underline; }
+      .footer .footer-container a:hover {
+        color: white;
+        text-decoration: underline; }
+  .footer a.donate-link {
+    color: #008990; }
+  .footer .icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-right: .5em; }
+    @media screen and (min-width: 768px) {
+      .footer .icon {
+        text-align: left; } }
+    .footer .icon:active {
+      color: #008990; }
+    .footer .icon:hover {
+      color: #008990; }
+  .footer .donate {
+    background: #008990;
+    color: white;
+    font-family: Helvetica;
+    padding: .25em 0; }
+    .footer .donate ul {
+      font-size: 1.65em;
+      letter-spacing: .03em;
+      line-height: .9em;
+      margin: 1.5em 1.5em .75em; }
+    .footer .donate li:last-child {
+      border-radius: 3px;
+      background-color: #ffc200;
+      color: #222222;
+      font: 700 .5em Helvetica;
+      letter-spacing: 1px;
+      line-height: 1.4em;
+      margin: 1em 0 1.5em;
+      padding: .25em 0;
+      text-align: center;
+      text-transform: uppercase; }
+    .footer .donate a:active {
+      text-decoration: none; }
+    .footer .donate a:hover {
+      text-decoration: none; }
+    @media screen and (min-width: 768px) {
+      .footer .donate {
+        padding: 0 0 1em; } }
+
+@media screen and (min-width: 768px) {
+  .footer-container div {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .footer-container div:last-child {
+      margin-right: 0; } }
