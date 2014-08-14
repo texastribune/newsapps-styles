@@ -1,18 +1,13 @@
 .shareline {
   @extend %content-block;
-
   h3 {
+    @extend %paragraph-header;
     border-bottom: 1px solid $border-gray;
     color: $bodytext-black;
-    font-family: $base-sans-serif;
-    font-size: .875em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 1.4em;
+    line-height: 1.4;
     margin-top: 1em;
     padding-bottom: .75em;
     text-align: left;
-    text-transform: uppercase;
   }
 
   p {

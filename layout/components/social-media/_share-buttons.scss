@@ -3,6 +3,7 @@
 $bp-share-buttons: $default-768;
 
 .share-row {
+  @extend %content-block;
   margin-bottom: 1em;
   
   @include media($bp-share-buttons) {
