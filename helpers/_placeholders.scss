@@ -15,3 +15,26 @@
     margin-right: 0;
   }
 }
+
+
+// Prose Placeholders
+
+%prose {
+  color: $bodytext-black;
+  display: block;
+  font-family: $base-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
+  
+%paragraph-header {
+  font-family: $base-sans-serif;
+  font-size: .875em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  text-transform: uppercase;
+
+}

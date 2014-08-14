@@ -2,11 +2,7 @@
 
 .prose {
   @extend %content-block;
-  color: $bodytext-black;
-  display: block;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: left;
+  @extend %prose;
 
   h1 { //headline
     font-family: $base-sans-serif;
@@ -27,12 +23,7 @@
   }
 
   h3 { //paragraph header
-    font-family: $base-sans-serif;
-    font-size: .875em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 1em 0;
-    text-transform: uppercase;
+    @extend %paragraph-header;
 
     &.data-header {
       margin: 0 0 1em; 
@@ -41,10 +32,6 @@
   }
 
   p {
-    font-family: $base-serif;
-    font-size: 1em;
-    font-weight: 400;
-    font-weight: normal;
     margin-bottom: 1em;
 
     &.byline { //byline

@@ -386,7 +386,7 @@
   <div class="prose">
     <h1>Prose</h1>
     <p>The basic prose styles outlined below can be found in theme/prose. The class .prose includes an extension of content-block, and its elements are given a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
-    <p>The majority of this Style Guide is styled with .prose. These paragraphs, for example, are just simple .prose &lt;p&gt; tags.</p>
+    <p>The majority of this Style Guide is styled with .prose. These paragraphs, for example, are just simple .prose &lt;p&gt; tags. If you want to apply these paragraph settings to an element, and don't want to use a .prose class, you can @extend %prose to a specific element in your stylesheet.</p>
 
   <!-- Headline, Byline -->
     <div id="headline">
@@ -408,7 +408,7 @@
   <!-- Headers -->
     <div id="headers">
       <h3>Paragraph Headers</h3>
-      <p>That ^ is an example of a .prose h3 paragraph header. Notice it will automatically transform the text to uppercase.</p>
+      <p>That ^ is an example of a .prose h3 paragraph header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
       <pre>
         <code>
 &lt;h3&gt;Paragraph Headers&lt;/h3&gt;
