@@ -846,7 +846,7 @@ dd {
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1.4em;
-    margin-top: 1em;
+    margin: 1em 0;
     text-transform: uppercase; }
   .prose p {
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;

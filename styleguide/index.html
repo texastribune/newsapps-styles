@@ -23,7 +23,6 @@
           <li><a href="#headline">Headline, Byline</a></li>
           <li><a href="#text">Prose Text</a></li>
         </ol>
-
       </li>
       <li><a href="#social-media">Social Media</a></li>
     </ul>
@@ -33,8 +32,8 @@
 <!-- Base HTML Styles -->
 <div id="base-html" class="container">
   <div id="base-html" class="content-block">
-    <h2>Base HTML Styles</h2>
-    <p>The basic html styles can be found in in the base_theme file.</p>
+    <h1>Base HTML Styles</h1>
+    <p>The basic html styles can be found in in the base_theme file. For full effect, this section of the News Apps Style Guide doesn't have any other styles.</p>
 
     <h1>This is an H1</h1>
     <h2>This is an H2</h2>
@@ -57,8 +56,8 @@
 
 <!-- Grid Specs -->
 <div id="grid-specs" class="container">
-  <div class="content-block">
-    <h2>Grid Specs</h2>
+  <div class="prose">
+    <h1>Grid Specs</h1>
     <p>The grid layout files are located in base/scaffold.</p>
     <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
     <h3>Content-Block</h3>
@@ -68,8 +67,8 @@
 
 <!-- Masthead -->
 <div id="masthead" class="container">
-  <div class="content-block">
-    <h2>Masthead</h2>
+  <div class="prose">
+    <h1>Masthead</h1>
     <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
   </div>
 </div>
@@ -83,7 +82,7 @@
    </div>
   </header>
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <pre>
      <code>
       &lt;header class="masthead"&gt;
@@ -102,8 +101,8 @@
 
 <!-- Project Header, Lead Art -->
 <div id="lead-banner" class="container">
-  <div class="content-block">
-    <h2>Project Header, Lead Art</h2>
+  <div class="prose">
+    <h1>Project Header, Lead Art</h1>
     <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
     <h3>Basic Banner</h3>
   </div>
@@ -118,7 +117,7 @@
  </header>
 </div>
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <pre>
       <code>
        &lt;div class="banner"&gt;
@@ -180,12 +179,12 @@
   </header>
 </div>
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <pre>
       <code>
           &lt;div class="banner"&gt;
             &lt;div class="grand-header-image"&gt;&lt;/div&gt;
-            &lt;header class="grand-header content-block"&gt;
+            &lt;header class="grand-header"&gt;
               &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
               &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
               &lt;!-- Static navigation bar --&gt;
@@ -232,8 +231,8 @@
 
 <!-- Footers -->
 <div id="footer" class="container">
-  <div class="content-block">
-    <h2>Footer</h2>
+  <div class="prose">
+    <h1>Footer</h1>
     <p>These styles are located in layout/footers. There are two main footer options: Basic and News Apps.</p>
     <h3>Basic</h3>
   </div>
@@ -242,7 +241,7 @@
 <!-- Basic Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="content-block">
+    <div class="prose">
     <nav class="first-nav">
       <ul>
         <li>&copy; 2014 <a href="http://www.texastribune.org/">The Texas Tribune</a></li>
@@ -263,7 +262,7 @@
   </div>
 </footer>
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <pre>
       <code>
         &lt;footer class="footer"&gt;
@@ -295,7 +294,7 @@
 
 <!-- News Apps Footer -->
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <h3>News Apps</h3>
     <p>Don't forget to add FontAwesome to your header! &lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;&lt;/p&gt;</p>
   </div>
@@ -336,7 +335,7 @@
   </div>
 </footer>
 <div class="container">
-  <div class="content-block">
+  <div class="prose">
     <pre>
       <code>
         &lt;footer class="footer"&gt;
@@ -379,25 +378,30 @@
   </div>
 </div>
 
+<!-- Prose Styles -->
+<div id="prose" class="container">
+  <div class="prose">
+    <h1>Prose</h1>
+    <p>The basic prose styles outlined below can be found in theme/prose. The class .prose includes an extension of content-block, and its elements are given a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
+  </div>
+</div>
+
 <!-- Headline, Byline -->
 <div id="headline" class="container">
-  <div class="content-block">
-    <h2>Headline, Byline</h2>
-
-  </div>
-
   <div class="prose">
-      <h1>Cat Saves Planet from Apocolypse, Dies in Action</h1>
-      <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
-    </div>
+    <h1>Headline, Byline</h1>
+    <h1>Cat Saves Planet from Apocolypse, Dies in Action</h1>
+    <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
+  </div>
 </div>
+
 
     
 
 <!-- Social Media -->
 <div id="social-media" class="container">
-  <div class="content-block">
-    <h2>Social Media</h2>
+  <div class="prose">
+    <h1>Social Media</h1>
     <p>Styles are located in layout/headers/social-media. There are a couple of options, most of which require you to include FontAwesome in the header.</p>
     <p>&lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;&lt;/p&gt;</p>
     <h3>Share Buttons</h3>
