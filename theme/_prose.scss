@@ -1,0 +1,66 @@
+/* Base Prose Theme */
+
+.prose {
+  @extend %content-block;
+  color: $bodytext-black;
+  display: block;
+  font-weight: 400;
+  text-align: left;
+
+  h1 { //headline
+    font-family: $base-sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin: .6em 0;
+  }
+
+  h2 { //pull-quote text
+    font-family: $base-serif;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: .7em .5em;
+    position: relative;
+    text-align: left;
+  }
+
+  h3 { //paragraph header
+    font-family: $base-sans-serif;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    margin-top: 1em;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: $base-serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  p.byline { //byline
+    font-family: $base-sans-serif;
+    font-size: .85em;
+
+    a {
+      font-weight: 800;
+    }
+  }
+
+  p.caption { 
+    color: $text-gray;
+    font-family: $base-sans-serif;
+    font-size: .85em;
+    font-weight: 500;
+    margin: .25em;
+    text-align: left;
+  }
+
+}
+

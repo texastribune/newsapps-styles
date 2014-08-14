@@ -372,7 +372,7 @@ th {
     display: table;
     clear: both; }
 
-.content-block, .shareline {
+.content-block, .shareline, .prose {
   margin-left: 1.25em;
   margin-right: 1.25em; }
 
@@ -819,3 +819,51 @@ dd {
 .shareline .fa-facebook:before {
   content: '\f09a';
   padding: 0 .5em; }
+
+/* Base Prose Theme */
+.prose {
+  color: #282828;
+  display: block;
+  font-weight: 400;
+  text-align: left; }
+  .prose h1 {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin: .6em 0; }
+  .prose h2 {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: .7em .5em;
+    position: relative;
+    text-align: left; }
+  .prose h3 {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: .875em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    margin-top: 1em;
+    text-transform: uppercase; }
+  .prose p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin-bottom: 1em; }
+  .prose p.byline {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: .85em; }
+    .prose p.byline a {
+      font-weight: 800; }
+  .prose p.caption {
+    color: #666666;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: .85em;
+    font-weight: 500;
+    margin: .25em;
+    text-align: left; }
