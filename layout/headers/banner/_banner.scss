@@ -17,17 +17,17 @@
     vertical-align: middle;
 
     a {
-      color: rgb(255, 255, 255);
+      color: $white;
     }
 
     //Project Title
     h1 {
-      color: rgb(255, 255, 255);
+      color: $white;
       font-family: $base-serif;
       font-size: 2.5em;
       font-weight: 800;
       line-height: 1.15;
-      text-shadow: rgb(0, 0, 0) 3px 3px 0;
+      text-shadow: $black 3px 3px 0;
       @include white-space(.5);
 
       @include media($default-768) {
@@ -42,7 +42,7 @@
       font-size: 1.25em;
       letter-spacing: .0625em;
       line-height: 1.15;
-      text-shadow: rgb(0, 0, 0) 2px 2px 0;
+      text-shadow: $black 2px 2px 0;
       @include white-space(1);
 
       @include media($default-768) {

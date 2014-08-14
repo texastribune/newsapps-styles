@@ -47,7 +47,7 @@ $bp-footer: $default-768;
     }
 
     a {
-      color: $footer-offwhite;
+      @extend %href-on-black;
     }
 
     .donor-item {

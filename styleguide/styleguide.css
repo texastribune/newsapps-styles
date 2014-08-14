@@ -381,6 +381,16 @@ th {
     margin-left: 0;
     margin-right: 0; } }
 
+.footer .last-nav a, .footer .footer-container a {
+  color: #dddddd;
+  text-decoration: none; }
+  .footer .last-nav a:active, .footer .footer-container a:active {
+    color: white;
+    text-decoration: underline; }
+  .footer .last-nav a:hover, .footer .footer-container a:hover {
+    color: white;
+    text-decoration: underline; }
+
 .prose {
   color: #282828;
   display: block;
@@ -631,8 +641,6 @@ dd {
   @media screen and (min-width: 768px) {
     .footer .last-nav {
       float: right; } }
-  .footer .last-nav a {
-    color: #eeeeee; }
   .footer .last-nav .donor-item {
     padding-right: 0; }
     .footer .last-nav .donor-item a {
@@ -688,15 +696,6 @@ dd {
       width: 100%;
       border: 0;
       padding: 0; }
-    .footer .footer-container a {
-      color: #dddddd;
-      text-decoration: none; }
-      .footer .footer-container a:active {
-        color: white;
-        text-decoration: underline; }
-      .footer .footer-container a:hover {
-        color: white;
-        text-decoration: underline; }
   .footer a.donate-link {
     color: #008990; }
   .footer .icon {

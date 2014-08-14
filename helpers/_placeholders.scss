@@ -16,6 +16,24 @@
   }
 }
 
+// Header & Footer 
+
+%href-on-black {
+  color: $href-offwhite;
+  text-decoration: none;
+
+  &:active {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+
 
 // Prose Placeholders
 

@@ -49,18 +49,7 @@ $bp-footer: $default-768;
     }
 
     a {
-      color: rgb(221, 221, 221);
-      text-decoration: none;
-
-      &:active {
-        color: $white;
-        text-decoration: underline;
-      }
-
-      &:hover {
-        color: $white;
-        text-decoration: underline;
-      }
+      @extend %href-on-black;
     }
   }
 
