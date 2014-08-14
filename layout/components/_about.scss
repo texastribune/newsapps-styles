@@ -1,0 +1,56 @@
+//About & Contributors
+$bp-about: $default-768;
+
+.about {
+  @include features-layout($bp-about, 12, 8);
+  @extend %content-block;
+  @extend %prose;
+
+  h3 {
+    @extend %paragraph-header;
+  }
+
+  p.contributor {
+    font-weight: 600;
+  }
+
+  p.handle {
+    font-family: $base-sans-serif;
+    font-size: .95em;
+    font-weight: 300;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+    line-height: 1.2em;
+    margin-bottom: 1em;
+
+    p {
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: .1em;
+        }
+      }
+  }
+
+  .about-desc {
+    color: $text-gray;
+  }
+}
+
+
+    //   ul {
+    //     @include pad(0);
+    //     li {
+    //       @include span-columns(12 of 12);
+    //       @include media($desktop) {
+    //         @include span-columns(4 of 8);
+    //         @include omega(2n);
+    //       }
+    //     }
+    //   }
+    // }

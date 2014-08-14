@@ -372,14 +372,12 @@ th {
     display: table;
     clear: both; }
 
-.content-block, .banner .grand-header, .shareline, .prose, .prose ul {
-  margin-left: 1.25em;
-  margin-right: 1.25em; }
+.content-block, .banner .grand-header, .share-row, .shareline, .about, .prose, .prose ul {
+  padding: 0 1.25em; }
 
 @media screen and (max-width: 480px) {
   .content-block-full {
-    margin-left: 0;
-    margin-right: 0; } }
+    padding: 0; } }
 
 .footer .last-nav a, .footer .footer-container a {
   color: #dddddd;
@@ -391,7 +389,7 @@ th {
     color: white;
     text-decoration: underline; }
 
-.prose {
+.about, .prose {
   color: #282828;
   display: block;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -400,7 +398,7 @@ th {
   line-height: 1.4;
   text-align: left; }
 
-.prose h3 {
+.shareline h3, .about h3, .prose h3 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: .875em;
   font-weight: 700;
@@ -783,15 +781,10 @@ dd {
 .shareline h3 {
   border-bottom: 1px solid #cccccc;
   color: #282828;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: .875em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1.4em;
+  line-height: 1.4;
   margin-top: 1em;
   padding-bottom: .75em;
-  text-align: left;
-  text-transform: uppercase; }
+  text-align: left; }
 .shareline p {
   color: #666666;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -835,6 +828,40 @@ dd {
 .shareline .fa-facebook:before {
   content: '\f09a';
   padding: 0 .5em; }
+
+.about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .about:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .about {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      .about:last-child {
+        margin-right: 0; } }
+  .about p.contributor {
+    font-weight: 600; }
+  .about p.handle {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: .95em;
+    font-weight: 300; }
+  .about ul {
+    margin-top: 0; }
+  .about li {
+    line-height: 1.2em;
+    margin-bottom: 1em; }
+    .about li p {
+      margin: 0; }
+      .about li p:first-child {
+        margin-bottom: .1em; }
+  .about .about-desc {
+    color: #666666; }
 
 /* Base Prose Theme */
 .prose h1 {
@@ -891,3 +918,11 @@ dd {
   border-style: solid;
   border-width: 1px 0;
   position: relative; }
+
+pre {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  pre:last-child {
+    margin-right: 0; }

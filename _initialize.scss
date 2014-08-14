@@ -17,5 +17,11 @@
 @import 'layout/footers/newsapps';
 @import 'layout/components/social-media/share-buttons';
 @import 'layout/components/social-media/sharelines';
+@import 'layout/components/about';
 
 @import 'theme/prose';
+
+//Style Guide stylez
+pre {
+  @include span-columns(12);
+}
