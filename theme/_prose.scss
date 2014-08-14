@@ -5,6 +5,7 @@
   color: $bodytext-black;
   display: block;
   font-weight: 400;
+  line-height: 1.4;
   text-align: left;
 
   h1 { //headline
@@ -14,7 +15,7 @@
     margin: .6em 0;
   }
 
-  h2 { //pull-quote text
+  h2 { //block-quote text
     font-family: $base-serif;
     font-size: 1.5em;
     font-style: italic;
@@ -30,9 +31,13 @@
     font-size: .875em;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 1.4em;
     margin: 1em 0;
     text-transform: uppercase;
+
+    &.data-header {
+      margin: 0 0 1em; 
+      text-transform: none;   
+    }
   }
 
   p {
@@ -40,26 +45,63 @@
     font-size: 1em;
     font-weight: 400;
     font-weight: normal;
-    line-height: 1.4em;
     margin-bottom: 1em;
+
+    &.byline { //byline
+      font-family: $base-sans-serif;
+      font-size: .85em;
+
+      a {
+        font-weight: 800;
+      }
+    }
+
+    &.caption { 
+      color: $text-gray;
+      font-family: $base-sans-serif;
+      font-size: .85em;
+      font-weight: 400;
+      margin: .25em 0;
+    }
+
+    &.source {
+      font-family: $base-sans-serif;
+      font-weight: 300;
+      margin: 1em .5em;
+    }
+
   }
 
-  p.byline { //byline
-    font-family: $base-sans-serif;
-    font-size: .85em;
+  img {
+    width: 100%;
+  }
 
-    a {
-      font-weight: 800;
+  ul {
+    @extend %content-block;
+    font-family: $base-sans-serif;
+    font-size: .875em;
+    font-weight: 600;
+    list-style-type: disc;
+    padding: 0 1em; 
+
+    @include media($default-768) {
+      line-height: 1.85em;
+    }
+
+    li {
+      margin-bottom: .5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
-  p.caption { 
-    color: $text-gray;
-    font-family: $base-sans-serif;
-    font-size: .85em;
-    font-weight: 500;
-    margin: .25em;
-    text-align: left;
+  .block-text { 
+    border-color: $tribune-yellow;
+    border-style: solid;
+    border-width: 1px 0;
+    position: relative;
   }
 
 }
