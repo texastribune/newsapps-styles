@@ -372,7 +372,7 @@ th {
     display: table;
     clear: both; }
 
-.content-block, .shareline, .prose {
+.content-block, .banner .grand-header, .shareline, .prose {
   margin-left: 1.25em;
   margin-right: 1.25em; }
 

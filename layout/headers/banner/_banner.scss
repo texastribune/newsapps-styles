@@ -9,6 +9,7 @@
   width: 100%;
 
   .grand-header {
+    @extend %content-block;
     display: table-cell;
     padding: 0 1.25em;
     position: relative;
