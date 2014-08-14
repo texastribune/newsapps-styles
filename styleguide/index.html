@@ -30,6 +30,7 @@
       <li><a href="#components">Components</a>
         <ol>
           <li><a href="#social-media">Social Media</a></li>
+          <li><a href="#about">About, Contributors</a></li>
         </ol>
       </li>
       
@@ -487,6 +488,9 @@
 
 <!-- Components -->
 <div id="components" class="container">
+  <div class="prose">
+    <h1>Components</h1>
+  </div>
   <!-- Social Media -->
   <div id="social-media">
     <div class="prose">
@@ -494,20 +498,21 @@
       <p>Styles are located in layout/components/social-media. There are a couple of options, most of which require you to include FontAwesome in the header.</p>
       <p>&lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;</p>
       <h3>Share Buttons</h3>
-        <div class="row share-row" style="margin-bottom: 1em;">
-          <a target="_blank" title="share on Twitter" href="http://twitter.com/share?text=Check out the Texas Hospitals Explorer and learn more about quality of care at Texas' 377 hospitals&url=http://hospitals.texastribune.org/&hashtags=txhospitals">
-            <div class="share-cell first-share">
-              <i class="fa fa-twitter"></i> Tweet
-            </div>
-          </a>
-          <a target="_blank" title="share on Facebook" href="http://www.facebook.com/sharer.php?u=http://hospitals.texastribune.org/">
-            <div class="share-cell">
-              <i class="fa fa-facebook"></i> Recommend
-            </div>
-          </a>
+    </div>
+    <div class="row share-row" style="margin-bottom: 1em;">
+      <a target="_blank" title="share on Twitter" href="http://twitter.com/share?text=Check out the Texas Hospitals Explorer and learn more about quality of care at Texas' 377 hospitals&url=http://hospitals.texastribune.org/&hashtags=txhospitals">
+        <div class="share-cell first-share">
+          <i class="fa fa-twitter"></i> Tweet
         </div>
-      <pre>
-        <code>
+      </a>
+      <a target="_blank" title="share on Facebook" href="http://www.facebook.com/sharer.php?u=http://hospitals.texastribune.org/">
+        <div class="share-cell">
+          <i class="fa fa-facebook"></i> Recommend
+        </div>
+      </a>
+    </div>
+    <pre>
+      <code>
 &lt;div class="row share-row"&gt;
   &lt;a target="_blank" title="share on Twitter" href="http://twitter.com/share?text=Check out the Texas Hospitals Explorer and learn more about quality of care at Texas' 377 hospitals&url=http://hospitals.texastribune.org/&hashtags=txhospitals"&gt;
     &lt;div class="share-cell first-share"&gt;
@@ -520,37 +525,39 @@
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
-        </code>
-      </pre>
+      </code>
+    </pre>
+    <div class="prose">
       <h3>Sharelines</h3>
       <p>For that little sumthin' extra...</p>
       <p>You'll need to encode the URLs, which you can easily do on the console using encodeURI('http...');</p>
-      <div class="shareline">
-        <h3>Sharelines</h3>
-        <ul>
-          <li>
-            <a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
-            <i class="fa fa-twitter"></i>
-            </a>
-            <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
-            <i class="fa fa-facebook"></i>
-            </a>
-            <p>The Politics of Prevention: How Texas lawmakers have changed women's access to care
-            </p>
-          </li>
-          <li>
-            <a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
-            <i class="fa fa-twitter"></i>
-            </a>
-            <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
-            <i class="fa fa-facebook"></i>
-            </a>
-            <p>Check out Texas Tribune's series on how state politics have affected women's access to care in Texas</p>
-          </li>
-        </ul>
-      </div>
-      <pre>
-        <code>
+    </div>
+    <div class="shareline">
+      <h3>Sharelines</h3>
+      <ul>
+        <li>
+          <a href="https://twitter.com/home?status=The%20Politics%20of%20Prevention:%20How%20Texas%20lawmakers%20have%20changed%20women's%20access%20to%20care%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>The Politics of Prevention: How Texas lawmakers have changed women's access to care
+          </p>
+        </li>
+        <li>
+          <a href="https://twitter.com/home?status=Check%20out%20@TexasTribune's%20series%20on%20how%20state%20politics%20have%20affected%20women's%20access%20to%20care%20in%20Texas%20http%3A//trib.it/1p0ZgHb" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1p0ZgHb" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>Check out Texas Tribune's series on how state politics have affected women's access to care in Texas</p>
+        </li>
+      </ul>
+    </div>
+    <pre>
+      <code>
 &lt;div class="shareline"&gt;
   &lt;h3&gt;Sharelines&lt;/h3&gt;
   &lt;ul&gt;
@@ -575,11 +582,51 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
-        </code>
-      </pre>
-    </div>
+      </code>
+    </pre>
   </div>
 
+  <!-- About, Contributors -->
+  <div id="about">
+    <div class="prose">
+      <h3>About, Contributors</h3>
+      <p></p>
+    </div>
+    <div class="about">
+      <h3>ABOUT</h3>
+      <p class="about-desc">The Tribune's intrepid News Apps developers and designers worked for months &mdash; through sweat, blood, tears and maniacal laughter &mdash; to bring you this amazing style guide. Use it carefully, for our mascot, The Unicorn Head, has been known to stealthily attack people with bad style. Just ask the foam buffalo.</p>
+      <h3>Contributors</h3>
+      <ul>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/becca-aaronson/">Becca Aaronson</a></p>
+          <p class="handle">News Apps Developer | <a href="https://twitter.com/becca_aa" target="_blank">@becca_aa</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/ryan-murphy/">Ryan Murphy</a></p>
+          <p class="handle">News Apps Team Lead | <a href="https://twitter.com/rdmurphy" target="_blank">@rdmurphy</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="mailto:mvanetta@texastribune.org">Marcos Vanetta</a></p>
+          <p class="handle">Knight/Mozilla Fellow | <a href="https://twitter.com/malev" target="_blank">@malev</a></p>
+        </li>
+      </ul>
+      <h3>Art &amp; Design</h3>
+      <ul>
+        <li>
+          <p class="contributor"><a href="mailto:bhasson@texastribune.org">Ben Hasson</a></p>
+          <p class="handle">Web Designer | <a href="https://twitter.com/been_hussln" target="_blank">@been_hussln</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/jacob-villanueva/">Jacob Villanueva</a></p>
+          <p class="handle">Art Director | <a href="https://twitter.com/jacovillanueva" target="_blank">@jacovillanueva</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="mailto:twiseman@texastribune.org">Todd Wiseman</a></p>
+          <p class="handle">Multimedia Producer | <a href="https://twitter.com/wisemeister" target="_blank">@Wisemeister</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 
