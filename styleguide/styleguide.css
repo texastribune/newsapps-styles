@@ -945,9 +945,4 @@ dd {
   position: relative; }
 
 pre {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
   width: 100%; }
-  pre:last-child {
-    margin-right: 0; }

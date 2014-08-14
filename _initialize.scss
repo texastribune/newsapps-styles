@@ -23,5 +23,5 @@
 
 //Style Guide stylez
 pre {
-  @include span-columns(12);
+  @include fill-parent();
 }

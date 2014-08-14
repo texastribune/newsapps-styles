@@ -511,6 +511,7 @@
         </div>
       </a>
     </div>
+  <div class="prose">
     <pre>
       <code>
 &lt;div class="row share-row"&gt;
@@ -527,7 +528,6 @@
 &lt;/div&gt;
       </code>
     </pre>
-    <div class="prose">
       <h3>Sharelines</h3>
       <p>For that little sumthin' extra...</p>
       <p>You'll need to encode the URLs, which you can easily do on the console using encodeURI('http...');</p>
@@ -556,6 +556,7 @@
         </li>
       </ul>
     </div>
+  <div class="prose">
     <pre>
       <code>
 &lt;div class="shareline"&gt;
@@ -590,7 +591,8 @@
   <div id="about">
     <div class="prose">
       <h3>About, Contributors</h3>
-      <p></p>
+      <p>Give yourself (and your teammates!) some credit. Styles for the About section are located in layout/components/about.</p>
+      <p>The .about class includes @extend %prose, %content-block and %paragraph-header. Even though the styles look similar to .prose, <strong>don't put your About section in a .prose tag</strong>. It also includes two grid mixins: features-layout ($bp-about, 12, 8) to add whitespace on the sides of large screens, and list-grid ($bp-about, 12, 2) to allow two contributors per row on large screens.</p>
     </div>
     <div class="about">
       <h3>ABOUT</h3>
@@ -626,8 +628,9 @@
         </li>
       </ul>
     </div>
-    <pre>
-      <code>
+    <div class="prose">
+      <pre>
+        <code>
 &lt;div class="about"&gt;
   &lt;h3&gt;ABOUT&lt;/h3&gt;
   &lt;p class="about-desc"&gt;The Tribune's intrepid News Apps developers and designers worked for months &mdash; through sweat, blood, tears and maniacal laughter &mdash; to bring you this amazing style guide. Use it carefully, for our mascot, The Unicorn Head, has been known to stealthily attack people with bad style. Just ask the foam buffalo.&lt;/p&gt;
@@ -662,9 +665,9 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
-      </code>
-    </pre>
-
+        </code>
+      </pre>
+    </div>
   </div>
 </div>
 
