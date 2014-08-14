@@ -5,18 +5,16 @@
 }
 
 %content-block {
-  margin-left: 1.25em; // 20px left
-  margin-right: 1.25em; // 20px right
+  @include pad(0 1.25em);
 }
 
 %content-block-full {
   @include media($default-480) {
-    margin-left: 0;
-    margin-right: 0;
+    @include pad(0);
   }
 }
 
-// Header & Footer 
+// Footer Links 
 
 %href-on-black {
   color: $href-offwhite;
@@ -35,7 +33,7 @@
 
 
 
-// Prose Placeholders
+// Prose 
 
 %prose {
   color: $bodytext-black;

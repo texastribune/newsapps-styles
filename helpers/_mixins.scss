@@ -6,6 +6,14 @@
 
 /* Grid Mixins */
 
+@mixin features-layout ($bp, $col-width, $new-span-size) {
+  @include span-columns($col-width);
+  @include media($bp) {
+    @include span-columns($new-span-size of $col-width);
+    @include shift(($col-width - $new-span-size) / 2);
+  }
+}
+
 @mixin list-grid ($bp, $col-width, $number-li) {
   //Creates a grid for list items
   //$bp = breakpoint
