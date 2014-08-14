@@ -845,6 +845,31 @@ dd {
       margin-left: 17.05961%; }
       .about:last-child {
         margin-right: 0; } }
+  .about ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0; }
+    .about ul:last-child {
+      margin-right: 0; }
+    .about ul li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .about ul li:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 768px) {
+        .about ul li {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .about ul li:last-child {
+            margin-right: 0; }
+          .about ul li:nth-child(2n) {
+            margin-right: 0; } }
   .about p.contributor {
     font-weight: 600; }
   .about p.handle {

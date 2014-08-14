@@ -3,6 +3,7 @@ $bp-about: $default-768;
 
 .about {
   @include features-layout($bp-about, 12, 8);
+  @include list-grid($bp-about, 12, 2);
   @extend %content-block;
   @extend %prose;
 
