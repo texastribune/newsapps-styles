@@ -52,7 +52,7 @@ button,
   @include button(flat, $tribune-yellow);
 
   &:disabled {
-    background-color: darken($glossary-gray, 20%);
+    background-color: darken($explainer-gray, 20%);
     cursor: default;
   }
 }
