@@ -33,6 +33,7 @@
         <ol>
           <li><a href="#social-media">Social Media</a></li>
           <li><a href="#about">About, Contributors</a></li>
+          <li><a href="#table">Tables</a></li>
         </ol>
       </li>
       
@@ -683,6 +684,68 @@
   </div>
 </div>
 
+<div id="tables">
+  <div class="prose">
+    <h3>Tables</h3>
+    <p>Table styles are located in layout/components/tables. You must define which header is related to each data point, in order to have headers on Mobile. To do this, set the "data-title" inside the &lt;td&gt; tag, i.e. &lt;td data-title="blank"&gt;.</p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>One</th>
+        <th>Two</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-title="Title">Big Bird</td>
+        <td data-title="One">A</td>
+        <td data-title="Two">B</td>
+      </tr>
+      <tr>
+        <td data-title="Title">Bert</td>
+        <td data-title="One">C</td>
+        <td data-title="Two">D</td>
+      </tr>
+      <tr>
+        <td data-title="Title">Ernie</td>
+        <td data-title="One">E</td>
+        <td data-title="Two">F</td>
+      </tr>
+    </tbody>
+  </table>
+  <pre>
+    <code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;One&lt;/th&gt;
+      &lt;th&gt;Two&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Big Bird&lt;/td&gt;
+      &lt;td data-title="One"&gt;A&lt;/td&gt;
+      &lt;td data-title="Two"&gt;B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Bert&lt;/td&gt;
+      &lt;td data-title="One"&gt;C&lt;/td&gt;
+      &lt;td data-title="Two"&gt;D&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Ernie&lt;/td&gt;
+      &lt;td data-title="One"&gt;E&lt;/td&gt;
+      &lt;td data-title="Two"&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+    </code>
+  </pre>
+</div>
 
 </div>
 </body>

@@ -888,6 +888,69 @@ dd {
   .about .about-desc {
     color: #666666; }
 
+table {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 2em;
+  width: 100%; }
+  @media screen and (max-width: 480px) {
+    table {
+      border-top: 1px solid #bbbbbb;
+      display: block;
+      font-size: .875em; } }
+
+@media screen and (max-width: 480px) {
+  thead {
+    display: none; } }
+
+@media screen and (max-width: 480px) {
+  tbody {
+    display: block; } }
+
+th {
+  border-bottom: 1px solid #bbbbbb;
+  font-size: 1em;
+  font-weight: 800;
+  padding: 0 12px 8px;
+  text-align: right;
+  vertical-align: middle; }
+  th:first-child {
+    text-align: left; }
+  @media screen and (max-width: 480px) {
+    th {
+      display: block; } }
+
+td {
+  font-size: .875em;
+  padding: 8px 12px;
+  text-align: right; }
+  td:first-child {
+    text-align: left; }
+  @media screen and (max-width: 480px) {
+    td {
+      display: block;
+      font-weight: 300;
+      padding: 0 12px 8px;
+      text-align: left; }
+      td:first-child {
+        font-size: 1em;
+        font-weight: 800;
+        padding-top: 8px; }
+      td[data-title]:first-child:before {
+        content: none; }
+      td:before {
+        content: attr(data-title) "\A";
+        display: block;
+        font-weight: 800;
+        margin-bottom: .25em;
+        white-space: pre-wrap; } }
+
+tr:nth-child(odd) td {
+  background-color: whitesmoke; }
+@media screen and (max-width: 480px) {
+  tr {
+    display: block; } }
+
 /* Base Prose Theme */
 .prose h1 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
