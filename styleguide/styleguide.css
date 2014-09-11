@@ -939,7 +939,7 @@ td {
       td[data-title]:first-child:before {
         content: none; }
       td:before {
-        content: attr(data-title) "\A";
+        content: attr(data-title) "\a";
         display: block;
         font-weight: 800;
         margin-bottom: .25em;
