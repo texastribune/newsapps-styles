@@ -21,8 +21,4 @@
 @import 'layout/components/tables';
 
 @import 'theme/prose';
-
-//Style Guide stylez
-pre {
-  @include fill-parent();
-}
+@import 'theme/style-guide';

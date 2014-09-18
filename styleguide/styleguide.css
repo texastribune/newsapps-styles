@@ -414,7 +414,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+  z-index: 0; }
 
 h1,
 h2,
@@ -1022,3 +1023,27 @@ tr:nth-child(odd) td {
 
 pre {
   width: 100%; }
+
+@media screen and (min-width: 600px) {
+  #side-nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    #side-nav:last-child {
+      margin-right: 0; } }
+
+.side-nav {
+  margin-right: 2em; }
+  .side-nav li {
+    border-bottom: 1px solid #bbbbbb;
+    vertical-align: middle; }
+    .side-nav li a {
+      color: #282828;
+      display: block;
+      padding: 1em;
+      text-decoration: none; }
+    .side-nav li:hover {
+      background-color: #008990;
+      transition: padding .2s ease;
+      padding-left: 1.25em; }
