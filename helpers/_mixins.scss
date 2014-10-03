@@ -1,26 +1,26 @@
 /* Basic Style Mixins */
 
-@mixin breakpoint($media) {
+@mixin breakpoint($media, $bp) {
   @if $media == tiny {
-    @include media ($bp-landing-tiny) {
+    @include media ($bp) {
       @content ;
     }
   }
 
   @else if $media == small {
-    @include media ($bp-landing-small) {
+    @include media ($bp) {
       @content ;
     }
   }
 
   @else if $media == med {
-    @include media ($bp-landing-medium) {
+    @include media ($bp) {
       @content ;
     }
   }
 
   @else if $media == large {
-    @include media ($bp-landing-large) {
+    @include media ($bp) {
       @content ;
     }    
   }
