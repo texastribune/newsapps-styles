@@ -1,12 +1,11 @@
 /* Base Theme for HTML elements */
 
 body {
-  color: $bodytext-black;
+  background-color: $tribune-black;
   font-family: $base-sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   text-rendering: optimizelegibility;
-  z-index: 0;
 }
 
 h1,
@@ -32,7 +31,7 @@ hr {
   background-color: $line-gray;
   border: 0 none;
   height: 2px;
-  @include white-space(2);
+  margin-bottom: 2em;
 
   &.thin {
     height: 1px;
