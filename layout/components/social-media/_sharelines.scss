@@ -1,0 +1,78 @@
+.shareline {
+  @extend %content-block;
+  h3 {
+    @extend %paragraph-header;
+    border-bottom: 1px solid $border-gray;
+    color: $bodytext-black;
+    line-height: 1.4;
+    margin-top: 1em;
+    padding-bottom: .75em;
+    text-align: left;
+  }
+
+  p {
+    color: $text-gray;
+    font-family: $base-sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+    letter-spacing: .02em;
+    line-height: 1.4;
+    margin: 1em 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      border-bottom: 1px solid $border-gray;
+      margin: auto;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:active {
+      color: $share-button-black;
+    }
+
+    &:hover {
+      color: $share-button-black;
+    }
+  }
+
+  .fa {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    display: inline-block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 1em;
+
+    &:active {
+      color: $share-button-black;
+    }
+
+    &:hover {
+      color: $share-button-black;
+    }
+  }
+
+  .fa-twitter:before {
+    border-right: 1px solid #ccc;
+    content: '\f099';
+    padding-right: .5em;
+  }
+
+  .fa-facebook:before {
+    content: '\f09a';
+    padding: 0 .5em;
+  }
+
+}
