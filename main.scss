@@ -1,0 +1,11 @@
+// dependencies: bourbon + neat
+@import 'bower_components/dist/bourbon';
+@import 'bower_components/app/assets/stylesheets/neat';
+
+// loads base and helpers
+@import 'initialize';
+
+// layout
+@import 'layout/masthead';
+@import 'layout/banner';
+@import 'layout/footers/small';

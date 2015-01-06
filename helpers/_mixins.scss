@@ -1,0 +1,80 @@
+/* Basic Style Mixins */
+
+@mixin breakpoint($media, $bp) {
+  @if $media == tiny {
+    @include media ($bp) {
+      @content ;
+    }
+  }
+
+  @else if $media == small {
+    @include media ($bp) {
+      @content ;
+    }
+  }
+
+  @else if $media == med {
+    @include media ($bp) {
+      @content ;
+    }
+  }
+
+  @else if $media == large {
+    @include media ($bp) {
+      @content ;
+    }    
+  }
+}
+
+@mixin hide($bp) {
+  @include media($bp) {
+    display: none;
+  }
+}
+
+
+/* Grid Mixins */
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+@mixin features-layout ($bp, $col-width, $new-span-size) {
+  @include span-columns($col-width);
+  @include media($bp) {
+    @include span-columns($new-span-size of $col-width);
+    @include shift(($col-width - $new-span-size) / 2);
+  }
+}
+
+@mixin list-grid ($bp, $col-width, $number-li) {
+  //Creates a grid for list items
+  //$bp = breakpoint
+  //$col-width = the number of span-columns in your grid
+  //$number-li = the number of list items
+  ul {
+    @include span-columns($col-width);
+    @include pad(0);
+    
+    li {
+      @include span-columns($col-width of $col-width);
+      @include media($bp) {
+        @include span-columns($col-width / $number-li of $col-width);
+        @include omega($number-li+n);
+      }
+    }
+  }
+}
+
+@mixin div-grid ($bp, $col-width, $number-div, $min-col) {
+  // @include span-columns ($col-width / $min-col);
+  
+  @include media($bp) {
+    div {
+      @include span-columns($col-width / $number-div of $col-width);
+      @include omega($number-div+n);
+    }
+  }
+}
+

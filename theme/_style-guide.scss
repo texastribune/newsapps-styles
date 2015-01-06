@@ -1,0 +1,35 @@
+$bp-guide: new-breakpoint(min-width 600px);
+
+//Style Guide stylez
+pre {
+  @include fill-parent();
+}
+
+#side-nav {
+  @include media($bp-guide) {
+    @include span-columns(4);
+  }
+}
+
+.side-nav {
+  margin-right: 2em;
+  li {
+    border-bottom: 1px solid $line-gray;
+    vertical-align: middle;
+    a {
+      color: $bodytext-black;
+      display: block;
+      padding: 1em;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $teal;
+      transition: padding .2s ease;
+      padding-left: 1.25em;
+
+    }
+  }
+
+
+}

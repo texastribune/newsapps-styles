@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Apps Styleguide</title>
+  <link rel="stylesheet" href="styleguide.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<!-- Table of Contents -->
+<div class="container">
+  <div class="content-block">
+    <div class="prose">
+      <h1>Hello World!</h1>
+      <p>Welcome to the Texas Tribune News Apps Style Guide &mdash; a constant work-in-progress.</p>
+      <hr class="yellow"></hr>
+    </div>
+    <div id="side-nav">
+      <ul class="side-nav">
+        <li><a href="#base-html">Base HTML Styles</a></li>
+        <li><a href="#grid-specs">Grid Specs</a></li>
+        <li><a href="#masthead">Masthead</a></li>
+        <li><a href="#lead-banner">Project Header, Lead Art</a></li>
+        <li><a href="#footer">Footer</a></li>
+        <li><a href="#prose">Prose</a></li>
+        <li><a href="#headline">Headline, Byline</a></li>
+        <li><a href="#headers">Headers</a></li>
+        <li><a href="#captions">Captions</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#block-text">Block Text</a>
+        </li>
+        <li><a href="explainer">Explainer Text</a></li>
+        <li><a href="#components">Components</a>
+        <li><a href="#social-media">Social Media</a></li>
+        <li><a href="#about">About, Contributors</a></li>
+        <li><a href="#table">Tables</a></li>
+        </li>  
+      </ul>
+    </div>
+  </div>
+
+<!-- Base HTML Styles -->
+<div id="base-html">
+  <div id="base-html" class="content-block">
+    <h1>Base HTML Styles</h1>
+    <p>The basic html styles can be found in in the base_theme file. For full effect, this section of the News Apps Style Guide doesn't have any other styles.</p>
+
+    <h1>This is an H1</h1>
+    <h2>This is an H2</h2>
+    <h3>This is an H3</h3>
+    <h4>This is an H4</h4>
+    <h5>This is an H5</h5>
+    <h6>This is an H6</h6>
+    <p>This is a paragraph.</p>
+
+    <button>Button Tag</button>
+
+    <div class="button">Div.Button</div>
+
+    <p>Here are examples of HR tags. The basic HR tag is 2px wide and gray. Add the class "thin" to make it 1px wide and the class "yellow" to make it classic Tribune yellow. It includes 2rem white-space.</p>
+    <hr>
+    <hr class="thin">
+    <hr class="yellow">
+  </div>
+</div>
+
+<!-- Grid Specs -->
+<div id="grid-specs" class="container">
+  <div class="prose">
+    <h1>Grid Specs</h1>
+    <p>The grid layout files are located in base/scaffold.</p>
+    <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
+    <h3>Content-Block</h3>
+    <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, or add "@extend %content-block" to the parent-most element's styles. </p>
+  </div>
+</div>
+
+<!-- Masthead -->
+<div id="masthead" class="container">
+  <div class="prose">
+    <h1>Masthead</h1>
+    <p>Here is the code for the Masthead that links back to the Tribune homepage.</p>
+  </div>
+</div>
+  <header class="masthead">
+   <div class="container">
+    <div class="branding">
+      <a href="http://www.texastribune.org/">
+       <img class="trib-logo" alt="The Texas Tribune" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png">
+      </a>
+    </div>
+   </div>
+  </header>
+<div class="container">
+  <div class="prose">
+    <pre>
+     <code>
+&lt;header class="masthead"&gt;
+  &lt;div class="container"&gt;
+&lt;div class="branding"&gt;
+ &lt;a href="http://www.texastribune.org/"&gt;
+   &lt;img class="trib-logo" alt="The Texas Tribune" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"&gt;
+ &lt;/a&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;  
+     </code>
+    </pre>
+  </div>
+</div>
+
+<!-- Project Header, Lead Art -->
+<div id="lead-banner" class="container">
+  <div class="prose">
+    <h1>Project Header, Lead Art</h1>
+    <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+    <h3>Basic Banner</h3>
+  </div>
+</div>
+
+<!-- Basic Banner -->
+<div class="banner">
+ <div class="grand-header-image"></div>
+ <header class="grand-header">
+  <h1><a href="/">Project Title</a></h1>
+  <p>Zingy subtitle to hook 'em in</p>
+ </header>
+</div>
+<div class="container">
+  <div class="prose">
+    <pre>
+      <code>
+&lt;div class="banner"&gt;
+ &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+ &lt;header class="grand-header"&gt;
+  &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+  &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
+ &lt;/header&gt;
+&lt;/div&gt;
+     </code>
+    </pre>
+
+    <h3>Banner with Navigation Buttons</h3>
+    <p>Preferred height for this banner style is 448px. Styles located at layout/headers/banner/nav-bar.</p>
+  </div>
+</div>
+
+<!-- Banner with Nav-Bar -->
+<div class="banner">
+  <div class="grand-header-image"></div>
+  <header class="grand-header">
+    <h1><a href="/">Project Title</a></h1>
+    <p>Zingy subtitle to hook 'em in</p>
+    <!-- Static navigation bar -->
+    <div class="wrapper">
+    <div id="nav-bar" class="nav-bar">
+      <ul>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 1
+          </div>
+        </a>
+       </li>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 2
+          </div>
+        </a>
+       </li>
+       <li>
+        <a href="">
+          <div class="nav-link">
+           Story 3
+          </div>
+        </a>
+       </li>
+       <li class="selected">
+        <a href="">
+          <div class="nav-link">
+           Story 4
+          </div>
+        </a>
+       </li>
+      </ul>
+    </div>
+    </div>
+  </header>
+</div>
+<div class="container">
+  <div class="prose">
+    <pre>
+      <code>
+&lt;div class="banner"&gt;
+  &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+  &lt;header class="grand-header"&gt;
+    &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
+    &lt;!-- Static navigation bar --&gt;
+    &lt;div class="wrapper"&gt;
+      &lt;div id="nav-bar" class="nav-bar"&gt;
+        &lt;ul&gt;
+         &lt;li&gt;
+          &lt;a href=""&gt;
+            &lt;div class="nav-link"&gt;
+                       Story 1
+            &lt;/div&gt;
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a href=""&gt;
+            &lt;div class="nav-link"&gt;
+                       Story 2
+            &lt;/div&gt;
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a href=""&gt;
+            &lt;div class="nav-link"&gt;
+                       Story 3
+            &lt;/div&gt;
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="selected"&gt;
+          &lt;a href=""&gt;
+            &lt;div class="nav-link"&gt;
+                       Story 4
+            &lt;/div&gt;
+          &lt;/a&gt;
+         &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<!-- Footers -->
+<div id="footer" class="container">
+  <div class="prose">
+    <h1>Footer</h1>
+    <p>These styles are located in layout/footers. There are two main footer options: Basic and News Apps.</p>
+    <h3>Basic</h3>
+  </div>
+</div>
+
+<!-- Basic Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content-block">
+    <nav class="first-nav">
+      <ul>
+        <li>&copy; 2014 <a href="http://www.texastribune.org/">The Texas Tribune</a></li>
+      </ul>
+    </nav>
+    <nav class="last-nav">
+      <ul>
+        <li><a href="http://www.texastribune.org/about/">About Us</a></li>
+        <li><a href="http://www.texastribune.org/contact/">Contact Us</a></li>
+        <li><a href="http://www.texastribune.org/support-us/donors-and-members/">Who Funds Us?</a></li>
+        <li><a href="http://www.texastribune.org/terms-of-service/">Terms of Service</a></li>
+        <li><a href="http://www.texastribune.org/ethics/">Code of Ethics</a></li>
+        <li><a href="http://www.texastribune.org/privacy/">Privacy Policy</a></li>
+        <li class="donor-item"><a href="https://www.texastribune.org/join/">Donate</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+</footer>
+<div class="container">
+  <div class="prose">
+    <pre>
+      <code>
+&lt;footer class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="content-block"&gt;
+    &lt;nav class="first-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&copy; 2014 &lt;a href="http://www.texastribune.org/"&gt;The Texas Tribune&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;nav class="last-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/about/"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/support-us/donors-and-members/"&gt;Who Funds Us?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/terms-of-service/"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/ethics/"&gt;Code of Ethics&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.texastribune.org/privacy/"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="donor-item"&gt;&lt;a href="https://www.texastribune.org/join/"&gt;Donate&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<!-- News Apps Footer -->
+<div class="container">
+  <div class="prose">
+    <h3>News Apps</h3>
+    <p>Don't forget to add FontAwesome to your header! &lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;&lt;/p&gt;</p>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <a href="https://twitter.com/newsapps"><img class="logo" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-NewsApps-yellow.svg" alt="Texas Tribune News Apps logo, links to News Apps' Twitter account"></a>
+    </div>
+    <div>
+      <ul>
+        <li><a href="http://www.facebook.com/texastribune"><i class="icon fa-facebook-square"></i>Facebook</a></li>
+        <li><a href="http://twitter.com/TexasTribune"><i class="icon fa-twitter-square"></i>Twitter</a></li>
+        <li><a href="http://www.youtube.com/user/thetexastribune"><i class="icon fa-youtube-play"></i>YouTube</a></li>
+        <li><a href="http://instagram.com/texas_tribune"><i class="icon fa-instagram"></i>Instagram</a></li>
+        <li><a href="http://www.linkedin.com/company/texas-tribune"><i class="icon fa-linkedin-square"></i>LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="internal-links">
+      <ul>
+      <li><a href="http://www.texastribune.org/about/">About Us</a></li>
+      <li><a href="http://www.texastribune.org/support-us/donors-and-members/">Who Funds Us?</a></li>
+      <li><a href="http://www.texastribune.org/terms-of-service/">Terms of Service</a></li>
+      <li><a href="http://www.texastribune.org/ethics/">Code of Ethics</a></li>
+      <li><a href="http://www.texastribune.org/privacy/">Privacy Policy</a></li>
+      <li><a href="http://www.texastribune.org/corrections/">Corrections</a></li>
+      <li><a href="https://www.texastribune.org/join/" class="donate-link">Donate</a></li>
+    </ul>
+    </div>
+    <div class="donate">
+      <ul>
+        <li>Nonpartisan.</li>
+        <li>Nonprofit.</li>
+        <li>Statewide.</li>
+        <a href="https://www.texastribune.org/join/"><li>Join Us</li></a>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="container">
+  <div class="prose">
+    <pre>
+      <code>
+&lt;footer class="footer"&gt;
+  &lt;div class="footer-container"&gt;
+    &lt;div&gt;
+      &lt;a href="https://twitter.com/newsapps"&gt;&lt;img class="logo" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-NewsApps-yellow.svg" alt="Texas Tribune News Apps logo, links to News Apps' Twitter account"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://www.facebook.com/texastribune"&gt;&lt;i class="icon fa-facebook-square"&gt;&lt;/i&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://twitter.com/TexasTribune"&gt;&lt;i class="icon fa-twitter-square"&gt;&lt;/i&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.youtube.com/user/thetexastribune"&gt;&lt;i class="icon fa-youtube-play"&gt;&lt;/i&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://instagram.com/texas_tribune"&gt;&lt;i class="icon fa-instagram"&gt;&lt;/i&gt;Instagram&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.linkedin.com/company/texas-tribune"&gt;&lt;i class="icon fa-linkedin-square"&gt;&lt;/i&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="internal-links"&gt;
+      &lt;ul&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/about/"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/support-us/donors-and-members/"&gt;Who Funds Us?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/terms-of-service/"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/ethics/"&gt;Code of Ethics&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/privacy/"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.texastribune.org/corrections/"&gt;Corrections&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.texastribune.org/join/" class="donate-link"&gt;Donate&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="donate"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Nonpartisan.&lt;/li&gt;
+        &lt;li&gt;Nonprofit.&lt;/li&gt;
+        &lt;li&gt;Statewide.&lt;/li&gt;
+        &lt;a href="https://www.texastribune.org/join/"&gt;&lt;li&gt;Join Us&lt;/li&gt;&lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<!-- Prose Styles -->
+<div id="prose" class="container">
+  <div class="prose">
+    <h1>Prose</h1>
+    <p>The basic prose styles outlined below can be found in theme/prose. The class .prose includes an extension of content-block, and its elements are given a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
+    <p>The majority of this Style Guide is styled with .prose. These paragraphs, for example, are just simple .prose &lt;p&gt; tags. If you want to apply these paragraph settings to an element, and don't want to use a .prose class, you can @extend %prose to a specific element in your stylesheet.</p>
+
+  <!-- Headline, Byline -->
+    <div id="headline">
+        <h3>Headline, Byline</h3>
+        <p>Use the &lt;h1&gt; tag in .prose for Headlines, and &lt;p class="byline"&gt; for bylines.</p>
+        <h1>Cat Saves Planet from Apocolypse, Dies in Action</h1>
+        <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
+      <pre>
+        <code>
+&lt;div class="prose"&gt;
+  &lt;h1&gt;Headline, Byline&lt;/h1&gt;
+  &lt;h1&gt;Cat Saves Planet from Apocolypse, Dies in Action&lt;/h1&gt;
+  &lt;p class="byline"&gt;By &lt;a href="http://www.texastribune.org/about/staff/captain-planet/"&gt;Captain Planet&lt;/a&gt; | July 0, 2084&lt;/p&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+
+  <!-- Headers -->
+    <div id="headers">
+      <h3>Paragraph Headers</h3>
+      <p>That ^ is an example of a .prose h3 paragraph header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
+      <pre>
+        <code>
+&lt;h3&gt;Paragraph Headers&lt;/h3&gt;
+        </code>
+      </pre>
+      <h3 class="data-header">Data Headers</h3>
+      <p>That ^ is an example of a .prose .data-header. It's used for data-related headers, such as legend titles, or for explainer text.</p>
+      <pre>
+        <code>
+&lt;h3 class="data-header"&gt;Data Headers&lt;/h3&gt;
+        </code>
+      </pre>
+    </div>
+
+  <!-- Captions -->
+    <div id="captions">
+      <h3>Captions</h3>
+      <p>Captions for photos and other media elements are styled using prose p.caption. Images within .prose will fill 100% of the available width, unless otherwise specified.</p>
+      <img src="http://placekitten.com/800/400" style="width: 50%;">
+      <p class="caption">This is a picture of a kitten. </p>
+      <pre>
+        <code>
+&lt;img src="http://placekitten.com/800/400" style="width: 50%;"&gt;
+&lt;p class="caption"&gt;This is a picture of a kitten. &lt;/p&gt;
+        </code>
+      </pre>
+    </div>
+
+  <!-- Lists -->
+    <div id="lists">
+      <h3>Lists</h3>
+      <ul>
+        <li>Are often used to call out important points.</li>
+        <li>They typically begin with an h3 paragraph header.</li>
+        <li>Exciting stuff.</li>
+      </ul>
+
+      <pre>
+        <code>
+&lt;h3&gt;List Header&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;          
+        </code>
+      </pre>
+    </div>
+
+  <!-- Block Text -->
+    <div id="block-text">
+      <h3>Block Text</h3>
+      <p>Add a div.block-text around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
+      <p>Use the &lt;h2&gt; tag for block quote quotes, and p.source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
+
+      <div class="block-text">
+        <h2>&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
+        <p class="source">&mdash; Becca Aaronson, cat enthusiast</p>
+      </div>
+      <pre>
+        <code>
+&lt;div class="block-text"&gt;
+  &lt;h2&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
+  &lt;p class="source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+  <!-- Explainer -->
+    <div id="explainer">
+      <h3>Explainer Text</h3>
+      <p class="explainer-text">Use the class explainer-text when you're explaining something, such as how to use the Hospitals Explorer or to define a glossary definition.</p>
+      <pre>
+        <code>
+&lt;p class="explainer-text"&gt;Text goes here&lt;/p&gt;
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<!-- Components -->
+<div id="components" class="container">
+  <div class="prose">
+    <h1>Components</h1>
+  </div>
+  <!-- Social Media -->
+  <div id="social-media">
+    <div class="prose">
+      <h1>Social Media</h1>
+      <p>Styles are located in layout/components/social-media. There are a couple of options, most of which require you to include FontAwesome in the header.</p>
+      <p>&lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;</p>
+      <h3>Share Buttons</h3>
+    </div>
+    <div class="row share-row" style="margin-bottom: 1em;">
+      <a target="_blank" title="share on Twitter" href="https://twitter.com/intent/tweet?text=Tweet%20Text"> 
+        <div class="share-cell first-share">
+          <i class="fa fa-twitter"></i> Tweet
+        </div>
+      </a>
+      <a target="_blank" title="share on Facebook" href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/" title="share on Facebook">
+        <div class="share-cell">
+          <i class="fa fa-facebook"></i> Recommend
+        </div>
+      </a>
+    </div>
+  <div class="prose">
+    <pre>
+      <code>
+&lt;div class="row share-row"&gt;
+  &lt;a target="_blank" title="share on Twitter" href="https://twitter.com/intent/tweet?text=Tweet%20Text"&gt;
+    &lt;div class="share-cell first-share"&gt;
+      &lt;i class="fa fa-twitter"&gt;&lt;/i&gt; Tweet
+    &lt;/div&gt;
+  &lt;/a&gt;
+  &lt;a target="_blank" title="share on Facebook" href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/"&gt;
+    &lt;div class="share-cell"&gt;
+      &lt;i class="fa fa-facebook"&gt;&lt;/i&gt; Recommend
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+      <h3>Sharelines</h3>
+      <p>For that little sumthin' extra...</p>
+      <p>You'll need to encode the URLs, which you can easily do on the console using encodeURI('http...');</p>
+    </div>
+    <div class="shareline">
+      <h3>Sharelines</h3>
+      <ul>
+        <li>
+          <a href="https://twitter.com/intent/tweet?text=Tweet%20Text" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>The Politics of Prevention: How Texas lawmakers have changed women's access to care
+          </p>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?text=Tweet%20Text" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+          </a>
+          <p>Check out Texas Tribune's series on how state politics have affected women's access to care in Texas</p>
+        </li>
+      </ul>
+    </div>
+  <div class="prose">
+    <pre>
+      <code>
+&lt;div class="shareline"&gt;
+  &lt;h3&gt;Sharelines&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="https://twitter.com/intent/tweet?text=Tweet%20Text" title="share on Twitter" class="social-share" target="_blank"&gt;
+      &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/" title="share on Facebook" class="social-share" target="_blank"&gt;
+      &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;p&gt;The Politics of Prevention: How Texas lawmakers have changed women's access to care
+      &lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="https://twitter.com/intent/tweet?text=Tweet%20Text" title="share on Twitter" class="social-share" target="_blank"&gt;
+      &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href="https://www.facebook.com/dialog/feed?app_id=154122474650943&display=popup&name=%20%7C%20The%20Shale%20Life&link=http%3A%2F%2Fapps.texastribune.org%2Fshale-life%2F&redirect_uri=http://apps.texastribune.org/shale-life/" title="share on Facebook" class="social-share" target="_blank"&gt;
+      &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;p&gt;Check out Texas Tribune's series on how state politics have affected women's access to care in Texas&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+
+  <!-- About, Contributors -->
+  <div id="about">
+    <div class="prose">
+      <h3>About, Contributors</h3>
+      <p>Give yourself (and your teammates!) some credit. Styles for the About section are located in layout/components/about.</p>
+      <p>The .about class includes @extend %prose, %content-block and %paragraph-header. Even though the styles look similar to .prose, <strong>don't put your About section in a .prose tag</strong>. It also includes two grid mixins: features-layout ($bp-about, 12, 8) to add whitespace on the sides of large screens, and list-grid ($bp-about, 12, 2) to allow two contributors per row on large screens.</p>
+    </div>
+    <div class="about">
+      <h3>ABOUT</h3>
+      <p class="about-desc">The Tribune's intrepid News Apps developers and designers worked for months &mdash; through sweat, blood, tears and maniacal laughter &mdash; to bring you this amazing style guide. Use it carefully, for our mascot, The Unicorn Head, has been known to stealthily attack people with bad style. Just ask the foam buffalo.</p>
+      <h3>Contributors</h3>
+      <ul>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/becca-aaronson/">Becca Aaronson</a></p>
+          <p class="handle">News Apps Developer | <a href="https://twitter.com/becca_aa" target="_blank">@becca_aa</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/ryan-murphy/">Ryan Murphy</a></p>
+          <p class="handle">News Apps Team Lead | <a href="https://twitter.com/rdmurphy" target="_blank">@rdmurphy</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="mailto:mvanetta@texastribune.org">Marcos Vanetta</a></p>
+          <p class="handle">Knight/Mozilla Fellow | <a href="https://twitter.com/malev" target="_blank">@malev</a></p>
+        </li>
+      </ul>
+      <h3>Art &amp; Design</h3>
+      <ul>
+        <li>
+          <p class="contributor"><a href="mailto:bhasson@texastribune.org">Ben Hasson</a></p>
+          <p class="handle">Web Designer | <a href="https://twitter.com/been_hussln" target="_blank">@been_hussln</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="http://www.texastribune.org/about/staff/jacob-villanueva/">Jacob Villanueva</a></p>
+          <p class="handle">Art Director | <a href="https://twitter.com/jacovillanueva" target="_blank">@jacovillanueva</a></p>
+        </li>
+        <li>
+          <p class="contributor"><a href="mailto:twiseman@texastribune.org">Todd Wiseman</a></p>
+          <p class="handle">Multimedia Producer | <a href="https://twitter.com/wisemeister" target="_blank">@Wisemeister</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="prose">
+      <pre>
+        <code>
+&lt;div class="about"&gt;
+  &lt;h3&gt;ABOUT&lt;/h3&gt;
+  &lt;p class="about-desc"&gt;The Tribune's intrepid News Apps developers and designers worked for months &mdash; through sweat, blood, tears and maniacal laughter &mdash; to bring you this amazing style guide. Use it carefully, for our mascot, The Unicorn Head, has been known to stealthily attack people with bad style. Just ask the foam buffalo.&lt;/p&gt;
+  &lt;h3&gt;Contributors&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="http://www.texastribune.org/about/staff/becca-aaronson/"&gt;Becca Aaronson&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;News Apps Developer | &lt;a href="https://twitter.com/becca_aa" target="_blank"&gt;@becca_aa&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="http://www.texastribune.org/about/staff/ryan-murphy/"&gt;Ryan Murphy&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;News Apps Team Lead | &lt;a href="https://twitter.com/rdmurphy" target="_blank"&gt;@rdmurphy&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="mailto:mvanetta@texastribune.org"&gt;Marcos Vanetta&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;Knight/Mozilla Fellow | &lt;a href="https://twitter.com/malev" target="_blank"&gt;@malev&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h3&gt;Art &amp; Design&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="mailto:bhasson@texastribune.org"&gt;Ben Hasson&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;Web Designer | &lt;a href="https://twitter.com/been_hussln" target="_blank"&gt;@been_hussln&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="http://www.texastribune.org/about/staff/jacob-villanueva/"&gt;Jacob Villanueva&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;Art Director | &lt;a href="https://twitter.com/jacovillanueva" target="_blank"&gt;@jacovillanueva&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p class="contributor"&gt;&lt;a href="mailto:twiseman@texastribune.org"&gt;Todd Wiseman&lt;/a&gt;&lt;/p&gt;
+      &lt;p class="handle"&gt;Multimedia Producer | &lt;a href="https://twitter.com/wisemeister" target="_blank"&gt;@Wisemeister&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<div id="tables">
+  <div class="prose">
+    <h3>Tables</h3>
+    <p>Table styles are located in layout/components/tables. You must define which header is related to each data point, in order to have headers on Mobile. To do this, set the "data-title" inside the &lt;td&gt; tag, i.e. &lt;td data-title="blank"&gt;.</p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>One</th>
+        <th>Two</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-title="Title">Big Bird</td>
+        <td data-title="One">A</td>
+        <td data-title="Two">B</td>
+      </tr>
+      <tr>
+        <td data-title="Title">Bert</td>
+        <td data-title="One">C</td>
+        <td data-title="Two">D</td>
+      </tr>
+      <tr>
+        <td data-title="Title">Ernie</td>
+        <td data-title="One">E</td>
+        <td data-title="Two">F</td>
+      </tr>
+    </tbody>
+  </table>
+  <pre>
+    <code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;One&lt;/th&gt;
+      &lt;th&gt;Two&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Big Bird&lt;/td&gt;
+      &lt;td data-title="One"&gt;A&lt;/td&gt;
+      &lt;td data-title="Two"&gt;B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Bert&lt;/td&gt;
+      &lt;td data-title="One"&gt;C&lt;/td&gt;
+      &lt;td data-title="Two"&gt;D&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td data-title="Title"&gt;Ernie&lt;/td&gt;
+      &lt;td data-title="One"&gt;E&lt;/td&gt;
+      &lt;td data-title="Two"&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+    </code>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

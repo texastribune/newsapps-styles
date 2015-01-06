@@ -1,0 +1,129 @@
+/* News Apps Footer */
+
+$bp-footer: $default-768;
+
+// Grid
+.footer-container {
+  @extend %container;
+  @include div-grid($bp-footer, 12, 4, 2);
+}
+
+// Styles
+.footer {
+  background-color: $masthead-black;
+  color: $white;
+  font-size: .75em;
+  margin-top: 1em;
+
+  @include media($bp-footer) {
+    line-height: 1.1em;
+  }
+
+  .logo {
+    margin-top: 1em;
+    width: 120px;
+  }
+
+  .footer-container {
+    margin: auto;
+    text-align: center;
+
+    div {
+      @include media($bp-footer) {
+        text-align: left;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 2em;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: .5em;
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
+
+    a {
+      @extend %href-on-black;
+    }
+  }
+
+  a.donate-link {
+    color: $teal;
+  }
+
+  .icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: $white;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-right: .5em;
+
+    @include media($bp-footer) {
+      text-align: left;
+    }
+
+    &:active {
+      color: $teal;
+    }
+
+    &:hover {
+      color: $teal;
+    }
+
+  }
+
+  .donate {
+    background: $teal;
+    color: $white;
+    font-family: Helvetica;
+    padding: .25em 0;
+
+    ul {
+      font-size: 1.65em;
+      letter-spacing: .03em;
+      line-height: .9em;
+      margin: 1.5em 1.5em .75em;
+    }
+
+    li {
+      &:last-child {
+        background-color: $tribune-yellow;
+        border-radius: 3px;
+        color: $bodytext-black;
+        font: 700 .5em Helvetica;
+        letter-spacing: 1px;
+        line-height: 1.4em;
+        margin: 1em 0 1.5em;
+        padding: .25em 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      &:active {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @include media($bp-footer) {
+      padding: 0 0 1em;
+    }
+  }
+}
+
