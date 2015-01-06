@@ -410,12 +410,11 @@ th {
 /* Grid Mixins */
 /* Base Theme for HTML elements */
 body {
-  color: #282828;
+  background-color: white;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
-  text-rendering: optimizelegibility;
-  z-index: 0; }
+  text-rendering: optimizelegibility; }
 
 h1,
 h2,
@@ -511,7 +510,6 @@ dd {
 .banner {
   background-color: #373737;
   display: table;
-  height: 225px;
   margin: 0 0 1.5em;
   position: relative;
   width: 100%; }
@@ -530,7 +528,7 @@ dd {
       font-weight: 800;
       line-height: 1.15;
       text-shadow: black 3px 3px 0;
-      margin-bottom: 0.5em; }
+      margin-bottom: .5em; }
       @media screen and (min-width: 768px) {
         .banner .grand-header h1 {
           font-size: 3.5em; } }
@@ -546,7 +544,7 @@ dd {
         .banner .grand-header p {
           font-size: 1.5em; } }
   .banner .grand-header-image {
-    background-image: url("");
+    background-image: url("http://placekitten.com/1000/800");
     background-position: center center;
     background-size: cover;
     bottom: 0;
@@ -666,6 +664,8 @@ dd {
     margin-right: 2.35765%;
     width: 23.23176%; }
     .footer-container div:last-child {
+      margin-right: 0; }
+    .footer-container div:nth-child(4n) {
       margin-right: 0; } }
 
 .footer {
@@ -955,9 +955,9 @@ tr:nth-child(odd) td {
 /* Base Prose Theme */
 .prose h1 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
-  margin: .6em 0; }
+  margin: 1.25em 0 .6em; }
 .prose h2 {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.5em;
@@ -974,7 +974,8 @@ tr:nth-child(odd) td {
   margin-bottom: 1em; }
   .prose p.byline {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: .85em; }
+    font-size: .85em;
+    margin-bottom: 0; }
     .prose p.byline a {
       font-weight: 800; }
   .prose p.caption {
@@ -1001,7 +1002,7 @@ tr:nth-child(odd) td {
   .prose ul li {
     margin-bottom: .5em; }
     .prose ul li:last-child {
-      margin-bottom: 0; }
+      margin-bottom: 2em; }
 .prose .block-text {
   border-color: #ffc200;
   border-style: solid;
