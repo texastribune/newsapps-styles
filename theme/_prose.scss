@@ -3,6 +3,7 @@
 .prose {
   @extend %content-block;
   @extend %prose;
+  @include clearfix();
 
   h1 { //headline
     font-family: $base-sans-serif;
