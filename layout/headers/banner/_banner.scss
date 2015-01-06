@@ -8,17 +8,20 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
   display: table;
   // height: 600px;
   // max-height: $banner-height; 
-  margin: 0 0 1.5em;
+  margin: 0;
   position: relative;
   width: 100%;
 
   .grand-header {
     @extend %content-block;
-    display: table-cell;
-    padding: 0 1.25em;
-    position: relative;
+    background-color: transparentize($masthead-black, .6);
+    bottom: 0%;
+    display: block;
+    padding: 1em;
+    position: absolute;
     text-align: center;
     vertical-align: middle;
+    width: 100%;
 
     a {
       color: $white;
@@ -28,11 +31,11 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
     h1 {
       color: $white;
       font-family: $base-serif;
-      font-size: 2.5em;
+      font-size: 2em;
       font-weight: 800;
       line-height: 1.15;
       text-shadow: $black 3px 3px 0;
-      margin-bottom: .5em;
+      margin-bottom: .25em;
 
       @include media($default-768) {
         font-size: 3.5em;
@@ -43,11 +46,11 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
     p {
       color: $white;
       font-family: $base-sans-serif;
-      font-size: 1.25em;
+      font-size: 1em;
       letter-spacing: .0625em;
       line-height: 1.15;
-      text-shadow: $black 2px 2px 0;
-      margin-bottom: 1em;;
+      text-shadow: none;
+      margin-bottom: 1.5em;;
 
       @include media($default-768) {
         font-size: 1.5em;
@@ -67,4 +70,5 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
     top: 0;
 
   }
+  
 }
