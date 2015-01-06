@@ -1,5 +1,4 @@
 /* Basic Style Mixins */
-
 @mixin breakpoint($media, $bp) {
   @if $media == tiny {
     @include media ($bp) {
@@ -32,6 +31,16 @@
   }
 }
 
+@mixin clearfix {
+  &:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+}
 
 /* Grid Mixins */
 
