@@ -683,7 +683,7 @@ dd {
   background-color: #111111;
   color: white;
   font-size: .75em;
-  margin-top: 1em; }
+  margin-top: 2em; }
   @media screen and (min-width: 768px) {
     .footer {
       line-height: 1.1em; } }
