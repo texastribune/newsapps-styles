@@ -1,5 +1,12 @@
-// size of lead art banner on apps/explorers
-$banner-height: 225px;
+// Responsive-design Breakpoints
+$default-768: new-breakpoint(min-width 768px);
+$default-480: new-breakpoint(max-width 480px);
 
-// url to background-image on banner
+$small: new-breakpoint(max-width 15em);
+$medium: new-breakpoint(max-width 45em);
+$large: new-breakpoint(min-width 50em);
+
+// Lead-Banner Settings
+$banner-height: 225px;
 $grand-header-image-url: '';
+

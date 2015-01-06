@@ -4,5 +4,21 @@
 
 @import 'helpers/variables';
 @import 'helpers/colors';
+@import 'helpers/placeholders';
 @import 'helpers/functions';
 @import 'helpers/mixins';
+
+@import 'theme/base-theme'; 
+
+@import 'layout/headers/masthead/masthead';
+@import 'layout/headers/banner/banner';
+@import 'layout/headers/banner/nav-bar';
+@import 'layout/footers/basic';
+@import 'layout/footers/newsapps';
+@import 'layout/components/social-media/share-buttons';
+@import 'layout/components/social-media/sharelines';
+@import 'layout/components/about';
+@import 'layout/components/tables';
+
+@import 'theme/prose';
+@import 'theme/style-guide';

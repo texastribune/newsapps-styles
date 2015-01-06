@@ -1,0 +1,86 @@
+/* Base Theme for HTML elements */
+
+body {
+  background-color: $white;
+  font-family: $base-sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-rendering: optimizelegibility;
+}
+
+.container {
+  @include clearfix;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: $href-teal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  background-color: $line-gray;
+  border: 0 none;
+  height: 2px;
+  margin-bottom: 2em;
+
+  &.thin {
+    height: 1px;
+  }
+
+  &.yellow {
+    background-color: $tribune-yellow;
+  }
+}
+
+button,
+.button {
+  color: $bodytext-black;
+  display: inline-block;
+  font-family: $base-sans-serif;
+  letter-spacing: .03rem;
+  vertical-align: middle;
+  @include button(flat, $tribune-yellow);
+
+  &:disabled {
+    background-color: darken($explainer-gray, 20%);
+    cursor: default;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+dl {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  font-weight: 300;
+  margin: 0;
+}
+
+dt,
+dd {
+  line-height: 1.4;
+}
