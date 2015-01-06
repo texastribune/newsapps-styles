@@ -1,7 +1,7 @@
-$bp-footer: new-breakpoint(min-width 768px);
+$bp-footer: $default-768;
 
-.tribune-footer {
-  background-color: rgb(17, 17, 17);
+.footer {
+  background-color: $masthead-black;
   color: $footer-offwhite;
   margin: 2em 0 0;
   padding: .125em 0 0;
@@ -13,11 +13,8 @@ $bp-footer: new-breakpoint(min-width 768px);
   }
 
   nav {
-    font-size: .875em;
-
     @include media($bp-footer) {
       float: left;
-      font-size: .75em;
       margin: 0 0 1em;
     }
   }
@@ -39,6 +36,7 @@ $bp-footer: new-breakpoint(min-width 768px);
     }
 
     li {
+      font-size: .875em;
       padding: 0;
     }
   }
@@ -49,7 +47,7 @@ $bp-footer: new-breakpoint(min-width 768px);
     }
 
     a {
-      color: $footer-offwhite;
+      @extend %href-on-black;
     }
 
     .donor-item {
