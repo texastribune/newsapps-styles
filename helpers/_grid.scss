@@ -1,0 +1,127 @@
+// Default Breakpoints
+// ===================
+// These are fairly meaningless default settings
+// Feel free to reset these variables 
+// to fit the needs of your specific project
+
+$small: new-breakpoint(min-width 460px max-width 810px);
+$medium: new-breakpoint(min-width 811px max-width 1080px);
+$large: new-breakpoint(min-width 1081px);
+
+$default-768: new-breakpoint(min-width 768px);
+$default-480: new-breakpoint(max-width 480px);
+
+
+// To override Bourbon's max-width
+// for the outer-container
+$max-width: 1081px;
+
+/* Grid Mixins */
+/* =========== */
+
+// Omega-Reset
+// -----------
+// To change the omega # at various breakpoints
+// More info: http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Features-Layout
+// ---------------
+// To add white-space around prose for feature projects
+// Also used on 'About' section
+@mixin features-layout ($bp) {
+  @include span-columns(12);
+  @include media($bp) {
+    @include span-columns(10 of 12);
+    @include shift(1);
+  }
+}
+
+@mixin list-grid ($bp, $col-width, $number-li) {
+  // Creates a grid for list items
+  // $bp = breakpoint
+  // $col-width = the number of span-columns in your grid
+  // $number-li = the number of list items
+
+  ul {
+    @include span-columns($col-width);
+    @include pad(0);
+    
+    li {
+      @include span-columns($col-width of $col-width);
+      @include media($bp) {
+        @include span-columns($col-width / $number-li of $col-width);
+        @include omega($number-li+n);
+      }
+    }
+  }
+}
+
+@mixin li-grid($col-width, $med-li, $lg-li) {
+  li {
+    @include span-columns(12);
+
+    @include media($small) {
+      @include span-columns($col-width / $med-li of $col-width);
+      @include omega($med-li+n);
+    }
+
+    @include media($medium) {
+      @include span-columns($col-width / $med-li of $col-width);
+      @include omega($med-li+n);
+    }
+
+    @include media($large) {
+      @include span-columns($col-width / $lg-li of $col-width);
+      @include omega($lg-li+n);
+    }
+  }
+}
+
+
+@mixin div-grid-basic ($bp, $col-width, $number-div) {
+  // Create a div grid with single breakpoint
+  // $bp = breakpoint
+  // $col-width = the number of span-columns in your grid
+  // $number-div = the number of divs
+
+  @include media($bp) {
+    div {
+      @include span-columns($col-width / $number-div of $col-width);
+      @include omega($number-div+n);
+    }
+  }
+}
+
+@mixin div-grid-triple ($col-width, $number-div-small, $number-div-med, $number-div-large) {
+  // Create a div grid w/ three breakpoints
+  // $number-breaks = number of breakpoints
+  // $col-width = the number of span-columns in your grid
+  // $number-div-small = the number of side-by-side divs at $small breakpoint
+  // $number-div-med = the number of side-by-side divs at $medium breakpoint
+  // $number-div-large = the number of side-by-side divs at $large breakpoint
+
+  @include media($small) {
+    div {
+      @include span-columns($col-width / $number-div-small of $col-width);
+      @include omega($number-div-small+n);
+    }
+  }
+
+  @include media($medium) {
+    div {
+      @include span-columns($col-width / $number-div-med of $col-width);
+      @include omega($number-div-med+n);
+    }
+  }
+
+  @include media($large) {
+    div {
+      @include span-columns($col-width / $number-div-large of $col-width);
+      @include omega($number-div-large+n);
+    }
+  }
+}

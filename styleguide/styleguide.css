@@ -362,9 +362,11 @@ th {
     display: table;
     clear: both; }
 
+/* Grid Mixins */
+/* =========== */
 /* Grid Settings */
 .container, .wrapper, .footer-container {
-  max-width: 68em;
+  max-width: 1081px;
   margin-left: auto;
   margin-right: auto; }
   .container:after, .wrapper:after, .footer-container:after {
@@ -407,7 +409,6 @@ th {
   text-transform: uppercase; }
 
 /* Basic Style Mixins */
-/* Grid Mixins */
 /* Base Theme for HTML elements */
 body {
   background-color: white;
@@ -853,8 +854,8 @@ dd {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-left: 17.05961%; }
+      width: 82.94039%;
+      margin-left: 8.5298%; }
       .about:last-child {
         margin-right: 0; } }
   .about ul {
