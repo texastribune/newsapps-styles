@@ -381,16 +381,6 @@ th {
   .content-block-full {
     padding: 0; } }
 
-.footer .last-nav a, .footer .footer-container a {
-  color: #dddddd;
-  text-decoration: none; }
-  .footer .last-nav a:active, .footer .footer-container a:active {
-    color: white;
-    text-decoration: underline; }
-  .footer .last-nav a:hover, .footer .footer-container a:hover {
-    color: white;
-    text-decoration: underline; }
-
 .about, .prose {
   color: #282828;
   display: block;
@@ -407,6 +397,16 @@ th {
   letter-spacing: 1px;
   margin: 1em 0;
   text-transform: uppercase; }
+
+.footer .last-nav a, .footer .footer-container a {
+  color: #dddddd;
+  text-decoration: none; }
+  .footer .last-nav a:active, .footer .footer-container a:active {
+    color: white;
+    text-decoration: underline; }
+  .footer .last-nav a:hover, .footer .footer-container a:hover {
+    color: white;
+    text-decoration: underline; }
 
 /* Basic Style Mixins */
 /* Base Theme for HTML elements */

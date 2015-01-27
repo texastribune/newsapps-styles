@@ -11,10 +11,10 @@ $large: new-breakpoint(min-width 1081px);
 $default-768: new-breakpoint(min-width 768px);
 $default-480: new-breakpoint(max-width 480px);
 
-
 // To override Bourbon's max-width
 // for the outer-container
 $max-width: 1081px;
+
 
 /* Grid Mixins */
 /* =========== */

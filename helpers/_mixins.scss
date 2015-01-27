@@ -1,12 +1,5 @@
 /* Basic Style Mixins */
 
-
-@mixin hide($bp) {
-  @include media($bp) {
-    display: none;
-  }
-}
-
 @mixin clearfix {
   &:after {
    visibility: hidden;
@@ -18,5 +11,73 @@
  }
 }
 
+@mixin hide($bp) {
+  @include media($bp) {
+    display: none;
+  }
+}
 
+@mixin mobile-only {
+  display: block;
 
+  @include media($small) {
+    display: none;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+@mixin desktop-only {
+  display: none;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
+  }
+}
+
+@mixin desktop-hide {
+  display: block;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+@mixin mobile-hide {
+  @include clearfix;
+  display: none;
+
+  @include media($small) {
+    display: none;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
+  }
+}

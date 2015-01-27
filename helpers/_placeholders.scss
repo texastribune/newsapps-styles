@@ -14,27 +14,8 @@
   }
 }
 
-// Footer Links 
-
-%href-on-black {
-  color: $href-offwhite;
-  text-decoration: none;
-
-  &:active {
-    color: $white;
-    text-decoration: underline;
-  }
-
-  &:hover {
-    color: $white;
-    text-decoration: underline;
-  }
-}
-
-
 
 // Prose 
-
 %prose {
   color: $bodytext-black;
   display: block;
@@ -52,5 +33,26 @@
   letter-spacing: 1px;
   margin: 1em 0;
   text-transform: uppercase;
+}
 
+%dataviz-header {
+  font-family: $base-sans-serif;
+  font-size: 1.1em;
+  font-weight: 400em;
+}
+
+// Footer Links 
+%href-on-black {
+  color: $href-offwhite;
+  text-decoration: none;
+
+  &:active {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
 }

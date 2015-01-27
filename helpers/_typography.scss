@@ -1,0 +1,26 @@
+// Default Breakpoints
+// ===================
+// These are fairly meaningless default settings
+// Feel free to reset these variables 
+// to fit the needs of your specific project
+
+$small: new-breakpoint(min-width 460px max-width 810px);
+$medium: new-breakpoint(min-width 811px max-width 1080px);
+$large: new-breakpoint(min-width 1081px);
+
+$default-768: new-breakpoint(min-width 768px);
+$default-480: new-breakpoint(max-width 480px);
+
+
+// To override Bourbon's max-width
+// for the outer-container
+$max-width: 1081px;
+
+
+// Typography
+// ==========
+$base-sans-serif: $helvetica;
+$base-serif: $georgia;
+
+
+
