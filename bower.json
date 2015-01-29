@@ -10,7 +10,7 @@
     "**/*.txt"
   ],
   "devDependencies": {
-    "bourbon": "~4.1.1",
+    "bourbon": "3",
     "neat": "~1.7.1"
   }
 }
