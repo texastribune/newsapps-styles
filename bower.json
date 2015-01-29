@@ -1,6 +1,5 @@
 {
   "name": "newsapps-styles",
-  "version": "0.7.0-alpha",
   "main": "_initialize.scss",
   "private": true,
   "ignore": [
