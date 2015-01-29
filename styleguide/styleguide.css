@@ -1,7 +1,10 @@
-* {
+html {
   box-sizing: border-box; }
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -25,7 +28,8 @@ body {
    ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 article,
@@ -37,6 +41,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -77,7 +82,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent; }
+  background-color: transparent; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -357,22 +362,22 @@ th {
 /* Grid Settings */
 .row {
   display: block; }
-  .row:after {
+  .row::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 .about, .prose {
   color: #282828;
   display: block;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.4;
   text-align: left; }
 
 .shareline h3, .about h3, .prose h3 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -386,10 +391,10 @@ th {
   max-width: 1081px;
   margin-left: auto;
   margin-right: auto; }
-  .container:after, .wrapper:after, .footer-container:after {
+  .container::after, .wrapper::after, .footer-container::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 .content-block, .banner .grand-header, .share-row, .shareline, .about, .prose, .prose ul {
   padding: 0 1.25em; }
@@ -401,14 +406,14 @@ th {
 .about, .prose {
   color: #282828;
   display: block;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.4;
   text-align: left; }
 
 .shareline h3, .about h3, .prose h3 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -418,7 +423,7 @@ th {
 /* Base Theme for HTML elements */
 body {
   background-color: white;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   text-rendering: optimizelegibility; }
@@ -460,7 +465,7 @@ button,
 .button {
   color: #282828;
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   letter-spacing: .03rem;
   vertical-align: middle;
   background-color: #ffc200;
@@ -541,7 +546,7 @@ dd {
       color: white; }
     .banner .grand-header h1 {
       color: white;
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
       font-size: 2em;
       font-weight: 800;
       line-height: 1.15;
@@ -552,7 +557,7 @@ dd {
           font-size: 3.5em; } }
     .banner .grand-header p {
       color: white;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1em;
       letter-spacing: .0625em;
       line-height: 1.15;
@@ -574,7 +579,7 @@ dd {
 /* Static Nav-Bar */
 .nav-bar {
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -583,7 +588,7 @@ dd {
   .nav-bar ul {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 2.3576515979%;
     width: 100%;
     padding: 0; }
     .nav-bar ul:last-child {
@@ -591,7 +596,7 @@ dd {
     .nav-bar ul li {
       float: left;
       display: block;
-      margin-right: 2.35765%;
+      margin-right: 2.3576515979%;
       width: 100%; }
       .nav-bar ul li:last-child {
         margin-right: 0; }
@@ -599,8 +604,8 @@ dd {
         .nav-bar ul li {
           float: left;
           display: block;
-          margin-right: 2.35765%;
-          width: 23.23176%; }
+          margin-right: 2.3576515979%;
+          width: 23.2317613015%; }
           .nav-bar ul li:last-child {
             margin-right: 0; }
           .nav-bar ul li:nth-child(4n) {
@@ -688,8 +693,8 @@ dd {
   .footer-container div {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
+    margin-right: 2.3576515979%;
+    width: 23.2317613015%; }
     .footer-container div:last-child {
       margin-right: 0; }
     .footer-container div:nth-child(4n) {
@@ -824,7 +829,7 @@ dd {
   text-align: left; }
 .shareline p {
   color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .9em;
   font-weight: 300;
   letter-spacing: .02em;
@@ -869,7 +874,7 @@ dd {
 .about {
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 2.3576515979%;
   width: 100%; }
   .about:last-child {
     margin-right: 0; }
@@ -877,15 +882,15 @@ dd {
     .about {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
+      margin-right: 2.3576515979%;
+      width: 82.9403914003%;
+      margin-left: 8.5298042998%; }
       .about:last-child {
         margin-right: 0; } }
   .about ul {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 2.3576515979%;
     width: 100%;
     padding: 0; }
     .about ul:last-child {
@@ -893,7 +898,7 @@ dd {
     .about ul li {
       float: left;
       display: block;
-      margin-right: 2.35765%;
+      margin-right: 2.3576515979%;
       width: 100%; }
       .about ul li:last-child {
         margin-right: 0; }
@@ -901,8 +906,8 @@ dd {
         .about ul li {
           float: left;
           display: block;
-          margin-right: 2.35765%;
-          width: 48.82117%; }
+          margin-right: 2.3576515979%;
+          width: 48.821174201%; }
           .about ul li:last-child {
             margin-right: 0; }
           .about ul li:nth-child(2n) {
@@ -910,7 +915,7 @@ dd {
   .about p.contributor {
     font-weight: 600; }
   .about p.handle {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .95em;
     font-weight: 300; }
   .about ul {
@@ -926,7 +931,7 @@ dd {
     color: #666666; }
 
 table {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 2em;
   width: 100%; }
@@ -997,12 +1002,12 @@ tr:nth-child(odd) td {
   clear: both;
   height: 0; }
 .prose h1 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   margin: 1.25em 0 .6em; }
 .prose h2 {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1.5em;
   font-style: italic;
   font-weight: 700;
@@ -1016,25 +1021,25 @@ tr:nth-child(odd) td {
 .prose p {
   margin-bottom: 1em; }
   .prose p.byline {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .85em;
     margin-bottom: 0; }
     .prose p.byline a {
       font-weight: 800; }
   .prose p.caption {
     color: #666666;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .85em;
     font-weight: 400;
     margin: .25em 0; }
   .prose p.source {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-weight: 300;
     margin: 1em .5em; }
 .prose img {
   width: 100%; }
 .prose ul {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 600;
   list-style-type: disc;
@@ -1053,14 +1058,14 @@ tr:nth-child(odd) td {
   position: relative; }
 .prose .explainer-header {
   color: #282828;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 800;
   line-height: 1.2;
   text-align: left; }
 .prose .explainer-text {
   background: whitesmoke;
   color: #282828;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.3;
   padding: 1em; }
@@ -1072,8 +1077,8 @@ pre {
   #side-nav {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
     #side-nav:last-child {
       margin-right: 0; } }
 
@@ -1094,3 +1099,7 @@ pre {
 
 .banner {
   height: 16em; }
+
+
+
+/*# sourceMappingURL=styleguide.css.map */
