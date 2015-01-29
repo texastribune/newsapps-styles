@@ -8,7 +8,7 @@
     "*.html",
     "**/*.txt"
   ],
-  "devDependencies": {
+  "dependencies": {
     "bourbon": "~4.1.1",
     "neat": "~1.7.1"
   }
