@@ -1,16 +1,15 @@
 {
   "name": "newsapps-styles",
-  "version": "0.6.2",
-  "main": "main.scss",
+  "main": "_initialize.scss",
   "private": true,
-  "dependencies": {
-    "bourbon": "~4.0.2",
-    "neat": "~1.6.0"
-  },
   "ignore": [
     "styleguide/",
     "dist/",
     "*.html",
     "**/*.txt"
-  ]
+  ],
+  "devDependencies": {
+    "bourbon": "~4.1.1",
+    "neat": "~1.7.1"
+  }
 }
