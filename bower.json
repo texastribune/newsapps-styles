@@ -12,5 +12,8 @@
   "devDependencies": {
     "bourbon": "3",
     "neat": "~1.7.1"
+  },
+  "resolutions": {
+    "bourbon": "3"
   }
 }
