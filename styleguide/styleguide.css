@@ -32,14 +32,29 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
@@ -57,7 +72,8 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-[hidden], template {
+[hidden],
+template {
   display: none; }
 
 /* Links
@@ -71,7 +87,8 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0; }
 
 /* Text-level semantics
@@ -85,7 +102,8 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 /**
@@ -118,7 +136,8 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -168,7 +187,10 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
@@ -184,7 +206,11 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -204,7 +230,8 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, select {
+button,
+select {
   text-transform: none; }
 
 /**
@@ -214,7 +241,10 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -223,13 +253,15 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -247,7 +279,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -258,7 +291,8 @@ input[type="checkbox"], input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -277,7 +311,8 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -320,28 +355,29 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td, th {
+td,
+th {
   padding: 0; }
 
 /* Grid Settings */
 .row {
   display: block; }
-  .row:after {
+  .row::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 .about, .prose {
   color: #282828;
   display: block;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.4;
   text-align: left; }
 
 .shareline h3, .about h3, .prose h3 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -355,29 +391,29 @@ td, th {
   max-width: 1081px;
   margin-left: auto;
   margin-right: auto; }
-  .container:after, .wrapper:after, .footer-container:after {
+  .container::after, .wrapper::after, .footer-container::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 .content-block, .banner .grand-header, .share-row, .shareline, .about, .prose, .prose ul {
   padding: 0 1.25em; }
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 480px) {
   .content-block-full {
     padding: 0; } }
 
 .about, .prose {
   color: #282828;
   display: block;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.4;
   text-align: left; }
 
 .shareline h3, .about h3, .prose h3 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -387,7 +423,7 @@ td, th {
 /* Base Theme for HTML elements */
 body {
   background-color: white;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   text-rendering: optimizelegibility; }
@@ -400,7 +436,13 @@ body {
   clear: both;
   height: 0; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0; }
 
 a {
@@ -419,10 +461,11 @@ hr {
   hr.yellow {
     background-color: #ffc200; }
 
-button, .button {
+button,
+.button {
   color: #282828;
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   letter-spacing: .03rem;
   vertical-align: middle;
   background-color: #ffc200;
@@ -435,16 +478,21 @@ button, .button {
   padding: 7px 18px;
   text-decoration: none;
   background-clip: padding-box; }
-  button:hover:not(:disabled), .button:hover:not(:disabled) {
-    background-color: #ffca15;
+  button:hover:not(:disabled),
+  .button:hover:not(:disabled) {
+    background-color: #ffc81a;
     cursor: pointer; }
-  button:active:not(:disabled), button:focus:not(:disabled), .button:active:not(:disabled), .button:focus:not(:disabled) {
+  button:active:not(:disabled), button:focus:not(:disabled),
+  .button:active:not(:disabled),
+  .button:focus:not(:disabled) {
     background-color: #e1ac05;
     cursor: pointer; }
-  button:disabled, .button:disabled {
+  button:disabled,
+  .button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
-  button:disabled, .button:disabled {
+  button:disabled,
+  .button:disabled {
     background-color: #c2c2c2;
     cursor: default; }
 
@@ -463,7 +511,8 @@ dd {
   font-weight: 300;
   margin: 0; }
 
-dt, dd {
+dt,
+dd {
   line-height: 1.4; }
 
 /* Tribune Masthead */
@@ -497,28 +546,28 @@ dt, dd {
       color: white; }
     .banner .grand-header h1 {
       color: white;
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
       font-size: 2em;
       font-weight: 800;
       line-height: 1.15;
       text-shadow: black 3px 3px 0;
       margin-bottom: .25em; }
-      @media screen and (min-width: 768px)  {
+      @media screen and (min-width: 768px) {
         .banner .grand-header h1 {
           font-size: 3.5em; } }
     .banner .grand-header p {
       color: white;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1em;
       letter-spacing: .0625em;
       line-height: 1.15;
       text-shadow: none;
       margin-bottom: 1.5em; }
-      @media screen and (min-width: 768px)  {
+      @media screen and (min-width: 768px) {
         .banner .grand-header p {
           font-size: 1.5em; } }
   .banner .grand-header-image {
-    background-image: url('http://placekitten.com/1000/800');
+    background-image: url("http://placekitten.com/1000/800");
     background-position: center center;
     background-size: cover;
     bottom: 0;
@@ -530,7 +579,7 @@ dt, dd {
 /* Static Nav-Bar */
 .nav-bar {
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -551,7 +600,7 @@ dt, dd {
       width: 100%; }
       .nav-bar ul li:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 768px)  {
+      @media screen and (min-width: 768px) {
         .nav-bar ul li {
           float: left;
           display: block;
@@ -588,11 +637,11 @@ dt, dd {
   margin: 2em 0 0;
   padding: .125em 0 0;
   text-align: center; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .footer {
       padding: 0;
       text-align: none; } }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .footer nav {
       float: left;
       margin: 0 0 1em; } }
@@ -601,7 +650,7 @@ dt, dd {
     padding: 0; }
   .footer .first-nav {
     color: #aaaaaa; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .footer .first-nav {
         float: left; } }
     .footer .first-nav a {
@@ -609,7 +658,7 @@ dt, dd {
     .footer .first-nav li {
       font-size: .875em;
       padding: 0; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .footer .last-nav {
       float: right; } }
   .footer .last-nav a {
@@ -628,7 +677,7 @@ dt, dd {
       font-weight: 800; }
   .footer li {
     margin: .75em 0; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .footer li {
         border-left: 1px solid #eeeeee;
         display: inline;
@@ -640,7 +689,7 @@ dt, dd {
           padding-left: 0; } }
 
 /* News Apps Footer */
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
   .footer-container div {
     float: left;
     display: block;
@@ -656,7 +705,7 @@ dt, dd {
   color: white;
   font-size: .75em;
   margin-top: 2em; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .footer {
       line-height: 1.1em; } }
   .footer .logo {
@@ -665,7 +714,7 @@ dt, dd {
   .footer .footer-container {
     margin: auto;
     text-align: center; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .footer .footer-container div {
         text-align: left; } }
     .footer .footer-container ul {
@@ -700,7 +749,7 @@ dt, dd {
     font-weight: normal;
     line-height: 1;
     padding-right: .5em; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .footer .icon {
         text-align: left; } }
     .footer .icon:active {
@@ -732,14 +781,14 @@ dt, dd {
       text-decoration: none; }
     .footer .donate a:hover {
       text-decoration: none; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .footer .donate {
         padding: 0 0 1em; } }
 
 /* Share Buttons */
 .share-row {
   margin-bottom: 1em; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .share-row {
       border-bottom: 1px solid #cccccc;
       border-top: 1px solid #cccccc; } }
@@ -754,19 +803,19 @@ dt, dd {
   font-size: .8em;
   padding: .75em 0;
   text-align: center; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .share-cell {
       border-bottom: 0;
       border-left: 1px solid #cccccc; } }
   .share-cell.first-share {
     border-top: 1px solid #cccccc; }
-    @media screen and (min-width: 768px)  {
+    @media screen and (min-width: 768px) {
       .share-cell.first-share {
         border-top: 0;
         border-left: 0; } }
   .share-cell i {
     padding: 0; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .share-cell {
       float: left;
       width: 50%; } }
@@ -780,7 +829,7 @@ dt, dd {
   text-align: left; }
 .shareline p {
   color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .9em;
   font-weight: 300;
   letter-spacing: .02em;
@@ -829,7 +878,7 @@ dt, dd {
   width: 100%; }
   .about:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .about {
       float: left;
       display: block;
@@ -853,7 +902,7 @@ dt, dd {
       width: 100%; }
       .about ul li:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 768px)  {
+      @media screen and (min-width: 768px) {
         .about ul li {
           float: left;
           display: block;
@@ -866,7 +915,7 @@ dt, dd {
   .about p.contributor {
     font-weight: 600; }
   .about p.handle {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .95em;
     font-weight: 300; }
   .about ul {
@@ -882,21 +931,21 @@ dt, dd {
     color: #666666; }
 
 table {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 2em;
   width: 100%; }
-  @media screen and (max-width: 480px)  {
+  @media screen and (max-width: 480px) {
     table {
       border-top: 1px solid #bbbbbb;
       display: block;
       font-size: .875em; } }
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 480px) {
   thead {
     display: none; } }
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 480px) {
   tbody {
     display: block; } }
 
@@ -909,7 +958,7 @@ th {
   vertical-align: middle; }
   th:first-child {
     text-align: left; }
-  @media screen and (max-width: 480px)  {
+  @media screen and (max-width: 480px) {
     th {
       display: block; } }
 
@@ -919,7 +968,7 @@ td {
   text-align: right; }
   td:first-child {
     text-align: left; }
-  @media screen and (max-width: 480px)  {
+  @media screen and (max-width: 480px) {
     td {
       display: block;
       font-weight: 300;
@@ -932,7 +981,7 @@ td {
       td[data-title]:first-child:before {
         content: none; }
       td:before {
-        content: attr(data-title) '\A';
+        content: attr(data-title) "\a";
         display: block;
         font-weight: 800;
         margin-bottom: .25em;
@@ -940,7 +989,7 @@ td {
 
 tr:nth-child(odd) td {
   background-color: whitesmoke; }
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 480px) {
   tr {
     display: block; } }
 
@@ -953,12 +1002,12 @@ tr:nth-child(odd) td {
   clear: both;
   height: 0; }
 .prose h1 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   margin: 1.25em 0 .6em; }
 .prose h2 {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1.5em;
   font-style: italic;
   font-weight: 700;
@@ -972,30 +1021,30 @@ tr:nth-child(odd) td {
 .prose p {
   margin-bottom: 1em; }
   .prose p.byline {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .85em;
     margin-bottom: 0; }
     .prose p.byline a {
       font-weight: 800; }
   .prose p.caption {
     color: #666666;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: .85em;
     font-weight: 400;
     margin: .25em 0; }
   .prose p.source {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-weight: 300;
     margin: 1em .5em; }
 .prose img {
   width: 100%; }
 .prose ul {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: .875em;
   font-weight: 600;
   list-style-type: disc;
   padding: 0 1em; }
-  @media screen and (min-width: 768px)  {
+  @media screen and (min-width: 768px) {
     .prose ul {
       line-height: 1.85em; } }
   .prose ul li {
@@ -1009,14 +1058,14 @@ tr:nth-child(odd) td {
   position: relative; }
 .prose .explainer-header {
   color: #282828;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 800;
   line-height: 1.2;
   text-align: left; }
 .prose .explainer-text {
   background: whitesmoke;
   color: #282828;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.3;
   padding: 1em; }
@@ -1024,7 +1073,7 @@ tr:nth-child(odd) td {
 pre {
   width: 100%; }
 
-@media screen and (min-width: 600px)  {
+@media screen and (min-width: 600px) {
   #side-nav {
     float: left;
     display: block;
@@ -1050,6 +1099,7 @@ pre {
 
 .banner {
   height: 16em; }
+
 
 
 /*# sourceMappingURL=styleguide.css.map */
