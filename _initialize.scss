@@ -1,11 +1,10 @@
 @import 'base/normalize';
-@import 'base/typography';
 @import 'base/scaffold';
 
-@import 'helpers/variables';
 @import 'helpers/colors';
+@import 'helpers/typography';
+@import 'helpers/grid';
 @import 'helpers/placeholders';
-@import 'helpers/functions';
 @import 'helpers/mixins';
 
 @import 'theme/base-theme'; 

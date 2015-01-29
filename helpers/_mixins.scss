@@ -1,35 +1,5 @@
-/* Basic Style Mixins */
-@mixin breakpoint($media, $bp) {
-  @if $media == tiny {
-    @include media ($bp) {
-      @content ;
-    }
-  }
-
-  @else if $media == small {
-    @include media ($bp) {
-      @content ;
-    }
-  }
-
-  @else if $media == med {
-    @include media ($bp) {
-      @content ;
-    }
-  }
-
-  @else if $media == large {
-    @include media ($bp) {
-      @content ;
-    }    
-  }
-}
-
-@mixin hide($bp) {
-  @include media($bp) {
-    display: none;
-  }
-}
+// Basic Mixins
+// ============
 
 @mixin clearfix {
   &:after {
@@ -42,48 +12,175 @@
  }
 }
 
-/* Grid Mixins */
+// Responsive Table Styles
+// =======================
+@mixin responsive-table($bp-table) {
+  font-family: Helvetica;
+  margin-bottom: 2em;
+  width: 100%;
 
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-  &:nth-child(#{$nth}+1) { clear: none }
-}
-
-@mixin features-layout ($bp, $col-width, $new-span-size) {
-  @include span-columns($col-width);
-  @include media($bp) {
-    @include span-columns($new-span-size of $col-width);
-    @include shift(($col-width - $new-span-size) / 2);
+  @include media($bp-table) {
+    border-top: 1px solid $line-gray;
+    display: block;
+    font-size: .875em;
   }
-}
 
-@mixin list-grid ($bp, $col-width, $number-li) {
-  //Creates a grid for list items
-  //$bp = breakpoint
-  //$col-width = the number of span-columns in your grid
-  //$number-li = the number of list items
-  ul {
-    @include span-columns($col-width);
-    @include pad(0);
-    
-    li {
-      @include span-columns($col-width of $col-width);
-      @include media($bp) {
-        @include span-columns($col-width / $number-li of $col-width);
-        @include omega($number-li+n);
+  thead {
+    @include media($bp-table) {
+      display: none;
+    }
+  }
+
+  tbody {
+    @include media($bp-table) {
+      display: block;
+    }
+
+    tr {
+      &:last-child {
+        td {
+          font-weight: 800;
+        }
       }
     }
   }
-}
 
-@mixin div-grid ($bp, $col-width, $number-div, $min-col) {
-  // @include span-columns ($col-width / $min-col);
-  
-  @include media($bp) {
-    div {
-      @include span-columns($col-width / $number-div of $col-width);
-      @include omega($number-div+n);
+  th {
+    border-bottom: 1px solid $line-gray;
+    font-size: .9em;
+    font-weight: 800;
+    padding: 0 12px 8px;
+    text-align: right;
+    vertical-align: middle;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    @include media($bp-table) {
+      display: block;
+    }
+  }
+
+  td {
+    font-size: .875em;
+    padding: 8px 12px;
+    text-align: right;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    @include media($bp-table) {
+      display: block;
+      font-weight: 300;
+      padding: 0 12px 8px;
+      text-align: left;
+
+      &:first-child {
+        font-size: 1em;
+        font-weight: 800;
+        padding-top: 8px;
+      }
+
+      &[data-title] {
+        &:first-child:before {
+          content: none;
+        }
+      }
+
+      &:before {
+        content: attr(data-title) '\A';
+        display: block;
+        font-weight: 800;
+        margin-bottom: .25em;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  tr {
+    &:nth-child(odd) td {
+      background-color: $background-gray;
+    }
+
+    @include media($bp-table) {
+      display: block;
     }
   }
 }
 
+
+// Mobile vs. Desktop Mixins
+// =========================
+
+@mixin hide($bp) {
+  @include media($bp) {
+    display: none;
+  }
+}
+
+@mixin mobile-only {
+  display: block;
+
+  @include media($small) {
+    display: none;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+@mixin desktop-only {
+  display: none;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
+  }
+}
+
+@mixin desktop-hide {
+  display: block;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+@mixin mobile-hide {
+  @include clearfix;
+  display: none;
+
+  @include media($small) {
+    display: none;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
+  }
+}
