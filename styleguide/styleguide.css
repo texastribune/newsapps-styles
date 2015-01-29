@@ -362,9 +362,28 @@ th {
     display: table;
     clear: both; }
 
+.about, .prose {
+  color: #282828;
+  display: block;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left; }
+
+.shareline h3, .about h3, .prose h3 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: .875em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  text-transform: uppercase; }
+
+/* Grid Mixins */
+/* =========== */
 /* Grid Settings */
 .container, .wrapper, .footer-container {
-  max-width: 68em;
+  max-width: 1081px;
   margin-left: auto;
   margin-right: auto; }
   .container:after, .wrapper:after, .footer-container:after {
@@ -378,16 +397,6 @@ th {
 @media screen and (max-width: 480px) {
   .content-block-full {
     padding: 0; } }
-
-.footer .last-nav a, .footer .footer-container a {
-  color: #dddddd;
-  text-decoration: none; }
-  .footer .last-nav a:active, .footer .footer-container a:active {
-    color: white;
-    text-decoration: underline; }
-  .footer .last-nav a:hover, .footer .footer-container a:hover {
-    color: white;
-    text-decoration: underline; }
 
 .about, .prose {
   color: #282828;
@@ -406,8 +415,6 @@ th {
   margin: 1em 0;
   text-transform: uppercase; }
 
-/* Basic Style Mixins */
-/* Grid Mixins */
 /* Base Theme for HTML elements */
 body {
   background-color: white;
@@ -649,6 +656,15 @@ dd {
   @media screen and (min-width: 768px) {
     .footer .last-nav {
       float: right; } }
+  .footer .last-nav a {
+    color: #dddddd;
+    text-decoration: none; }
+    .footer .last-nav a:active {
+      color: white;
+      text-decoration: underline; }
+    .footer .last-nav a:hover {
+      color: white;
+      text-decoration: underline; }
   .footer .last-nav .donor-item {
     padding-right: 0; }
     .footer .last-nav .donor-item a {
@@ -706,6 +722,15 @@ dd {
       width: 100%;
       border: 0;
       padding: 0; }
+    .footer .footer-container a {
+      color: #dddddd;
+      text-decoration: none; }
+      .footer .footer-container a:active {
+        color: white;
+        text-decoration: underline; }
+      .footer .footer-container a:hover {
+        color: white;
+        text-decoration: underline; }
   .footer a.donate-link {
     color: #008990; }
   .footer .icon {
@@ -853,8 +878,8 @@ dd {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-left: 17.05961%; }
+      width: 82.94039%;
+      margin-left: 8.5298%; }
       .about:last-child {
         margin-right: 0; } }
   .about ul {
