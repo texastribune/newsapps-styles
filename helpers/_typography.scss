@@ -29,3 +29,85 @@ $base-serif: $georgia;
   font-size: 1.1em;
   font-weight: 400;
 }
+
+
+// fonts
+$font-primary: 'Chaparral Pro', Georgia, serif;
+$font-secondary: 'Myriad Pro', clean, sans-serif;
+
+$base: 16;
+
+$font-sizes: (
+  xxl: 50,
+  xl: 44,
+  l: 38,
+  m: 32,
+  s: 26,
+  xs: 20
+);
+
+// Calculate pixels to rem units for font sizes
+@mixin font-size($f) {
+  font-size: $f+px; // for IE8
+  font-size: $f/$base+rem;
+}
+
+html {
+  font-size: 78%;
+}
+@media all and (min-width: 600px) {
+  html {
+    font-size: 88%;
+  }
+}
+@media all and (min-width: 800px) {
+  html {
+    font-size: 100%;
+  }
+}
+body {
+  font-family: $font-primary;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  font-weight: 900;
+  margin-bottom: calc(10rem / 16);
+}
+
+// interate over $font-sizes Sass map
+@each $greekname, $font-size in $font-sizes {
+  // print out font sizes
+  %#{$greekname}, .#{$greekname} {
+    @include font-size($font-size);
+  }
+}
+
+.h1, .font-xxl {
+  @extend %xxl;
+}
+
+.h2, .font-xl {
+  @extend %xl;
+}
+.h3, .font-l {
+  @extend %l;
+}
+.h4, .font-m {
+  @extend %m;
+}
+.h5, .font-s {
+  @extend %s;
+}
+.h6, .font-xs {
+  @extend %xs;
+}
+
+// p, ul {
+//   font-size: calc(18rem / 16);
+//   margin-bottom: calc(18rem / 16);
+//   max-width: 500px;
+// }
