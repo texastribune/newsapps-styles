@@ -5,13 +5,14 @@ pre {
   @include fill-parent();
 }
 
-#side-nav {
-  @include media($bp-guide) {
-    @include span-columns(4);
-  }
-}
+// #side-nav {
+//   @include media($bp-guide) {
+//     @include span-columns(4);
+//   }
+// }
 
 .side-nav {
+  @include clearfix;
   margin-right: 2em;
   li {
     border-bottom: 1px solid $line-gray;
@@ -26,7 +27,7 @@ pre {
     &:hover {
       background-color: $teal;
       transition: padding .2s ease;
-      padding-left: 1.25em;
+      padding-left: .5em;
 
     }
   }
