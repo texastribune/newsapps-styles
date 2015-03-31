@@ -18,10 +18,10 @@ gulp.task('styles', function () {
     console.error('Error:', err.message);
   })
   .pipe($.cached('styleguide'))
-  .pipe($.autoprefixer({
-    browsers: ['last 2 versions', 'IE 9', 'IE 8'],
-    cascade: false
-  }))
+  // .pipe($.autoprefixer({
+  //   browsers: ['last 2 versions', 'IE 9', 'IE 8'],
+  //   cascade: false
+  // }))
   .pipe($.sourcemaps.write('.'))
   .pipe(gulp.dest('styleguide'))
   .pipe($.size({title: 'styles'}));

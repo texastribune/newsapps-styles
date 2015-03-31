@@ -12,25 +12,6 @@ body {
   @include clearfix;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-a {
-  color: $href-teal;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 hr {
   background-color: $line-gray;
   border: 0 none;
@@ -59,11 +40,6 @@ button,
     background-color: darken($explainer-gray, 20%);
     cursor: default;
   }
-}
-
-ul {
-  list-style: none;
-  padding: 0;
 }
 
 dl {
