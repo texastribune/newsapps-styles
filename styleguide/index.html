@@ -42,7 +42,9 @@
 <!-- Base HTML Styles -->
 <div id="typography">
   <div class="content-block">
-    <h1>Typography</h1>
+    <header>
+      <h2 class="font-xl">Typography</h2>
+    </header>
     <p>Typography styles can be found in helpers/_typography.scss. The sizes correspond w/ HTML header elements, but those elements do not have any specific styles. For example, .xxl should be used on h1, but if you use an h1 without the class .xxl, it will not include the preset xxl font-size.</p>
 
     <h1 class="font-xxl">This is a class .font-xxl</h1>
@@ -51,6 +53,96 @@
     <h4 class="font-m">This is a class .font-m</h4>
     <h5 class="font-s">This is a class .font-s</h5>
     <h6 class="font-xs">This is a class .font-xs</h6>
+    <div class="hide-show">
+      <div class="button">Show HTML</div>
+      <pre>
+        <code>
+          &lt;h1 class="font-xxl"&gt;This is a class .font-xxl&lt;/h1&gt;
+          &lt;h2 class="font-xl"&gt;This is a class .font-xl&lt;/h2&gt;
+          &lt;h3 class="font-l"&gt;This is a class .font-l&lt;/h3&gt;
+          &lt;h4 class="font-m"&gt;This is a class .font-m&lt;/h4&gt;
+          &lt;h5 class="font-s"&gt;This is a class .font-s&lt;/h5&gt;
+          &lt;h6 class="font-xs"&gt;This is a class .font-xs&lt;/h6&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="hide-show">
+      <div class="button">Show CSS/Sass</div>
+      <pre>
+        <code>
+        // Typography
+        // ==========
+        $base-sans-serif: $helvetica;
+        $base-serif: $georgia;
+
+        // Font Sizes
+        $base: 16;
+        $xxl: 36;
+        $xl: 28;
+        $l: 24;
+        $m: 20;
+        $s: 14;
+        $xs: 10;
+
+        // Calculate pixels to rem units for font sizes
+        @mixin font-size($f) {
+          font-size: $f+px; // for IE8
+          font-size: $f/$base+rem;
+        }
+
+        // Include this mixin to change the font-size at a breakpoint.
+        // For example, you could set font-size: $pct to 78% on mobile.
+        @mixin font-size-bp($bp, $pct) {
+          @include media($bp) {
+            font-size: $pct;
+          }
+        }
+
+        body {
+          @include font-size($base);
+          font-family: $base-serif;
+          line-height: 1.2;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: $base-sans-serif;
+          font-weight: 800;
+          margin-bottom: calc(10rem / 16);
+        }
+
+        // These classes can be applied to any element
+        // to set the font-size.
+        .font-xxl {
+          @include font-size($xxl);
+        }
+
+        .font-xl {
+          @include font-size($xl);
+        }
+
+        .font-l {
+          @include font-size($l);
+        }
+
+        .font-m {
+          @include font-size($m);
+        }
+
+        .font-s {
+          @include font-size($s);
+        }
+
+        .font-xs {
+          @include font-size($xs);
+        }
+        </code>
+      </pre>
+    </div>
     <p>This is a paragraph.</p>
     <ul>
       <li>This is a regular list.</li>
@@ -754,5 +846,13 @@
 </div>
 
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.hide-show').click(function(){
+        $('pre', this).toggle();
+    });
+  });
+</script>
 </body>
 </html>

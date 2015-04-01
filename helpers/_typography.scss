@@ -3,33 +3,6 @@
 $base-sans-serif: $helvetica;
 $base-serif: $georgia;
 
-// Prose Settings
-%prose {
-  color: $bodytext-black;
-  display: block;
-  font-family: $base-serif;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: left;
-}
-
-%paragraph-header {
-  font-family: $base-sans-serif;
-  font-size: .875em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 1em 0;
-  text-transform: uppercase;
-}
-
-// Data Viz text (Sans Serif)
-%dataviz-header {
-  font-family: $base-sans-serif;
-  font-size: 1.1em;
-  font-weight: 400;
-}
-
 // Font Sizes
 $base: 16;
 $xxl: 36;
@@ -40,7 +13,7 @@ $s: 14;
 $xs: 10;
 
 // Calculate pixels to rem units for font sizes
-@mixin font-size($f, $bp) {
+@mixin font-size($f) {
   font-size: $f+px; // for IE8
   font-size: $f/$base+rem;
 }
@@ -54,15 +27,19 @@ $xs: 10;
 }
 
 body {
+  @include font-size($base);
   font-family: $base-serif;
-  font-size: 1rem;
   line-height: 1.2;
-  margin: 50px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $base-sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: calc(10rem / 16);
 }
 
@@ -75,15 +52,19 @@ h1, h2, h3, h4, h5, h6 {
 .font-xl {
   @include font-size($xl);
 }
+
 .font-l {
   @include font-size($l);
 }
+
 .font-m {
   @include font-size($m);
 }
+
 .font-s {
   @include font-size($s);
 }
+
 .font-xs {
   @include font-size($xs);
 }
@@ -98,8 +79,8 @@ a {
 }
 
 p {
+  @include font-size($base);
   font-family: $base-serif;
-  font-size: $base;
   font-weight: 400;
   line-height: 1.4em;
 }
@@ -124,15 +105,36 @@ li {
   }
 }
 
+// Prose Settings
+%prose {
+  color: $bodytext-black;
+  display: block;
+  font-family: $base-serif;
+  font-size: $base;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
 .prose {
   @extend %content-block;
   @extend %prose;
   @include clearfix;
+}
 
-  img {
-    width: 100%;
-  }
+%paragraph-header {
+  @include font-size($s);
+  font-family: $base-sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  text-transform: uppercase;
+}
 
+// Data Viz text (Sans Serif)
+%dataviz-header {
+  font-family: $base-sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
 .headline {
@@ -153,7 +155,7 @@ li {
   text-align: left;
 }
 
-.sub-header {
+.paragraph-header {
   @extend %paragraph-header;
 
   &.data-header {
