@@ -33,31 +33,26 @@ $base-serif: $georgia;
 // Font Sizes
 $base: 16;
 $xxl: 36;
-$xl: 24;
+$xl: 28;
 $l: 24;
 $m: 20;
 $s: 14;
 $xs: 10;
 
 // Calculate pixels to rem units for font sizes
-@mixin font-size($f) {
+@mixin font-size($f, $bp) {
   font-size: $f+px; // for IE8
   font-size: $f/$base+rem;
 }
 
-html {
-  font-size: 78%;
-}
-@media all and (min-width: 600px) {
-  html {
-    font-size: 88%;
+// Include this mixin to change the font-size at a breakpoint.
+// For example, you could set font-size: $pct to 78% on mobile.
+@mixin font-size-bp($bp, $pct) {
+  @include media($bp) {
+    font-size: $pct;
   }
 }
-@media all and (min-width: 800px) {
-  html {
-    font-size: 100%;
-  }
-}
+
 body {
   font-family: $base-serif;
   font-size: 1rem;
@@ -71,6 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: calc(10rem / 16);
 }
 
+// These classes can be applied to any element
+// to set the font-size.
 .font-xxl {
   @include font-size($xxl);
 }
@@ -98,11 +95,6 @@ a {
   &:hover {
     text-decoration: underline;
   }
-}
-
-p, ul {
-  font-size: calc(18rem / 16);
-  margin-bottom: calc(18rem / 16);
 }
 
 p {

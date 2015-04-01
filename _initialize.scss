@@ -2,12 +2,12 @@
 @import 'base/scaffold';
 
 @import 'helpers/colors';
-@import 'helpers/typography';
 @import 'helpers/grid';
+@import 'helpers/typography';
 @import 'helpers/placeholders';
 @import 'helpers/mixins';
 
-@import 'theme/base-theme'; 
+@import 'theme/base-theme';
 
 @import 'layout/headers/masthead/masthead';
 @import 'layout/headers/banner/banner';
