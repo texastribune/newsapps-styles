@@ -1,6 +1,6 @@
 // Tribune Colors
 $tribune-yellow: rgb(255, 194, 0);
-$teal: rgb(0, 137, 144);
+$tribune-teal: rgb(0, 137, 144);
 
 // Shades of Gray
 $black: rgb(0, 0, 0);
@@ -15,9 +15,10 @@ $background-gray: rgb(245, 245, 245);
 $white: rgb(255, 255, 255);
 
 //Color extensions
-$button-hover-teal: $teal;
-$button-selected-teal: transparentize($teal, .5);
-$href-teal: $teal;
+$teal: $tribune-teal;
+$button-hover-teal: $tribune-teal;
+$button-selected-teal: transparentize($tribune-teal, .5);
+$href-teal: $tribune-teal;
 $hr-gray: $line-gray;
 $explainer-gray: $background-gray;
 $masthead-black: $tribune-black;

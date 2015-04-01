@@ -54,7 +54,7 @@
     <h5 class="font-s">This is a class .font-s</h5>
     <h6 class="font-xs">This is a class .font-xs</h6>
     <div class="hide-show">
-      <div class="button">Show HTML</div>
+      <div class="button">Example HTML</div>
       <pre>
         <code>
           &lt;h1 class="font-xxl"&gt;This is a class .font-xxl&lt;/h1&gt;
@@ -67,7 +67,7 @@
       </pre>
     </div>
     <div class="hide-show">
-      <div class="button">Show CSS/Sass</div>
+      <div class="button">Example Sass</div>
       <pre>
         <code>
         // Typography
@@ -143,15 +143,67 @@
         </code>
       </pre>
     </div>
-    <p>This is a paragraph.</p>
+    <header>
+      <h3 class="font-l">Base elements</h3>
+    </header>
+    <p>This is a paragraph. It's one of few elements that has styles applied directly to the element class. <a href="">Links</a> are automatically colored $tribune-teal and have text-decoration removed.</p>
     <ul>
       <li>This is a regular list.</li>
-      <li>Of items</li>
+      <li>It's basically the same as a paragraph</li>
+      <li>Except sans-serif.</li>
     </ul>
     <ul class="disc">
       <li>This list has class .disc</li>
-      <li>Because its dotted.</li>
+      <li>Because we like it dotted.</li>
     </ul>
+    <div class="hide-show">
+      <div class="button">Example HTML</div>
+      <pre>
+        <code>
+          &lt;p&gt;This is a paragraph. It's one of few elements that has styles applied directly to the element class.&lt;a href=""&gt;Links&lt;/a&gt; are automatically colored $tribune-teal and have text-decoration removed.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;This is a regular list.&lt;/li&gt;
+            &lt;li&gt;Of items&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;ul class="disc"&gt;
+            &lt;li&gt;This list has class .disc&lt;/li&gt;
+            &lt;li&gt;Because its dotted.&lt;/li&gt;
+          &lt;/ul&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="hide-show">
+      <div class="button">Example CSS/Sass</div>
+      <pre>
+        <code>
+          a {
+            color: $href-teal;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          p {
+            @include font-size($base);
+            font-family: $base-serif;
+            font-weight: 400;
+            line-height: 1.4em;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+
+            &.disc {
+              list-style: disc;
+              padding: 0 1em;
+            }
+          }
+        </code>
+      </pre>
+    </div>
 
     <button>Button Tag</button>
 
@@ -230,18 +282,15 @@
   <div class="prose">
     <pre>
       <code>
-&lt;div class="banner"&gt;
- &lt;div class="grand-header-image"&gt;&lt;/div&gt;
- &lt;header class="grand-header"&gt;
-  &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
-  &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
- &lt;/header&gt;
-&lt;/div&gt;
+      &lt;div class="banner"&gt;
+       &lt;div class="grand-header-image"&gt;&lt;/div&gt;
+       &lt;header class="grand-header"&gt;
+        &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;Short descriptive subtitle&lt;/p&gt;
+       &lt;/header&gt;
+      &lt;/div&gt;
      </code>
     </pre>
-
-    <h3>Banner with Navigation Buttons</h3>
-    <p>Preferred height for this banner style is 448px. Styles located at layout/headers/banner/nav-bar.</p>
   </div>
 </div>
 
@@ -514,18 +563,18 @@
 
   <!-- Headers -->
     <div id="headers">
-      <h3>Paragraph Headers</h3>
-      <p>That ^ is an example of a .prose h3 paragraph header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
+      <h3 class="paragraph-header">Paragraph Headers</h3>
+      <p>That ^ is an example of a .paragraph-header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
       <pre>
         <code>
 &lt;h3&gt;Paragraph Headers&lt;/h3&gt;
         </code>
       </pre>
-      <h3 class="data-header">Data Headers</h3>
-      <p>That ^ is an example of a .prose .data-header. It's used for data-related headers, such as legend titles, or for explainer text.</p>
+      <h3 class="paragraph-header data">Data Headers</h3>
+      <p>That ^ is an example of a ".paragraph-header .paragraph-header-data". It's used for data-related headers, such as legend titles, or for explainer text.</p>
       <pre>
         <code>
-&lt;h3 class="data-header"&gt;Data Headers&lt;/h3&gt;
+&lt;h3 class="paragraph-header paragraph-header-data"&gt;Data Headers&lt;/h3&gt;
         </code>
       </pre>
     </div>
@@ -546,10 +595,10 @@
 
   <!-- Lists -->
     <div id="lists">
-      <h3>Lists</h3>
-      <ul>
+      <h3 class="paragraph-header">Prose Lists</h3>
+      <ul class="disc">
         <li>Are often used to call out important points.</li>
-        <li>They typically begin with an h3 paragraph header.</li>
+        <li>They typically begin with an .paragraph-header.</li>
         <li>Exciting stuff.</li>
       </ul>
 
@@ -567,19 +616,19 @@
 
   <!-- Block Text -->
     <div id="block-text">
-      <h3>Block Text</h3>
-      <p>Add a div.block-text around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
-      <p>Use the &lt;h2&gt; tag for block quote quotes, and p.source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
+      <h3>Block</h3>
+      <p>Add a div.block around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
+      <p>Use the class .block-quote for the text of the quote, and .block-quote-source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
 
-      <div class="block-text">
-        <h2>&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
-        <p class="source">&mdash; Becca Aaronson, cat enthusiast</p>
+      <div class="block">
+        <h2 class="block-quote">&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
+        <p class="block-quote-source">&mdash; Becca Aaronson, cat enthusiast</p>
       </div>
       <pre>
         <code>
-&lt;div class="block-text"&gt;
-  &lt;h2&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
-  &lt;p class="source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
+&lt;div class="block"&gt;
+  &lt;h2 class="block-quote"&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
+  &lt;p class="block-quote-source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
 &lt;/div&gt;
         </code>
       </pre>
