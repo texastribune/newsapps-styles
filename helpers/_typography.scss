@@ -131,7 +131,7 @@ ul {
 }
 
 .headline {
-  @include font-size($xl);
+  @include font-size($l);
   font-family: $base-sans-serif;
   font-weight: 600;
   margin: 1.25em 0 .6em;
@@ -151,15 +151,12 @@ ul {
   @include font-size($m);
   font-family: $base-sans-serif;
   font-weight: 400;
+  margin: 0 0 1em;
+  text-transform: none;
 }
 
 .paragraph-header {
   @extend %paragraph-header;
-
-  &.paragraph-header-data {
-    margin: 0 0 1em;
-    text-transform: none;
-  }
 }
 
 .byline { //byline
@@ -176,6 +173,7 @@ ul {
   border-color: $tribune-yellow;
   border-style: solid;
   border-width: 1px 0;
+  margin-bottom: calc(16rem / 16);
   position: relative;
 }
 
@@ -185,7 +183,7 @@ ul {
   font-style: italic;
   font-weight: 700;
   line-height: 1.2em;
-  margin: .7em .5em;
+  margin: calc(16rem / 16) calc(8rem / 16);
   position: relative;
   text-align: left;
 }
@@ -193,7 +191,7 @@ ul {
 .block-quote-source {
   font-family: $base-sans-serif;
   font-weight: 300;
-  margin: 1em .5em;
+  margin: calc(16rem / 16) calc(8rem / 16);
 }
 
 .caption {

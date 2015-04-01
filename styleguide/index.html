@@ -376,57 +376,6 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="prose">
-    <pre>
-      <code>
-&lt;div class="banner"&gt;
-  &lt;div class="grand-header-image"&gt;&lt;/div&gt;
-  &lt;header class="grand-header"&gt;
-    &lt;h1&gt;&lt;a href="/"&gt;Project Title&lt;/a&gt;&lt;/h1&gt;
-    &lt;p&gt;Zingy subtitle to hook 'em in&lt;/p&gt;
-    &lt;!-- Static navigation bar --&gt;
-    &lt;div class="wrapper"&gt;
-      &lt;div id="nav-bar" class="nav-bar"&gt;
-        &lt;ul&gt;
-         &lt;li&gt;
-          &lt;a href=""&gt;
-            &lt;div class="nav-link"&gt;
-                       Story 1
-            &lt;/div&gt;
-          &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-          &lt;a href=""&gt;
-            &lt;div class="nav-link"&gt;
-                       Story 2
-            &lt;/div&gt;
-          &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li&gt;
-          &lt;a href=""&gt;
-            &lt;div class="nav-link"&gt;
-                       Story 3
-            &lt;/div&gt;
-          &lt;/a&gt;
-         &lt;/li&gt;
-         &lt;li class="selected"&gt;
-          &lt;a href=""&gt;
-            &lt;div class="nav-link"&gt;
-                       Story 4
-            &lt;/div&gt;
-          &lt;/a&gt;
-         &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/header&gt;
-&lt;/div&gt;
-      </code>
-    </pre>
-  </div>
-</div>
-
 <!-- Footers -->
 <div id="footer" class="container">
   <div class="prose">
@@ -442,7 +391,7 @@
     <div class="content-block">
     <nav class="first-nav">
       <ul>
-        <li>&copy; 2014 <a href="http://www.texastribune.org/">The Texas Tribune</a></li>
+        <li>&copy; 2015 <a href="http://www.texastribune.org/">The Texas Tribune</a></li>
       </ul>
     </nav>
     <nav class="last-nav">
@@ -580,97 +529,113 @@
 <div id="prose" class="container">
   <div class="prose">
     <h1>Prose</h1>
-    <p>The basic prose styles outlined below can be found in theme/prose. The class .prose includes an extension of content-block, and its elements are given a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
-    <p>The majority of this Style Guide is styled with .prose. These paragraphs, for example, are just simple .prose &lt;p&gt; tags. If you want to apply these paragraph settings to an element, and don't want to use a .prose class, you can @extend %prose to a specific element in your stylesheet.</p>
+    <p>The basic prose styles outlined below can be found in helpers/_typography.scss. The extension %prose can be applied to any element to add basic paragraph styles, and is already applied to .prose. The .prose also includes an extension of %content-block, which gives elements a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
 
   <!-- Headline, Byline -->
     <div id="headline">
         <h3>Headline, Byline</h3>
         <p>Use the &lt;h1&gt; tag in .prose for Headlines, and &lt;p class="byline"&gt; for bylines.</p>
-        <h1>Cat Saves Planet from Apocolypse, Dies in Action</h1>
+        <h1 class="headline">Cat Saves Planet from Apocolypse, Dies in Action</h1>
         <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
-      <pre>
-        <code>
-&lt;div class="prose"&gt;
-  &lt;h1&gt;Headline, Byline&lt;/h1&gt;
-  &lt;h1&gt;Cat Saves Planet from Apocolypse, Dies in Action&lt;/h1&gt;
-  &lt;p class="byline"&gt;By &lt;a href="http://www.texastribune.org/about/staff/captain-planet/"&gt;Captain Planet&lt;/a&gt; | July 0, 2084&lt;/p&gt;
-&lt;/div&gt;
-        </code>
-      </pre>
+      <div class="hide-show">
+        <div class="button">Example HTML</div>
+        <pre>
+          <code>
+          &lt;div class="prose"&gt;
+            &lt;h1 class="headline"&gt;Cat Saves Planet from Apocolypse, Dies in Action&lt;/h1&gt;
+            &lt;p class="byline"&gt;By &lt;a href="http://www.texastribune.org/about/staff/captain-planet/"&gt;Captain Planet&lt;/a&gt; | July 0, 2084&lt;/p&gt;
+          &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
     </div>
 
   <!-- Headers -->
-    <div id="headers">
+    <div id="paragraph-header">
       <h3 class="paragraph-header">Paragraph Headers</h3>
       <p>That ^ is an example of a .paragraph-header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
-      <pre>
-        <code>
-&lt;h3&gt;Paragraph Headers&lt;/h3&gt;
-        </code>
-      </pre>
-      <h3 class="paragraph-header data">Data Headers</h3>
-      <p>That ^ is an example of a ".paragraph-header .paragraph-header-data". It's used for data-related headers, such as legend titles, or for explainer text.</p>
-      <pre>
-        <code>
-&lt;h3 class="paragraph-header paragraph-header-data"&gt;Data Headers&lt;/h3&gt;
-        </code>
-      </pre>
-    </div>
+      <div class="hide-show">
+        <div class="button">Example HTML</div>
+        <pre>
+          <code>
+          &lt;h3 class="paragraph-header"&gt;Paragraph Headers&lt;/h3&gt;
+          </code>
+        </pre>
+      </div>
+
 
   <!-- Captions -->
     <div id="captions">
       <h3>Captions</h3>
       <p>Captions for photos and other media elements are styled using prose p.caption. Images within .prose will fill 100% of the available width, unless otherwise specified.</p>
-      <img src="http://placekitten.com/800/400" style="width: 50%;">
+      <img src="http://placekitten.com/800/200">
       <p class="caption">This is a picture of a kitten. </p>
-      <pre>
-        <code>
-&lt;img src="http://placekitten.com/800/400" style="width: 50%;"&gt;
-&lt;p class="caption"&gt;This is a picture of a kitten. &lt;/p&gt;
-        </code>
-      </pre>
-    </div>
+      <div class="hide-show">
+        <div class="button">Example HTML</div>
+        <pre>
+          <code>
+          &lt;img src="http://placekitten.com/800/400"&gt;
+          &lt;p class="caption"&gt;This is a picture of a kitten. &lt;/p&gt;
+          </code>
+        </pre>
+      </div>
 
-  <!-- Lists -->
-    <div id="lists">
-      <h3 class="paragraph-header">Prose Lists</h3>
-      <ul class="disc">
-        <li>Are often used to call out important points.</li>
-        <li>They typically begin with an .paragraph-header.</li>
-        <li>Exciting stuff.</li>
-      </ul>
-
-      <pre>
-        <code>
-&lt;h3&gt;List Header&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;
-        </code>
-      </pre>
     </div>
 
   <!-- Block Text -->
     <div id="block-text">
-      <h3>Block</h3>
+      <h3>Blocks</h3>
       <p>Add a div.block around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
-      <p>Use the class .block-quote for the text of the quote, and .block-quote-source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
+
+      <header id="lists">
+        <h3>Prose Lists</h3>
+      </header>
+      <!-- Lists -->
+      <div class="block">
+        <h3 class="paragraph-header">Example list</h3>
+        <ul class="disc">
+          <li>Are often used to call out important points.</li>
+          <li>They typically begin with an .paragraph-header.</li>
+          <li>Exciting stuff.</li>
+        </ul>
+      </div>
+      <div class="hide-show">
+        <div class="button">Example HTML</div>
+        <pre>
+          <code>
+          &lt;div class="block"&gt;
+            &lt;h3 class="paragraph-header"&gt;Example list&lt;/h3&gt;
+            &lt;ul class="disc"&gt;
+              &lt;li&gt;One&lt;/li&gt;
+              &lt;li&gt;Two&lt;/li&gt;
+              &lt;li&gt;Three&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
+      <header id="block-quotes">
+        <h3>Block Quotes</h3>
+      </header>
+      <p>Use the class .block-quote for the text of a block quote, and .block-quote-source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
 
       <div class="block">
         <h2 class="block-quote">&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
         <p class="block-quote-source">&mdash; Becca Aaronson, cat enthusiast</p>
       </div>
-      <pre>
-        <code>
-&lt;div class="block"&gt;
-  &lt;h2 class="block-quote"&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
-  &lt;p class="block-quote-source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
-&lt;/div&gt;
-        </code>
-      </pre>
+      <div class="hide-show">
+        <div class="button">Example HTML</div>
+        <pre>
+          <code>
+          &lt;div class="block"&gt;
+            &lt;h2 class="block-quote"&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
+            &lt;p class="block-quote-source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
+          &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
     </div>
   <!-- Explainer -->
     <div id="explainer">
