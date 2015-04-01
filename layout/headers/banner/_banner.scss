@@ -1,5 +1,5 @@
-/* Header Banner */
-// Lead-Banner Settings
+/* Basic Banner */
+
 $banner-height: 600px;
 $grand-header-image-url: 'http://placekitten.com/1000/800';
 
@@ -7,7 +7,7 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
   background-color: lighten($masthead-black, 15%);
   display: table;
   // height: 600px;
-  // max-height: $banner-height; 
+  // max-height: $banner-height;
   margin: 0;
   position: relative;
   width: 100%;
@@ -60,7 +60,7 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
   }
 
   .grand-header-image {
-    background-image: url($grand-header-image-url); 
+    background-image: url($grand-header-image-url);
     background-position: center center;
     background-size: cover;
     bottom: 0;
@@ -70,5 +70,5 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
     top: 0;
 
   }
-  
+
 }

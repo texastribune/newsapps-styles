@@ -265,7 +265,7 @@
 <div id="lead-banner" class="container">
   <div class="prose">
     <h1>Project Header, Lead Art</h1>
-    <p>These styles can be found in theme/lead-banner.scss. To assign the URL for the lead art, go to helpers/variables. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
+    <p>The banner styles are located in layout > headers > banner. The default height of the banner is 225px, and it can also be changed in helpers/variables.</p>
     <h3>Basic Banner</h3>
   </div>
 </div>
@@ -279,7 +279,8 @@
  </header>
 </div>
 <div class="container">
-  <div class="prose">
+  <div class="prose hide-show">
+    <div class="button">Example HTML</div>
     <pre>
       <code>
       &lt;div class="banner"&gt;
@@ -292,51 +293,89 @@
      </code>
     </pre>
   </div>
+  <div class="prose hide-show">
+    <div class="button">Example CSS/Sass</div>
+    <pre>
+      <code>
+        /* Basic Banner */
+
+        $banner-height: 600px;
+        $grand-header-image-url: 'http://placekitten.com/1000/800';
+
+        .banner {
+          background-color: lighten($masthead-black, 15%);
+          display: table;
+          // height: 600px;
+          // max-height: $banner-height;
+          margin: 0;
+          position: relative;
+          width: 100%;
+
+          .grand-header {
+            @extend %content-block;
+            background-color: transparentize($masthead-black, .6);
+            bottom: 0%;
+            display: block;
+            padding: 1em;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+
+            a {
+              color: $white;
+            }
+
+            //Project Title
+            h1 {
+              color: $white;
+              font-family: $base-serif;
+              font-size: 2em;
+              font-weight: 800;
+              line-height: 1.15;
+              text-shadow: $black 3px 3px 0;
+              margin-bottom: .25em;
+
+              @include media($default-768) {
+                font-size: 3.5em;
+              }
+            }
+
+            //Project Subtitle
+            p {
+              color: $white;
+              font-family: $base-sans-serif;
+              font-size: 1em;
+              letter-spacing: .0625em;
+              line-height: 1.15;
+              text-shadow: none;
+              margin-bottom: 1.5em;;
+
+              @include media($default-768) {
+                font-size: 1.5em;
+              }
+            }
+
+          }
+
+          .grand-header-image {
+            background-image: url($grand-header-image-url);
+            background-position: center center;
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+          }
+
+        }
+      </code>
+    </pre>
+  </div>
 </div>
 
-<!-- Banner with Nav-Bar -->
-<div class="banner">
-  <div class="grand-header-image"></div>
-  <header class="grand-header">
-    <h1><a href="/">Project Title</a></h1>
-    <p>Zingy subtitle to hook 'em in</p>
-    <!-- Static navigation bar -->
-    <div class="wrapper">
-    <div id="nav-bar" class="nav-bar">
-      <ul>
-       <li>
-        <a href="">
-          <div class="nav-link">
-           Story 1
-          </div>
-        </a>
-       </li>
-       <li>
-        <a href="">
-          <div class="nav-link">
-           Story 2
-          </div>
-        </a>
-       </li>
-       <li>
-        <a href="">
-          <div class="nav-link">
-           Story 3
-          </div>
-        </a>
-       </li>
-       <li class="selected">
-        <a href="">
-          <div class="nav-link">
-           Story 4
-          </div>
-        </a>
-       </li>
-      </ul>
-    </div>
-    </div>
-  </header>
-</div>
 <div class="container">
   <div class="prose">
     <pre>
