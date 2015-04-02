@@ -15,6 +15,9 @@ $default-480: new-breakpoint(max-width 480px);
 // for the outer-container
 $max-width: 1081px;
 
+.container {
+  @include clearfix;
+}
 
 /* Grid Mixins */
 /* =========== */

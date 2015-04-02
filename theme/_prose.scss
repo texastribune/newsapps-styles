@@ -2,7 +2,6 @@
 
 // Prose Settings
 .prose {
-  @extend %content-block;
   @extend %prose;
   @include clearfix;
 
@@ -11,6 +10,7 @@
     font-family: $base-sans-serif;
     font-weight: 600;
     list-style: disc;
+    padding: 0 1em;
   }
 
   li {
@@ -19,6 +19,10 @@
     &:last-child {
       margin-bottom: 1em;
     }
+  }
+
+  img {
+    width: 100%;
   }
 
 }
@@ -31,8 +35,8 @@
 }
 
 .byline { //byline
+  @include font-size($s);
   font-family: $base-sans-serif;
-  font-size: .85em;
   margin-bottom: 0;
 
   a {
@@ -41,9 +45,9 @@
 }
 
 .caption {
+  @include font-size($s);
   color: $text-gray;
   font-family: $base-sans-serif;
-  font-size: .85em;
   font-weight: 400;
   margin: .25em 0;
 }

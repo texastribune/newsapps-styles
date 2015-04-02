@@ -13,20 +13,12 @@
     <div class="prose">
       <h1>Hello World!</h1>
       <p>Welcome to the Texas Tribune News Apps Style Guide &mdash; a constant work-in-progress.</p>
-      <hr class="yellow"></hr>
+      <hr class="yellow">
     </div>
     <div id="side-nav">
       <ul class="side-nav">
         <li><a href="#typography">Typography</a></li>
-        <li><a href="#prose">Prose</a>
-<!--           <ul>
-            <li><a href="#headline">Headline, Byline</a></li>
-            <li><a href="#headers">Headers</a></li>
-            <li><a href="#captions">Captions</a></li>
-            <li><a href="#lists">Lists</a></li>
-            <li><a href="#block-text">Block Text</a>
-          </ul> -->
-        </li>
+        <li><a href="#prose">Prose</a></li>
         <li><a href="#grid-specs">Grid Specs</a></li>
         <li><a href="#masthead">Masthead</a></li>
         <li><a href="#lead-banner">Project Header, Lead Art</a></li>
@@ -42,13 +34,12 @@
   </div>
 
 <!-- Base HTML Styles -->
-<div id="typography">
-  <div class="content-block">
-    <header>
+  <section class="content-block">
+    <header id="typography" >
       <h2 class="font-xl">Typography</h2>
     </header>
     <p>Typography styles can be found in helpers/_typography.scss. Georgia is our $base-serif font, and Helvetica Neue is our $base-sans-serif.</p>
-    <header>
+    <header id="font-sizes">
       <h3 class="font-l">Font-Sizes</h3>
     </header>
     <p>The $base font-size is 16px. In addition, there are six preset font-sizes assigned to the variables $xxl, $xl, $l, $m, $s, $xs. Those sizes correspond to the number of HTML header elements, but &lt;h1&gt;-&lt;h6&gt; do not have any assigned font-sizes. Instead, we have a series of font-size classes that can be assigned to any element. For example, the class .font-xxl will usually be used on &lt;h1&gt;, but if you use an h1 without the class .font-xxl, it will not include the preset $xxl font-size.</p>
@@ -186,11 +177,11 @@
         </code>
       </pre>
     </div>
-    <header>
+    <header id="#base-elements">
       <h3 class="font-l">Base elements</h3>
     </header>
-    <p>Few typography styles are assigned to base HTML elements. All elements in the &lt;body&gt; will be in $base-serif, font-size 16px, and line-height: 1.2 &mdash; unless otherwise specified.</p>
-    <p>Headers, paragraphs, links and unordered lists are the only HTML elements with base typography styles. We often use unordered lists to create additional components, so the base &lt;ul&gt; element does not include padding, margins or a list-style. For a bulleted list, include the class .disc.</p>
+    <p>The only place that base HTML elements should be given styles is in the helpers/_base.scss file. Few typography styles are assigned directly to HTML elements. All elements in the &lt;body&gt; will be in $base-sans-serif, font-size 16px, and line-height: 1 &mdash; unless otherwise specified.</p>
+    <p>Headers, paragraphs, links and unordered lists are the only HTML elements with additional typography styles. We often use unordered lists to create additional components, so the base &lt;ul&gt; element does not include padding, margins or a list-style. For a bulleted list, include the class .disc.</p>
     <ul>
       <li>This is a regular list.</li>
       <li>It's basically the same as a paragraph</li>
@@ -216,16 +207,31 @@
         </code>
       </pre>
     </div>
+    <p>Here are examples of &lt;hr&gt; tags. The basic &lt;hr&gt; is 2px wide and gray. Add the class "thin" to make it 1px wide and the class "yellow" to make it classic Tribune yellow. It includes 2rem white-space.</p>
+    <hr>
+    <hr class="thin">
+    <hr class="yellow">
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+          &lt;hr&gt;
+          &lt;hr class="thin"&gt;
+          &lt;hr class="yellow"&gt;
+        </code>
+      </pre>
+    </div>
     <div class="hide-show">
       <div class="button">CSS/Sass</div>
       <pre>
         <code>
-        // Base Elements
-
         body {
           @include font-size($base);
-          font-family: $base-serif;
-          line-height: 1.2;
+          background-color: $white;
+          font-family: $base-sans-serif;
+          -moz-osx-font-smoothing: grayscale;
+          line-height: 1;
+          text-rendering: optimizelegibility;
         }
 
         h1,
@@ -234,8 +240,14 @@
         h4,
         h5,
         h6 {
-          font-family: $base-sans-serif;
           font-weight: 800;
+        }
+
+        p {
+          @include font-size($base);
+          font-family: $base-serif;
+          font-weight: 400;
+          line-height: 1.4em;
         }
 
         a {
@@ -245,13 +257,6 @@
           &:hover {
             text-decoration: underline;
           }
-        }
-
-        p {
-          @include font-size($base);
-          font-family: $base-serif;
-          font-weight: 400;
-          line-height: 1.4em;
         }
 
         ul {
@@ -266,157 +271,197 @@
           }
         }
 
+        hr {
+          background-color: $line-gray;
+          border: 0 none;
+          height: 2px;
+          margin-bottom: 2em;
+
+          &.thin {
+            height: 1px;
+          }
+
+          &.yellow {
+            background-color: $tribune-yellow;
+          }
+        }
+
         </code>
       </pre>
     </div>
     <!-- Prose Styles -->
-    <div id="prose" class="container">
-     <header>
-        <h3>Prose</h3>
-      </header>
-      <div class="prose">
-        <p>The basic prose styles outlined below can be found in helpers/_typography.scss. The extension %prose can be applied to any element to add basic paragraph styles, and is already applied to .prose. The .prose also includes an extension of %content-block, which gives elements a margin to prevent them from bumping up against the edges of small screens. Full-screen media elements should not be contained within a .prose tag.</p>
-
-      <!-- Headline, Byline -->
-        <div id="headline">
-            <h3>Headline, Byline</h3>
-            <p>Use the &lt;h1&gt; tag in .prose for Headlines, and &lt;p class="byline"&gt; for bylines.</p>
-            <h1 class="headline">Cat Saves Planet from Apocolypse, Dies in Action</h1>
-            <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
-          <div class="hide-show">
-            <div class="button">Example HTML</div>
-            <pre>
-              <code>
-              &lt;div class="prose"&gt;
-                &lt;h1 class="headline"&gt;Cat Saves Planet from Apocolypse, Dies in Action&lt;/h1&gt;
-                &lt;p class="byline"&gt;By &lt;a href="http://www.texastribune.org/about/staff/captain-planet/"&gt;Captain Planet&lt;/a&gt; | July 0, 2084&lt;/p&gt;
-              &lt;/div&gt;
-              </code>
-            </pre>
-          </div>
-        </div>
-
-      <!-- Headers -->
-        <div id="paragraph-header">
-          <h3 class="paragraph-header">Paragraph Headers</h3>
-          <p>That ^ is an example of a .paragraph-header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
-          <div class="hide-show">
-            <div class="button">Example HTML</div>
-            <pre>
-              <code>
-              &lt;h3 class="paragraph-header"&gt;Paragraph Headers&lt;/h3&gt;
-              </code>
-            </pre>
-          </div>
-
-
-      <!-- Captions -->
-        <div id="captions">
-          <h3>Captions</h3>
-          <p>Captions for photos and other media elements are styled using prose p.caption. Images within .prose will fill 100% of the available width, unless otherwise specified.</p>
-          <img src="http://placekitten.com/800/200">
-          <p class="caption">This is a picture of a kitten. </p>
-          <div class="hide-show">
-            <div class="button">Example HTML</div>
-            <pre>
-              <code>
-              &lt;img src="http://placekitten.com/800/400"&gt;
-              &lt;p class="caption"&gt;This is a picture of a kitten. &lt;/p&gt;
-              </code>
-            </pre>
-          </div>
-
-        </div>
-
-      <!-- Block Text -->
-        <div id="block-text">
-          <h3>Blocks</h3>
-          <p>Add a div.block around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
-
-          <header id="lists">
-            <h3>Prose Lists</h3>
-          </header>
-          <!-- Lists -->
-          <div class="block">
-            <h3 class="paragraph-header">Example list</h3>
-            <ul class="disc">
-              <li>Are often used to call out important points.</li>
-              <li>They typically begin with an .paragraph-header.</li>
-              <li>Exciting stuff.</li>
-            </ul>
-          </div>
-          <div class="hide-show">
-            <div class="button">Example HTML</div>
-            <pre>
-              <code>
-              &lt;div class="block"&gt;
-                &lt;h3 class="paragraph-header"&gt;Example list&lt;/h3&gt;
-                &lt;ul class="disc"&gt;
-                  &lt;li&gt;One&lt;/li&gt;
-                  &lt;li&gt;Two&lt;/li&gt;
-                  &lt;li&gt;Three&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-              </code>
-            </pre>
-          </div>
-
-          <header id="block-quotes">
-            <h3>Block Quotes</h3>
-          </header>
-          <p>Use the class .block-quote for the text of a block quote, and .block-quote-source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
-
-          <div class="block">
-            <h2 class="block-quote">&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
-            <p class="block-quote-source">&mdash; Becca Aaronson, cat enthusiast</p>
-          </div>
-          <div class="hide-show">
-            <div class="button">Example HTML</div>
-            <pre>
-              <code>
-              &lt;div class="block"&gt;
-                &lt;h2 class="block-quote"&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
-                &lt;p class="block-quote-source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
-              &lt;/div&gt;
-              </code>
-            </pre>
-          </div>
-
-        </div>
-      <!-- Explainer -->
-        <div id="explainer">
-          <h3>Explainer Text</h3>
-          <p class="explainer-text">Use the class explainer-text when you're explaining something, such as how to use the Hospitals Explorer or to define a glossary definition.</p>
-          <pre>
-            <code>
-    &lt;p class="explainer-text"&gt;Text goes here&lt;/p&gt;
-            </code>
-          </pre>
-        </div>
-      </div>
+   <header id="prose">
+      <h3 class="font-l">Prose</h3>
+    </header>
+    <div class="prose">
+      <p>The basic prose styles outlined below can be found in theme/_prose.scss. The extension %prose can be applied to any element to add basic paragraph styles, and is already applied to .prose. Usually .prose should be used in conjunction with .content-block, which gives elements a margin to prevent them from bumping up against the edges of small screens. We do not @extend %content-block on .prose, because in some cases, .prose could be nested within a div that already has %content-block.</p>
+      <ul>
+        <li>Unordered lists are also given additional typography styles</li>
+        <li>when inside a .prose tag, such as margins and bullets.</li>
+      </ul>
     </div>
-    <button>Button Tag</button>
+    <div class="hide-show">
+      <div class="button">CSS/Sass</div>
+      <pre>
+        <code>
+          .prose {
+            @extend %content-block;
+            @extend %prose;
+            @include clearfix;
 
+            ul {
+              @include font-size($s);
+              font-family: $base-sans-serif;
+              font-weight: 600;
+              list-style: disc;
+              padding: 0 1em;
+            }
+
+            li {
+              margin-bottom: .5em;
+
+              &:last-child {
+                margin-bottom: 1em;
+              }
+            }
+
+          }
+        </code>
+      </pre>
+    </div>
+    <header id="headline">
+      <h3 class="font-l">Headline, Byline</h3>
+    </header>
+    <p>Use the classes .headline and .byline for basic headlines.</p>
+    <header>
+      <h1 class="headline">Cat Saves Planet from Apocolypse, Dies in Action</h1>
+      <p class="byline">By <a href="http://www.texastribune.org/about/staff/alexa-ura/">Captain Planet</a> | July 0, 2084</p>
+    </header>
+
+    <div class="hide-show">
+      <div class="button">HTML</div>
+        <pre>
+          <code>
+          &lt;header&gt;
+            &lt;h1 class="headline"&gt;Cat Saves Planet from Apocolypse, Dies in Action&lt;/h1&gt;
+            &lt;p class="byline"&gt;By &lt;a href="http://www.texastribune.org/about/staff/alexa-ura/"&gt;Captain Planet&lt;/a&gt; | July 0, 2084&lt;/p&gt;
+          &lt;/header&gt;
+        </code>
+      </pre>
+    </div>
+
+    <header id="paragraph-header">
+      <h3 class="paragraph-header">Paragraph Headers</h3>
+    </header>
+    <p>That ^ is an example of a .paragraph-header. Notice it will automatically transform the text to uppercase. You can also use these styles on other elements using @extend %paragraph-header.</p>
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+        &lt;h3 class="paragraph-header"&gt;Paragraph Headers&lt;/h3&gt;
+        </code>
+      </pre>
+    </div>
+
+    <header id="captions">
+      <h3 class="font-l">Captions</h3>
+    </header>
+    <p>Captions for photos and other media elements are styled using .caption. Images within .prose will fill 100% of the available width, unless otherwise specified.</p>
+    <div class="prose">
+      <img src="http://placekitten.com/800/300">
+      <p class="caption">This is a picture of a kitten inside a div.prose.</p>
+    </div>
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+        &lt;div class="prose"&gt;
+          &lt;img src="http://placekitten.com/800/400"&gt;
+          &lt;p class="caption"&gt;This is a picture of a kitten inside a div.prose. &lt;/p&gt;
+        &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+
+    <header>
+      <h3 id="block-text" class="font-l">Blocks</h3>
+    </header>
+    <p>Add a div.block around elements that you want to highlight with a yellow border on top and bottom, such as block-quotes or embedded lists.</p>
+    <!-- Lists -->
+    <div class="block prose">
+      <h3 class="paragraph-header">Example list</h3>
+      <ul class="disc">
+        <li>Lists are often used to call out important points.</li>
+        <li>They typically begin with an .paragraph-header.</li>
+        <li>Exciting stuff.</li>
+      </ul>
+    </div>
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+        &lt;div class="block prose"&gt;
+          &lt;h3 class="paragraph-header"&gt;Example list&lt;/h3&gt;
+          &lt;ul class="disc"&gt;
+            &lt;li&gt;One&lt;/li&gt;
+            &lt;li&gt;Two&lt;/li&gt;
+            &lt;li&gt;Three&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+
+    <header id="block-quotes">
+      <h3 class="font-l">Block Quotes</h3>
+    </header>
+    <p>Use the class .block-quote for the text of a block quote, and .block-quote-source for the attribution. Also, make sure to use HTML special characters for your quote marks! They won't be styled correctly if you forget. **Warning: The example code below is converting the special characters, so make sure to change it if you copy/paste.**</p>
+
+    <div class="block">
+      <h2 class="block-quote">&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;</h2>
+      <p class="block-quote-source">&mdash; Becca Aaronson, cat enthusiast</p>
+    </div>
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+        &lt;div class="block"&gt;
+          &lt;h2 class="block-quote"&gt;&ldquo;You know what&rsquo;s awesome? Cats. Cats are awesome.&rdquo;&lt;/h2&gt;
+          &lt;p class="block-quote-source"&gt;&mdash; Becca Aaronson, cat enthusiast&lt;/p&gt;
+        &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+    <!-- Explainer -->
+    <header id="explainer">
+      <h3 class="font-l">Explainer Text</h3>
+    </header>
+    <p class="explainer-text">Use the class explainer-text when you're explaining something, such as how to use the Hospitals Explorer or to define a glossary definition.</p>
+    <div class="hide-show">
+      <div class="button">HTML</div>
+      <pre>
+        <code>
+        &lt;p class="explainer-text"&gt;Text goes here&lt;/p&gt;
+        </code>
+      </pre>
+    </div>
+
+    <header id="buttons">
+      <h3 class="font-l">Buttons</h3>
+    </header>
+    <button>Button Tag</button>
     <div class="button">Div.Button</div>
 
-    <p>Here are examples of HR tags. The basic HR tag is 2px wide and gray. Add the class "thin" to make it 1px wide and the class "yellow" to make it classic Tribune yellow. It includes 2rem white-space.</p>
-    <hr>
-    <hr class="thin">
-    <hr class="yellow">
-  </div>
-</div>
 
+  </section>
 <!-- Grid Specs -->
-<div id="grid-specs" class="container">
-  <div class="prose">
+  <header id="grid-specs" class="prose">
     <h1>Grid Specs</h1>
-    <p>The grid layout files are located in base/scaffold.</p>
-    <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
-    <h3>Content-Block</h3>
-    <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, or add "@extend %content-block" to the parent-most element's styles. </p>
-  </div>
-</div>
-
+  </header>
+  <p>The grid layout files are located in base/scaffold.</p>
+  <p>To include an element in a responsive grid design, add the class .container to the parent-most element. You can also use "@extend %container" to add an outer-grid to any element that needs it.</p>
+  <h3>Content-Block</h3>
+  <p>Content-blocks are used to ensure that an element does not bump against the edge of the screen on smaller devices or window-sizes. Add the class .content-block to add a 20px left/right margin at all times, or add "@extend %content-block" to the parent-most element's styles. </p>
 <!-- Masthead -->
 <div id="masthead" class="container">
   <div class="prose">

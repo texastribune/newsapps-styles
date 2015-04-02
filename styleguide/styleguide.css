@@ -367,6 +367,11 @@ th {
     content: "";
     display: table; }
 
+.container::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 /* Grid Mixins */
 /* =========== */
 .font-xxl {
@@ -393,44 +398,6 @@ th {
   font-size: 12px;
   font-size: 0.75rem; }
 
-body {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
-  line-height: 1.2; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-weight: 800; }
-
-a {
-  color: #008990;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
-
-p {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
-  font-weight: 400;
-  line-height: 1.4em; }
-
-ul {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  list-style: none;
-  padding: 0; }
-  ul.disc {
-    list-style: disc;
-    padding: 0 1em; }
-
 /* PLACEHOLDERS */
 .container, .wrapper, .footer-container {
   max-width: 1081px;
@@ -441,7 +408,7 @@ ul {
     content: "";
     display: table; }
 
-.content-block, .banner .grand-header, .share-row, .shareline, .about, .prose {
+.content-block, .banner .grand-header, .share-row, .shareline, .about {
   padding: 0 1.25em; }
 
 @media screen and (max-width: 480px) {
@@ -476,19 +443,44 @@ ul {
 
 /* Base Theme for HTML elements */
 body {
+  font-size: 16px;
+  font-size: 1rem;
   background-color: white;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
   text-rendering: optimizelegibility; }
 
-.container:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800; }
+
+a {
+  color: #008990;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-weight: 400;
+  line-height: 1.4em; }
+
+ul {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  list-style: none;
+  padding: 0; }
+  ul.disc {
+    list-style: disc;
+    padding: 0 1em; }
 
 hr {
   background-color: #bbbbbb;
@@ -534,6 +526,14 @@ button,
   .button:disabled {
     background-color: #c2c2c2;
     cursor: default; }
+
+.container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
 
 /* Tribune Masthead */
 .masthead {
@@ -1026,11 +1026,14 @@ tr:nth-child(odd) td {
   font-size: 0.875rem;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 600;
-  list-style: disc; }
+  list-style: disc;
+  padding: 0 1em; }
 .prose li {
   margin-bottom: .5em; }
   .prose li:last-child {
     margin-bottom: 1em; }
+.prose img {
+  width: 100%; }
 
 .headline {
   font-size: 24px;
@@ -1040,16 +1043,18 @@ tr:nth-child(odd) td {
   margin: 1.25em 0 .6em; }
 
 .byline {
+  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: .85em;
   margin-bottom: 0; }
   .byline a {
     font-weight: 800; }
 
 .caption {
+  font-size: 14px;
+  font-size: 0.875rem;
   color: #666666;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: .85em;
   font-weight: 400;
   margin: .25em 0; }
 
