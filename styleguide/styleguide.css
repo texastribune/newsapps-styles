@@ -415,7 +415,7 @@ th {
   .content-block-full {
     padding: 0; } }
 
-.about, .prose {
+.about, .prose, .swatches li {
   font-size: 16px;
   font-size: 1rem;
   color: #282828;
@@ -1109,6 +1109,38 @@ pre {
 
 .banner {
   height: 16em; }
+
+.swatches:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+.swatches div {
+  padding: .75em;
+  height: 5em;
+  margin-bottom: .5em;
+  width: 100%; }
+.swatches ul {
+  margin: .5em 0;
+  list-style-type: none; }
+.swatches li {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%;
+  background-color: whitesmoke;
+  border: 1px solid #bbbbbb;
+  margin-bottom: 1em;
+  padding: .5em;
+  text-align: center; }
+  .swatches li:last-child {
+    margin-right: 0; }
+  .swatches li:nth-child(3n) {
+    margin-right: 0; }
+  .swatches li:nth-child(3n+1) {
+    clear: left; }
 
 
 
