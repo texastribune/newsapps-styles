@@ -463,6 +463,20 @@ ul {
   font-weight: 600;
   margin: 1.25em 0 .6em; }
 
+.byline {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: .85em;
+  margin-bottom: 0; }
+  .byline a {
+    font-weight: 800; }
+
+.caption {
+  color: #666666;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: .85em;
+  font-weight: 400;
+  margin: .25em 0; }
+
 .paragraph-header, .shareline h3, .about h3 {
   font-size: 14px;
   font-size: 0.875rem;
@@ -472,12 +486,13 @@ ul {
   margin: 1em 0;
   text-transform: uppercase; }
 
-.byline {
+.explainer-text {
+  background: whitesmoke;
+  color: #282828;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: .85em;
-  margin-bottom: 0; }
-  .byline a {
-    font-weight: 800; }
+  font-weight: 300;
+  line-height: 1.3;
+  padding: 1em; }
 
 .block {
   border-color: #ffc200;
@@ -501,28 +516,6 @@ ul {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 300;
   margin: calc(16rem / 16) calc(8rem / 16); }
-
-.caption {
-  color: #666666;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: .85em;
-  font-weight: 400;
-  margin: .25em 0; }
-
-.explainer-header {
-  color: #282828;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left; }
-
-.explainer-text {
-  background: whitesmoke;
-  color: #282828;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-weight: 300;
-  line-height: 1.3;
-  padding: 1em; }
 
 /* Grid Settings */
 .container, .wrapper, .footer-container {

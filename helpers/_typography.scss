@@ -137,6 +137,24 @@ ul {
   margin: 1.25em 0 .6em;
 }
 
+.byline { //byline
+  font-family: $base-sans-serif;
+  font-size: .85em;
+  margin-bottom: 0;
+
+  a {
+    font-weight: 800;
+  }
+}
+
+.caption {
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  font-size: .85em;
+  font-weight: 400;
+  margin: .25em 0;
+}
+
 %paragraph-header {
   @include font-size($s);
   font-family: $base-sans-serif;
@@ -146,27 +164,21 @@ ul {
   text-transform: uppercase;
 }
 
-// Data Viz text (Sans Serif)
-%dataviz-header {
-  @include font-size($m);
-  font-family: $base-sans-serif;
-  font-weight: 400;
-  margin: 0 0 1em;
-  text-transform: none;
-}
-
 .paragraph-header {
   @extend %paragraph-header;
 }
 
-.byline { //byline
+%explainer-text {
+  background: $explainer-gray;
+  color: $bodytext-black;
   font-family: $base-sans-serif;
-  font-size: .85em;
-  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.3;
+  padding: 1em;
+}
 
-  a {
-    font-weight: 800;
-  }
+.explainer-text {
+  @extend %explainer-text;
 }
 
 .block {
@@ -194,27 +206,3 @@ ul {
   margin: calc(16rem / 16) calc(8rem / 16);
 }
 
-.caption {
-  color: $text-gray;
-  font-family: $base-sans-serif;
-  font-size: .85em;
-  font-weight: 400;
-  margin: .25em 0;
-}
-
-.explainer-header {
-  color: $bodytext-black;
-  font-family: $base-sans-serif;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.explainer-text {
-  background: $explainer-gray;
-  color: $bodytext-black;
-  font-family: $base-sans-serif;
-  font-weight: 300;
-  line-height: 1.3;
-  padding: 1em;
-}
