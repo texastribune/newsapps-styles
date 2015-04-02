@@ -1,4 +1,83 @@
 /* Base Prose Theme */
 
+// Prose Settings
+.prose {
+  @extend %content-block;
+  @extend %prose;
+  @include clearfix;
 
+  ul {
+    @include font-size($s);
+    font-family: $base-sans-serif;
+    font-weight: 600;
+    list-style: disc;
+  }
+
+  li {
+    margin-bottom: .5em;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+}
+
+.headline {
+  @include font-size($l);
+  font-family: $base-sans-serif;
+  font-weight: 600;
+  margin: 1.25em 0 .6em;
+}
+
+.byline { //byline
+  font-family: $base-sans-serif;
+  font-size: .85em;
+  margin-bottom: 0;
+
+  a {
+    font-weight: 800;
+  }
+}
+
+.caption {
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  font-size: .85em;
+  font-weight: 400;
+  margin: .25em 0;
+}
+
+.paragraph-header {
+  @extend %paragraph-header;
+}
+
+.explainer-text {
+  @extend %explainer-text;
+}
+
+.block {
+  border-color: $tribune-yellow;
+  border-style: solid;
+  border-width: 1px 0;
+  margin-bottom: calc(16rem / 16);
+  position: relative;
+}
+
+.block-quote {
+  @include font-size($l);
+  font-family: $base-serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin: calc(16rem / 16) calc(8rem / 16);
+  position: relative;
+  text-align: left;
+}
+
+.block-quote-source {
+  font-family: $base-sans-serif;
+  font-weight: 300;
+  margin: calc(16rem / 16) calc(8rem / 16);
+}
 
