@@ -369,6 +369,30 @@ th {
 
 /* Grid Mixins */
 /* =========== */
+.font-xxl {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+.font-xl {
+  font-size: 28px;
+  font-size: 1.75rem; }
+
+.font-l {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+.font-m {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.font-s {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.font-xs {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
 body {
   font-size: 16px;
   font-size: 1rem;
@@ -382,8 +406,7 @@ h4,
 h5,
 h6 {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-weight: 800;
-  margin-bottom: calc(10rem / 16); }
+  font-weight: 800; }
 
 a {
   color: #008990;
@@ -407,33 +430,6 @@ ul {
   ul.disc {
     list-style: disc;
     padding: 0 1em; }
-
-.font-xxl {
-  font-size: 36px;
-  font-size: 2.25rem; }
-  @media screen and (max-width: 480px) {
-    .font-xxl {
-      font-size: 88; } }
-
-.font-xl {
-  font-size: 28px;
-  font-size: 1.75rem; }
-
-.font-l {
-  font-size: 24px;
-  font-size: 1.5rem; }
-
-.font-m {
-  font-size: 20px;
-  font-size: 1.25rem; }
-
-.font-s {
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-.font-xs {
-  font-size: 12px;
-  font-size: 0.75rem; }
 
 /* PLACEHOLDERS */
 .container, .wrapper, .footer-container {

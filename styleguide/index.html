@@ -47,7 +47,11 @@
     <header>
       <h2 class="font-xl">Typography</h2>
     </header>
-    <p>Typography styles can be found in helpers/_typography.scss. The sizes correspond w/ HTML header elements, but those elements do not have any specific styles. For example, .xxl should be used on h1, but if you use an h1 without the class .xxl, it will not include the preset xxl font-size.</p>
+    <p>Typography styles can be found in helpers/_typography.scss. Georgia is our $base-serif font, and Helvetica Neue is our $base-sans-serif.</p>
+    <header>
+      <h3 class="font-l">Font-Sizes</h3>
+    </header>
+    <p>The $base font-size is 16px. In addition, there are six preset font-sizes assigned to the variables $xxl, $xl, $l, $m, $s, $xs. Those sizes correspond to the number of HTML header elements, but &lt;h1&gt;-&lt;h6&gt; do not have any assigned font-sizes. Instead, we have a series of font-size classes that can be assigned to any element. For example, the class .font-xxl will usually be used on &lt;h1&gt;, but if you use an h1 without the class .font-xxl, it will not include the preset $xxl font-size.</p>
 
     <h1 class="font-xxl">This is a class .font-xxl</h1>
     <h2 class="font-xl">This is a class .font-xl</h2>
@@ -55,8 +59,11 @@
     <h4 class="font-m">This is a class .font-m</h4>
     <h5 class="font-s">This is a class .font-s</h5>
     <h6 class="font-xs">This is a class .font-xs</h6>
+
+    <p>There are two basic typography mixins. The @mixin font-size() is called on the preset font-size variables on each of the .font-size classes, but it can be called on any additional class to set a particular module's font-size.</p>
+    <p>The @mixin font-size-bp() takes two arguments, $breakpoint and $pct. It's used to change the font-size by a percentage at a certain breakpoint. For example, you could include the mixin to make paragraphs 88% percent smaller on screens 480 pixels or less.</p>
     <div class="hide-show">
-      <div class="button">Example HTML</div>
+      <div class="button">HTML</div>
       <pre>
         <code>
           &lt;h1 class="font-xxl"&gt;This is a class .font-xxl&lt;/h1&gt;
@@ -68,12 +75,15 @@
         </code>
       </pre>
     </div>
+
     <div class="hide-show">
-      <div class="button">Example Sass</div>
+      <div class="button">CSS/Sass</div>
       <pre>
         <code>
         // Typography
         // ==========
+
+        // Base Typography Variables
         $base-sans-serif: $helvetica;
         $base-serif: $georgia;
 
@@ -84,7 +94,9 @@
         $l: 24;
         $m: 20;
         $s: 14;
-        $xs: 10;
+        $xs: 12;
+
+        // Typography Mixins
 
         // Calculate pixels to rem units for font sizes
         @mixin font-size($f) {
@@ -92,7 +104,7 @@
           font-size: $f/$base+rem;
         }
 
-        // Include this mixin to change the font-size at a breakpoint.
+        // Change the font-size at a breakpoint.
         // For example, you could set font-size: $pct to 78% on mobile.
         @mixin font-size-bp($bp, $pct) {
           @include media($bp) {
@@ -115,6 +127,34 @@
           font-family: $base-sans-serif;
           font-weight: 800;
           margin-bottom: calc(10rem / 16);
+        }
+
+        a {
+          color: $href-teal;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        p {
+          @include font-size($base);
+          font-family: $base-serif;
+          font-weight: 400;
+          line-height: 1.4em;
+        }
+
+        ul {
+          @include font-size($base);
+          font-family: $base-sans-serif;
+          list-style: none;
+          padding: 0;
+
+          &.disc {
+            list-style: disc;
+            padding: 0 1em;
+          }
         }
 
         // These classes can be applied to any element
@@ -142,13 +182,15 @@
         .font-xs {
           @include font-size($xs);
         }
+
         </code>
       </pre>
     </div>
     <header>
       <h3 class="font-l">Base elements</h3>
     </header>
-    <p>This is a paragraph. It's one of few elements that has styles applied directly to the element class. <a href="">Links</a> are automatically colored $tribune-teal and have text-decoration removed.</p>
+    <p>Few typography styles are assigned to base HTML elements. All elements in the &lt;body&gt; will be in $base-serif, font-size 16px, and line-height: 1.2 &mdash; unless otherwise specified.</p>
+    <p>Headers, paragraphs, links and unordered lists are the only HTML elements with base typography styles. We often use unordered lists to create additional components, so the base &lt;ul&gt; element does not include padding, margins or a list-style. For a bulleted list, include the class .disc.</p>
     <ul>
       <li>This is a regular list.</li>
       <li>It's basically the same as a paragraph</li>
@@ -156,10 +198,10 @@
     </ul>
     <ul class="disc">
       <li>This list has class .disc</li>
-      <li>Because we like it dotted.</li>
+      <li>Because we like our bullet points dotted.</li>
     </ul>
     <div class="hide-show">
-      <div class="button">Example HTML</div>
+      <div class="button">HTML</div>
       <pre>
         <code>
           &lt;p&gt;This is a paragraph. It's one of few elements that has styles applied directly to the element class.&lt;a href=""&gt;Links&lt;/a&gt; are automatically colored $tribune-teal and have text-decoration removed.&lt;/p&gt;
@@ -175,34 +217,55 @@
       </pre>
     </div>
     <div class="hide-show">
-      <div class="button">Example CSS/Sass</div>
+      <div class="button">CSS/Sass</div>
       <pre>
         <code>
-          a {
-            color: $href-teal;
-            text-decoration: none;
+        // Base Elements
 
-            &:hover {
-              text-decoration: underline;
-            }
+        body {
+          @include font-size($base);
+          font-family: $base-serif;
+          line-height: 1.2;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: $base-sans-serif;
+          font-weight: 800;
+        }
+
+        a {
+          color: $href-teal;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
           }
+        }
 
-          p {
-            @include font-size($base);
-            font-family: $base-serif;
-            font-weight: 400;
-            line-height: 1.4em;
+        p {
+          @include font-size($base);
+          font-family: $base-serif;
+          font-weight: 400;
+          line-height: 1.4em;
+        }
+
+        ul {
+          @include font-size($base);
+          font-family: $base-sans-serif;
+          list-style: none;
+          padding: 0;
+
+          &.disc {
+            list-style: disc;
+            padding: 0 1em;
           }
+        }
 
-          ul {
-            list-style: none;
-            padding: 0;
-
-            &.disc {
-              list-style: disc;
-              padding: 0 1em;
-            }
-          }
         </code>
       </pre>
     </div>
