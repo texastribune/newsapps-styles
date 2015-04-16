@@ -37,7 +37,7 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
       text-shadow: $black 3px 3px 0;
       margin-bottom: .25em;
 
-      @include media($default-768) {
+      @include media($default-desktop) {
         font-size: 3.5em;
       }
     }
@@ -52,7 +52,7 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
       text-shadow: none;
       margin-bottom: 1.5em;;
 
-      @include media($default-768) {
+      @include media($default-desktop) {
         font-size: 1.5em;
       }
     }

@@ -8,8 +8,8 @@ $small: new-breakpoint(min-width 460px max-width 810px);
 $medium: new-breakpoint(min-width 811px max-width 1080px);
 $large: new-breakpoint(min-width 1081px);
 
-$default-768: new-breakpoint(min-width 768px);
-$default-480: new-breakpoint(max-width 480px);
+$default-desktop: new-breakpoint(min-width 768px);
+$default-mobile: new-breakpoint(max-width 480px);
 
 // To override Bourbon's max-width
 // for the outer-container
@@ -22,13 +22,7 @@ $max-width: 1081px;
 
 %content-block,
 .content-block {
-  @include pad(0 1.25em);
-}
-
-%content-block-full {
-  @include media($default-480) {
-    @include pad(0);
-  }
+  @include pad(0 10px);
 }
 
 /* Grid Mixins */

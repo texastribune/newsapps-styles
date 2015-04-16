@@ -1,5 +1,5 @@
 //About & Contributors
-$bp-about: $default-768;
+$bp-about: $default-desktop;
 
 .about {
   @include features-layout($bp-about);

@@ -379,10 +379,6 @@ th {
 .content-block, .banner .grand-header, .share-row, .shareline, .about {
   padding: 0 1.25em; }
 
-@media screen and (max-width: 480px) {
-  .content-block-full {
-    padding: 0; } }
-
 /* Grid Mixins */
 /* =========== */
 .font-xxl {

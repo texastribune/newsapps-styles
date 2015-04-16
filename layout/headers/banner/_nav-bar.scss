@@ -1,6 +1,6 @@
 /* Static Nav-Bar */
 
-$bp-nav-bar: $default-768;
+$bp-nav-bar: $default-desktop;
 
 // Grid
 .wrapper {
@@ -20,7 +20,7 @@ $bp-nav-bar: $default-768;
   text-align: center;
 
   //Add to active story page
-  .selected { 
+  .selected {
     background: $button-selected-teal;
   }
 
@@ -39,7 +39,7 @@ $bp-nav-bar: $default-768;
       }
 
       &:hover {
-        background: $button-hover-teal;     
+        background: $button-hover-teal;
       }
 
     }
@@ -52,6 +52,6 @@ $bp-nav-bar: $default-768;
 
     a {
       text-decoration: none;
-    } 
+    }
   }
 }
