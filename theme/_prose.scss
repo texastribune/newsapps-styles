@@ -6,7 +6,7 @@
   @include clearfix;
 
   ul {
-    @include font-size($s);
+    @extend %font-s;
     font-family: $base-sans-serif;
     font-weight: 600;
     list-style: disc;
@@ -28,14 +28,14 @@
 }
 
 .headline {
-  @include font-size($l);
+  @extend %font-l;
   font-family: $base-sans-serif;
   font-weight: 600;
   margin: 1.25em 0 .6em;
 }
 
 .byline { //byline
-  @include font-size($s);
+  @extend %font-s;
   font-family: $base-sans-serif;
   margin-bottom: 0;
 
@@ -45,7 +45,7 @@
 }
 
 .caption {
-  @include font-size($s);
+  @extend %font-s;
   color: $text-gray;
   font-family: $base-sans-serif;
   font-weight: 400;
@@ -69,7 +69,7 @@
 }
 
 .block-quote {
-  @include font-size($l);
+  @extend %font-l;
   font-family: $base-serif;
   font-style: italic;
   font-weight: 700;

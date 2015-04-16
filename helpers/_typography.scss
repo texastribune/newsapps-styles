@@ -17,45 +17,56 @@ $xs: 12;
 // Font Sizes
 
 // Calculate pixels to rem units for font sizes
-@mixin font-size($f) {
-  font-size: $f+px; // for IE8
-  font-size: $f/$base+rem;
-}
+// @mixin font-size($f) {
+//   font-size: $f+px; // for IE8
+//   font-size: $f/$base+rem;
+// }
 
 // Change the font-size at a breakpoint.
 // For example, you could set font-size: $pct to 78% on mobile.
-@mixin font-size-bp($bp, $pct) {
+@mixin font-size($f, $bp, $pct) {
+  font-size: $f+px; // for IE8
+  font-size: $f/$base+rem;
+
   @include media($bp) {
-    font-size: $pct;
+    font-size: $f*$pct+px; // for IE8
+    font-size: $f*$pct/$base+rem;
   }
 }
 
 // These classes can be applied to any element
 // to set the font-size.
+%font-xxl,
 .font-xxl {
-  @include font-size($xxl);
+  @include font-size($xxl, $default-mobile, .9);
 }
 
+%font-xl,
 .font-xl {
-  @include font-size($xl);
+  @include font-size($xl, $default-mobile, .9);
 }
 
+%font-l,
 .font-l {
-  @include font-size($l);
+  @include font-size($l, $default-mobile, .9);
 }
 
+%font-m,
 .font-m {
-  @include font-size($m);
+  @include font-size($m, $default-mobile, .9);
 }
 
+%font-base,
 .font-base {
-  @include font-size($base);
+  @include font-size($base, $default-mobile, .9);
 }
 
+%font-s,
 .font-s {
-  @include font-size($s);
+  @include font-size($s, $default-mobile, .9);
 }
 
+%font-xs,
 .font-xs {
-  @include font-size($xs);
+  @include font-size($xs, $default-mobile, .9);
 }

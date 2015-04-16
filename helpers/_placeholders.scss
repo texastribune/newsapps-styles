@@ -3,7 +3,7 @@
 
 // Typography Placeholders
 %prose {
-  @include font-size($base);
+  @extend %font-base;
   color: $bodytext-black;
   display: block;
   font-family: $base-serif;
