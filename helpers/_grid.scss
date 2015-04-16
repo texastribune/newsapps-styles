@@ -15,12 +15,13 @@ $default-480: new-breakpoint(max-width 480px);
 // for the outer-container
 $max-width: 1081px;
 
-// Grid Placeholders
-%container {
+%container,
+.container {
   @include outer-container;
 }
 
-%content-block {
+%content-block,
+.content-block {
   @include pad(0 1.25em);
 }
 
