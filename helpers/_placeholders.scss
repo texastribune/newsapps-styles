@@ -1,20 +1,5 @@
 /* PLACEHOLDERS */
 
-// Grid Placeholders
-%container {
-  @include outer-container;
-}
-
-%content-block {
-  @include pad(0 1.25em);
-}
-
-%content-block-full {
-  @include media($default-480) {
-    @include pad(0);
-  }
-}
-
 
 // Typography Placeholders
 %prose {

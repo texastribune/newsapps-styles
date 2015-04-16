@@ -9,8 +9,8 @@ $base-serif: $georgia;
 $base: 16;
 $xxl: 48;
 $xl: 36;
-$l: 24;
-$m: 18;
+$l: 28;
+$m: 22;
 $s: 14;
 $xs: 12;
 
@@ -46,6 +46,10 @@ $xs: 12;
 
 .font-m {
   @include font-size($m);
+}
+
+.font-base {
+  @include font-size($base);
 }
 
 .font-s {
