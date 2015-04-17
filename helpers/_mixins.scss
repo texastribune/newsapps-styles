@@ -12,6 +12,16 @@
  }
 }
 
+// Omega-Reset
+// -----------
+// To change the omega # at various breakpoints
+// More info: http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+
 // Responsive Table Styles
 // =======================
 @mixin responsive-table($bp-table) {

@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 400;
 }
 
 p {
@@ -40,11 +40,19 @@ ul {
   list-style: none;
   padding: 0;
 
-  &.disc {
+  &.bullet {
     list-style: disc;
     padding: 0 1em;
+    margin-bottom: 1em;
+
+    li {
+      margin-bottom: .5em;
+    }
+
   }
 }
+
+
 
 hr {
   background-color: $line-gray;
