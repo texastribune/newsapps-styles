@@ -1,0 +1,29 @@
+@mixin button($color) {
+    @include clearfix;
+    background-color: $color;
+    border-bottom: .25em solid darken($color, 4);
+    border-radius: 3px;
+    color: $bodytext-black;
+    display: inline-block;
+    font-family: $base-sans-serif;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    line-height: 1em;
+    margin: 0 0 .25em;
+    padding: .5em .75em .625em;
+    text-align: center;
+    vertical-align: middle;
+
+    &:active,
+    &:hover {
+        background-color: transparentize($color, .3);
+        border-bottom: .125em solid darken($color, 6);
+        margin-top: .125em;
+    }
+
+
+}
+
+.button {
+  @include button($tribune-yellow);
+}

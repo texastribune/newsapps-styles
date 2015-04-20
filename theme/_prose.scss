@@ -81,28 +81,29 @@
   padding: 1em;
 }
 
-.block {
+.prose-block {
   border-color: $tribune-yellow;
   border-style: solid;
   border-width: 1px 0;
-  margin-bottom: calc(16rem / 16);
+  margin-bottom: 1em;
   position: relative;
 }
 
 .block-quote {
-  @extend %font-l;
+  @extend %font-m;
   font-family: $base-serif;
   font-style: italic;
   font-weight: 700;
   line-height: 1.2em;
-  margin: calc(16rem / 16) calc(8rem / 16);
+  margin: 1em .5em;
   position: relative;
   text-align: left;
 }
 
 .block-quote-source {
+  @extend %font-base;
   font-family: $base-sans-serif;
   font-weight: 300;
-  margin: calc(16rem / 16) calc(8rem / 16);
+  margin: 1em .5em;
 }
 

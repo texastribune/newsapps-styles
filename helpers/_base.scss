@@ -69,19 +69,6 @@ hr {
   }
 }
 
-.button {
-  color: $bodytext-black;
-  display: inline-block;
-  font-family: $base-sans-serif;
-  letter-spacing: .03rem;
-  vertical-align: middle;
-  @include button(flat, $tribune-yellow);
-
-  &:disabled {
-    background-color: darken($explainer-gray, 20%);
-    cursor: default;
-  }
-}
 
 .container {
   @include clearfix;
