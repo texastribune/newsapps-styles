@@ -5,7 +5,7 @@ $bp-footer: $default-desktop;
 // Grid
 .footer-container {
   @extend %container;
-  @include div-grid-basic($bp-footer, 12, 4);
+  @include div-grid($bp-footer, 12, 4);
 }
 
 // Styles

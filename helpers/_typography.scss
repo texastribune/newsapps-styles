@@ -14,16 +14,6 @@ $m: 22;
 $s: 14;
 $xs: 12;
 
-// Font Sizes
-
-// Calculate pixels to rem units for font sizes
-// @mixin font-size($f) {
-//   font-size: $f+px; // for IE8
-//   font-size: $f/$base+rem;
-// }
-
-// Change the font-size at a breakpoint.
-// For example, you could set font-size: $pct to 78% on mobile.
 @mixin font-size($f, $bp, $pct) {
   font-size: $f+px; // for IE8
   font-size: $f/$base+rem;
@@ -32,6 +22,14 @@ $xs: 12;
     font-size: $f*$pct+px; // for IE8
     font-size: $f*$pct/$base+rem;
   }
+}
+
+.sans {
+  font-family: $base-sans-serif;
+}
+
+.serif {
+  font-family: $base-serif;
 }
 
 // These classes can be applied to any element

@@ -1,7 +1,6 @@
 /* Base Theme for HTML elements */
 
 body {
-  @extend %font-base;
   background-color: $white;
   font-family: $base-sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -35,24 +34,25 @@ a {
 }
 
 ul {
-  @extend %font-base;
-  font-family: $base-sans-serif;
   list-style: none;
   padding: 0;
 
   &.bullet {
+    font-family: $base-sans-serif;
+    font-weight: 600;
     list-style: disc;
     padding: 0 1em;
-    margin-bottom: 1em;
 
     li {
       margin-bottom: .5em;
+
+      &:last-child {
+        margin-bottom: 1em;
+      }
     }
 
   }
 }
-
-
 
 hr {
   background-color: $line-gray;
@@ -69,7 +69,6 @@ hr {
   }
 }
 
-button,
 .button {
   color: $bodytext-black;
   display: inline-block;
