@@ -4,6 +4,7 @@
     border-bottom: .25em solid darken($color, 4);
     border-radius: 3px;
     color: $bodytext-black;
+    cursor: pointer;
     display: inline-block;
     font-family: $base-sans-serif;
     font-weight: 600;
@@ -20,8 +21,6 @@
         border-bottom: .125em solid darken($color, 6);
         margin-top: .125em;
     }
-
-
 }
 
 .button {
