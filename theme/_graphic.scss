@@ -10,16 +10,18 @@
   h5,
   h6 {
     font-weight: 300;
-    line-height: 1.4;
     margin: 0 0 .625em;
   }
 
+  // For secondary header lines
+  // (typically applied to <p>)
   .subhead {
     @extend %font-base;
     font-weight: 700;
     margin: 0 0 .625em;
   }
 
+  // Explanatory subtext
   .subtext {
     @extend %font-s;
     color: lighten($bodytext-black, 25%);
