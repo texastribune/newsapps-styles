@@ -1,0 +1,49 @@
+.graphic {
+  @include clearfix;
+  line-height: 1.4;
+  margin: 0 0 1.875em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0 0 .625em;
+  }
+
+  .subhead {
+    @extend %font-base;
+    font-weight: 700;
+    margin: 0 0 .625em;
+  }
+
+  .subtext {
+    @extend %font-s;
+    color: lighten($bodytext-black, 25%);
+    font-family: $serif;
+    margin: 0 0 .715em; // 10px
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .footer {
+    @include clearfix;
+    @extend %font-s;
+    color: lighten($bodytext-black, 45%);
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}
+
+
+
