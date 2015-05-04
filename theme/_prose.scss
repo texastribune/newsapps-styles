@@ -82,7 +82,7 @@
 .byline {
   @extend %font-s;
   font-family: $base-sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 
   a {
     font-weight: 800;
