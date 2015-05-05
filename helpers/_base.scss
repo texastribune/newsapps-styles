@@ -3,9 +3,11 @@
 body {
   background-color: $white;
   font-family: $base-sans-serif;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 1;
-  text-rendering: optimizelegibility;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
 }
 
 h1,
@@ -41,7 +43,7 @@ ul {
 
   &.bullet {
     font-family: $base-sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     list-style: disc;
     padding: 0 1em;
 
