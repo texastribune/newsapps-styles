@@ -56,6 +56,10 @@
   text-align: left;
 }
 
+q.blockquote {
+  display: block;
+}
+
 .blockquote-source {
   @extend %font-base;
   font-family: $base-sans-serif;
