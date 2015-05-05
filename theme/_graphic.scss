@@ -10,22 +10,27 @@
   h5,
   h6 {
     font-weight: 300;
-    margin: 0 0 .625em;
+    margin: 0 0 .45em;
+  }
+
+  h1 {
+    @extend %font-l; // 22px
   }
 
   // For secondary header lines
   // (typically applied to <p>)
   .subhead {
     @extend %font-base;
+    font-family: $base-sans-serif;
     font-weight: 700;
-    margin: 0 0 .625em;
+    margin: 0 0 .5em;
   }
 
   // Explanatory subtext
   .subtext {
     @extend %font-s;
     color: lighten($bodytext-black, 25%);
-    font-family: $base-sans-serif;
+    font-family: $base-serif;
     margin: 0 0 .715em; // 10px
 
     &:last-child {
@@ -35,7 +40,7 @@
 
   .footer {
     @include clearfix;
-    @extend %font-s;
+    @extend %font-xs;
     background-color: $white;
     color: lighten($bodytext-black, 45%);
     margin: .5em 0;
