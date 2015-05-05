@@ -15,6 +15,11 @@ a {
   }
 }
 
+aside,
+blockquote {
+  margin: 0 0 1em;
+}
+
 h1,
 h2,
 h3,
@@ -25,16 +30,13 @@ h6 {
   margin: 0 0 .5em;
 }
 
-p,
-q {
+q,
+p {
   @include font-size($base);
   font-family: $base-serif;
   font-weight: 400;
   line-height: 1.4;
-}
-
-blockquote {
-  margin: 0;
+  margin: 0 0 1em;
 }
 
 ul {
