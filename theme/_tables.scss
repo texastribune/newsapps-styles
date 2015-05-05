@@ -3,7 +3,28 @@
 
 $bp-table: $default-mobile;
 
-@mixin responsive-table($bp-table:$default-mobile, $hide-first-th:false, $mobile-header-type:inline-block, $mobile-header-width:30%) {
+/** The responsive table mixin has the following attributes:
+
+$bp-table: Breakpoint to switch to mobile styles
+  Accepts = media query
+  Default = $default-mobile
+
+$hide-first-th: Hides data-title/header info for the first value,
+    and converts first <td> to header
+  Accepts = Boolean
+  Default = True
+
+$mobile-header-type: Display data-titles inline-block or block
+  Accepts = inline-block or block
+  Default = inline-block
+
+$mobile-header-width: For inline-block data-titles, you'll
+    need to set the width of the header
+  Accepts = Number/Percent for width attribute
+  Default = 30%
+**/
+
+@mixin responsive-table($bp-table:$default-mobile, $hide-first-th:true, $mobile-header-type:inline-block, $mobile-header-width:30%) {
   font-family: Helvetica;
   margin-bottom: 2em;
   width: 100%;
