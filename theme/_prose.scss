@@ -29,8 +29,10 @@
     }
   }
 
-  img {
-    width: 100%;
+  figure {
+    img {
+      width: 100%;
+    }
   }
 
 }
@@ -138,10 +140,6 @@
   input[type="email"],
   input[type="number"] {
     padding: .5em .25em;
-
-    &:active {
-
-    }
   }
 
   input[type="submit"],
