@@ -6,8 +6,13 @@ body {
   line-height: 1;
 }
 
-header, section, footer, aside, nav, main, article, figure {
-  display: block;
+a {
+  color: $href-teal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -20,21 +25,16 @@ h6 {
   margin: 0 0 .5em;
 }
 
-p {
-  @extend %font-base;
+p,
+q {
+  @include font-size($base);
   font-family: $base-serif;
   font-weight: 400;
   line-height: 1.4;
-
 }
 
-a {
-  color: $href-teal;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+blockquote {
+  margin: 0;
 }
 
 ul {
