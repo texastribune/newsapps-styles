@@ -1,8 +1,10 @@
+// Responsive Table Styles
+// =======================
+
 $bp-table: $default-mobile;
 
-table {
-  font-family: $base-sans-serif;
-  font-size: 1em;
+@mixin responsive-table($bp-table:$default-mobile, $hide-first-th:false, $mobile-header-type:inline-block, $mobile-header-width:30%) {
+  font-family: Helvetica;
   margin-bottom: 2em;
   width: 100%;
 
@@ -11,80 +13,130 @@ table {
     display: block;
     font-size: .875em;
   }
-}
 
-thead {
-  @include media($bp-table) {
-    display: none;
-  }
-}
-
-tbody {
-  @include media($bp-table) {
-    display: block;
-  }
-}
-
-th {
-  border-bottom: 1px solid $line-gray;
-  font-size: 1em;
-  font-weight: 800;
-  padding: 0 12px 8px;
-  text-align: right;
-  vertical-align: middle;
-
-  &:first-child {
-    text-align: left;
+  thead {
+    @include media($bp-table) {
+      display: none;
+    }
   }
 
-  @include media($bp-table) {
-    display: block;
-  }
-}
-
-td {
-  font-size: .875em;
-  padding: 8px 12px;
-  text-align: right;
-
-  &:first-child {
-    text-align: left;
-  }
-
-  @include media($bp-table) {
-    display: block;
-    font-weight: 300;
-    padding: 0 12px 8px;
-    text-align: left;
-
-    &:first-child {
-      font-size: 1em;
-      font-weight: 800;
-      padding-top: 8px;
+  tbody {
+    @include media($bp-table) {
+      display: block;
     }
 
-    &[data-title] {
-      &:first-child:before {
-        content: none;
+    // Include .highlight to bring attention an entire row
+    // such as the total values or current year
+    tr {
+      &.highlight {
+        td {
+          background-color: transparentize($tribune-yellow, .7);
+          font-weight: 600;
+        }
       }
     }
+  }
 
-    &:before {
-      content: attr(data-title) '\A';
-      display: block;
-      font-weight: 800;
-      margin-bottom: .25em;
-      white-space: pre-wrap;
+  th,
+  td {
+    &:last-child,
+    &[data-type="prose"] {
+      text-align: left;
+    }
+
+    &:last-child,
+    &[data-type="number"] {
+      text-align: right;
+
+      @include media($bp-table) {
+        text-align: left;
+      }
     }
   }
-}
 
-tr {
-  &:nth-child(odd) td {
-    background-color: $background-gray;
+  th {
+    border-bottom: 1px solid $line-gray;
+    font-size: .9em;
+    font-weight: 800;
+    padding: 0 12px 8px;
+    text-align: left;
+    vertical-align: middle;
+
+    @include media($bp-table) {
+      display: block;
+    }
   }
 
-  @include media($bp-table) {
-    display: block;
+  td {
+    font-size: .875em;
+    padding: 8px 12px;
+    text-align: left;
+
+    @include media($bp-table) {
+      @include clearfix;
+      display: block;
+      font-weight: 300;
+      padding: 0 12px 8px;
+      text-align: left;
+
+      @if $hide-first-th {
+
+        &:first-child {
+          font-size: 1em;
+          font-weight: 800;
+          padding-top: 8px;
+        }
+
+        &[data-title] {
+          &:first-child:before {
+            content: none;
+          }
+        }
+      } @else {
+
+        &[data-title] {
+          &:first-child:before {
+            padding-top: 1em;
+          }
+        }
+      }
+
+
+
+      @if $mobile-header-type == inline-block {
+
+        &:before {
+          content: attr(data-title) '\A';
+          float: left;
+          display: $mobile-header-type;
+          font-weight: 800;
+          margin: 0 1em .25em 0;
+          white-space: pre-wrap;
+          width: $mobile-header-width;
+        }
+      }
+
+      @if $mobile-header-type == block {
+
+        &:before {
+          content: attr(data-title) '\A';
+          display: $mobile-header-type;
+          font-weight: 800;
+          margin-bottom: .25em;
+          white-space: pre-wrap;
+        }
+      }
+
+    }
+  }
+
+  tr {
+    &:nth-child(odd) td {
+      background-color: $background-gray;
+    }
+
+    @include media($bp-table) {
+      display: block;
+    }
   }
 }
