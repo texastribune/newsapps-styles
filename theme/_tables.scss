@@ -22,6 +22,17 @@ $mobile-header-width: For inline-block data-titles, you'll
     need to set the width of the header
   Accepts = Number/Percent for width attribute
   Default = 30%
+
+For optimal use, you'll also need
+to include the following attributes
+===================================
+
+data-title="Header Name":  The header that will appear with a <td> value on mobile views
+
+data-type="prose": Add to <th> or <td> to ensure text aligns left
+
+data-type="number": Add to <th> or <td> to ensure text aligns right
+
 **/
 
 @mixin responsive-table($bp-table:$default-mobile, $hide-first-th:true, $mobile-header-type:inline-block, $mobile-header-width:30%) {
