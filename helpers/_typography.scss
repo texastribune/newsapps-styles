@@ -14,14 +14,17 @@ $m: 22;
 $s: 14;
 $xs: 12;
 
-@mixin font-size($f, $bp, $pct) {
+@mixin font-size($f, $pct:1, $bp:$default-mobile) {
   font-size: $f+px; // for IE8
   font-size: $f/$base+rem;
 
-  @include media($bp) {
-    font-size: $f*$pct+px; // for IE8
-    font-size: $f*$pct/$base+rem;
+  @if $pct != 1 {
+    @include media($bp) {
+      font-size: $f*$pct+px; // for IE8
+      font-size: $f*$pct/$base+rem;
+    }
   }
+
 }
 
 .sans {
@@ -36,35 +39,35 @@ $xs: 12;
 // to set the font-size.
 %font-xxl,
 .font-xxl {
-  @include font-size($xxl, $default-mobile, .9);
+  @include font-size($xxl, .9);
 }
 
 %font-xl,
 .font-xl {
-  @include font-size($xl, $default-mobile, .9);
+  @include font-size($xl, .9);
 }
 
 %font-l,
 .font-l {
-  @include font-size($l, $default-mobile, .9);
+  @include font-size($l, .9);
 }
 
 %font-m,
 .font-m {
-  @include font-size($m, $default-mobile, .9);
+  @include font-size($m, .9);
 }
 
 %font-base,
 .font-base {
-  @include font-size($base, $default-mobile, .9);
+  @include font-size($base, .9);
 }
 
 %font-s,
 .font-s {
-  @include font-size($s, $default-mobile, .9);
+  @include font-size($s, .9);
 }
 
 %font-xs,
 .font-xs {
-  @include font-size($xs, $default-mobile, .9);
+  @include font-size($xs, .9);
 }
