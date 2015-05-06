@@ -56,17 +56,6 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
     @include media($bp-table) {
       display: block;
     }
-
-    // Include .highlight to bring attention an entire row
-    // such as the total values or current year
-    tr {
-      &.highlight {
-        td {
-          background-color: transparentize($tribune-yellow, .7);
-          font-weight: 600;
-        }
-      }
-    }
   }
 
   th,
@@ -153,10 +142,60 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
   tr {
     &:nth-child(odd) td {
       background-color: $background-gray;
+
+      &.highlight {
+        background-color: transparentize($tribune-yellow, .75);
+        font-weight: 600;
+      }
     }
 
     @include media($bp-table) {
       display: block;
     }
   }
+
+  // Include .highlight to bring attention an entire row
+  // such as the total values or current year
+  tr {
+    &.highlight {
+      background-color: transparentize($tribune-yellow, .75);
+      font-weight: 600;
+
+      &:nth-child(odd) td {
+        background-color: transparentize($tribune-yellow, .75);
+      }
+    }
+  }
+
+  td {
+    &.highlight {
+      background-color: transparentize($tribune-yellow, .75);
+      font-weight: 600;
+    }
+  }
+}
+
+
+// + Transforms first data cell to header on mobile
+// + Display mobile headers as blocks
+table.responsive {
+  @include responsive-table();
+}
+
+// + Transforms first data cell to header on mobile
+// + Display mobile headers inline, 30% width
+table.inline {
+  @include responsive-table($mobile-header-type:inline-block);
+}
+
+// + Includes all data-title headers on mobile
+// + Display mobile headers as blocks
+table.show-first-th {
+  @include responsive-table($hide-first-th:false);
+}
+
+// + Includes all data-title headers on mobile
+// + Display mobile headers inline, 30% width
+table.inline-show-first-th {
+  @include responsive-table($hide-first-th:false, $mobile-header-type:inline-block);
 }
