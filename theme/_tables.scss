@@ -125,10 +125,15 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
           }
         }
       } @else {
-
-        &[data-title] {
-          &:first-child:before {
+        @if $mobile-header-type == inline-block {
+          &:first-child {
             padding-top: 1em;
+          }
+        } @else {
+          &[data-title] {
+            &:first-child:before {
+              padding-top: 1em;
+            }
           }
         }
       }
@@ -136,6 +141,8 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
 
 
       @if $mobile-header-type == inline-block {
+
+        padding-top: 1em;
 
         &:before {
           content: attr(data-title) '\A';
@@ -171,4 +178,8 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       display: block;
     }
   }
+}
+
+table.responsive {
+  @include responsive-table();
 }
