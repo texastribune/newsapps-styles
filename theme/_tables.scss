@@ -100,11 +100,13 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       padding: 0 12px 8px;
       text-align: left;
 
-      &:before {
-        content: attr(data-title) '\A';
-        display: block;
-        font-weight: 800;
-        white-space: pre-wrap;
+      @if attr(data-title) {
+        &:before {
+          content: attr(data-title) '\A';
+          display: block;
+          font-weight: 800;
+          white-space: pre-wrap;
+        }
       }
 
       &:first-child {
@@ -171,6 +173,10 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
     &.highlight {
       background-color: transparentize($tribune-yellow, .75);
       font-weight: 600;
+
+      @include media($bp-table) {
+        padding-top: 1em;
+      }
     }
   }
 }
