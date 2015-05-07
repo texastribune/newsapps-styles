@@ -77,6 +77,14 @@ ul {
 
 }
 
+figure {
+  margin: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
 hr {
   background-color: $line-gray;
   border: 0 none;
