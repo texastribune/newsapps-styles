@@ -5,11 +5,11 @@
 @import 'helpers/typography';
 @import 'helpers/base';
 @import 'helpers/buttons';
-
-@import 'layout/masthead';
-@import 'layout/banner';
-@import 'layout/footer';
-@import 'theme/tables';
+@import 'helpers/tables';
 
 @import 'theme/prose';
 @import 'theme/graphic';
+
+@import 'components/masthead';
+@import 'components/banner';
+@import 'components/footer';
