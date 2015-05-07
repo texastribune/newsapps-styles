@@ -4,7 +4,7 @@ $bp-footer: $default-desktop;
   background-color: $masthead-black;
   color: $href-offwhite;
   margin: 2em 0 0;
-  padding: .125em 0 0;
+  padding: .125em 0;
   text-align: center;
 
   @include media($bp-footer) {
@@ -67,6 +67,10 @@ $bp-footer: $default-desktop;
       a {
         color: $href-teal;
         font-weight: 800;
+      }
+
+      @include media($bp-footer) {
+        padding-bottom: 1em;
       }
     }
   }
