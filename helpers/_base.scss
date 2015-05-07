@@ -58,6 +58,36 @@ ul {
     }
 
   }
+
+  &.carat-serif,
+  &.carat-sans {
+    padding: .5em 0 0 1em;
+
+    li {
+      &:before {
+        color: $li-black;
+        content: '\2023';
+        font-family: $base-sans-serif;
+        margin: 0 .5em 0 -1em;
+        padding: 0;
+      }
+    }
+  }
+
+  &.carat-sans {
+    li {
+      color: $li-black;
+      font-family: $base-sans-serif;
+      margin: 0 auto .75em;
+    }
+
+  }
+
+  &.carat-serif {
+    li {
+      font-family: $base-serif;
+    }
+  }
 }
 
 hr {
