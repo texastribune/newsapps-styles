@@ -146,6 +146,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       background-color: $background-gray;
 
       &.highlight {
+        background-color: none;
         background-color: transparentize($tribune-yellow, .75);
         font-weight: 600;
       }
