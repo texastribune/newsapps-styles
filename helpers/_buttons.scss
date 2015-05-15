@@ -1,28 +1,44 @@
-@mixin button($color) {
+@mixin button($color, $type: null) {
     @include clearfix;
-    background-color: $color;
-    border-bottom: .25em solid darken($color, 4);
-    border-radius: 3px;
-    color: $bodytext-black;
     cursor: pointer;
     display: inline-block;
     font-family: $base-sans-serif;
-    font-weight: 600;
-    letter-spacing: .05rem;
-    line-height: 1;
-    margin: 0 0 .25em;
-    padding: .5em .75em .625em;
+    letter-spacing: .03rem;
+    margin: 0 0 0.3em;
     text-align: center;
     vertical-align: middle;
 
+    @if $type == ghost {
+      background: transparent;
+      border: 2px solid $color;
+      color: $color;
+      text-transform: uppercase;
+      padding: 0.5em 0.75em;
+    } @else {
+      background: $color;
+      @if $color == $teal {
+       color: $white;
+      } @else {
+        color: $bodytext-black;
+      }
+      border: 0px;
+      padding: .5em .75em .625em;
+    }
+
     &:active,
     &:hover {
-        background-color: transparentize($color, .3);
-        border-bottom: .125em solid darken($color, 6);
-        margin-top: .125em;
+        @if $type == ghost {
+          background-color: transparentize($color, 0.95);
+        } @else {
+          background-color: transparentize($color, .3);
+        }
     }
 }
 
 .button {
-  @include button($tribune-yellow);
+    @include button($tribune-yellow);
+}
+
+.ghost-button {
+    @include button($teal, ghost);
 }
