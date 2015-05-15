@@ -8,16 +8,39 @@ $small: new-breakpoint(min-width 460px max-width 810px);
 $medium: new-breakpoint(min-width 811px max-width 1080px);
 $large: new-breakpoint(min-width 1081px);
 
-$default-768: new-breakpoint(min-width 768px);
-$default-480: new-breakpoint(max-width 480px);
+$default-desktop: new-breakpoint(min-width 768px);
+$default-mobile: new-breakpoint(max-width 480px);
 
 // To override Bourbon's max-width
 // for the outer-container
 $max-width: 1081px;
 
+%container,
+.container {
+  @include outer-container;
+}
+
+%content-block,
+.content-block {
+  @include pad(0 10px);
+}
 
 /* Grid Mixins */
 /* =========== */
+
+// Clearfix
+// --------
+// Ensure elements don't accidentally overlap.
+@mixin clearfix {
+  &:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+}
 
 // Omega-Reset
 // -----------
@@ -59,34 +82,7 @@ $max-width: 1081px;
   }
 }
 
-@mixin li-grid($col-width, $med-li, $lg-li) {
-  // Create a list grid with multiple breakpoints
-  // $col-width = the number of span-columns in your grid
-  // $med-li = the number of li's across at medium bp
-  // $large-li = the number of li's across at large bp
-
-  li {
-    @include span-columns(12);
-
-    @include media($small) {
-      @include span-columns($col-width / $med-li of $col-width);
-      @include omega($med-li+n);
-    }
-
-    @include media($medium) {
-      @include span-columns($col-width / $med-li of $col-width);
-      @include omega($med-li+n);
-    }
-
-    @include media($large) {
-      @include span-columns($col-width / $lg-li of $col-width);
-      @include omega($lg-li+n);
-    }
-  }
-}
-
-
-@mixin div-grid-basic ($bp, $col-width, $number-div) {
+@mixin div-grid ($bp, $col-width, $number-div) {
   // Create a div grid with single breakpoint
   // $bp = breakpoint
   // $col-width = the number of span-columns in your grid
@@ -100,32 +96,76 @@ $max-width: 1081px;
   }
 }
 
-@mixin div-grid-triple ($col-width, $number-div-small, $number-div-med, $number-div-large) {
-  // Create a div grid w/ three breakpoints
-  // $number-breaks = number of breakpoints
-  // $col-width = the number of span-columns in your grid
-  // $number-div-small = the number of side-by-side divs at $small breakpoint
-  // $number-div-med = the number of side-by-side divs at $medium breakpoint
-  // $number-div-large = the number of side-by-side divs at $large breakpoint
+// Mobile vs. Desktop Mixins
+// =========================
+
+@mixin hide($bp) {
+  @include media($bp) {
+    display: none;
+  }
+}
+
+@mixin mobile-only {
+  display: block;
 
   @include media($small) {
-    div {
-      @include span-columns($col-width / $number-div-small of $col-width);
-      @include omega($number-div-small+n);
-    }
+    display: none;
   }
 
   @include media($medium) {
-    div {
-      @include span-columns($col-width / $number-div-med of $col-width);
-      @include omega($number-div-med+n);
-    }
+    display: none;
   }
 
   @include media($large) {
-    div {
-      @include span-columns($col-width / $number-div-large of $col-width);
-      @include omega($number-div-large+n);
-    }
+    display: none;
+  }
+}
+
+@mixin desktop-only {
+  display: none;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
+  }
+}
+
+@mixin desktop-hide {
+  display: block;
+
+  @include media($small) {
+    display: block;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+@mixin mobile-hide {
+  @include clearfix;
+  display: none;
+
+  @include media($small) {
+    display: none;
+  }
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: block;
   }
 }

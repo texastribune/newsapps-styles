@@ -1,10 +1,10 @@
-$bp-footer: $default-768;
+$bp-footer: $default-desktop;
 
 .footer {
   background-color: $masthead-black;
-  color: $footer-offwhite;
+  color: $href-offwhite;
   margin: 2em 0 0;
-  padding: .125em 0 0;
+  padding: .125em 0;
   text-align: center;
 
   @include media($bp-footer) {
@@ -68,6 +68,10 @@ $bp-footer: $default-768;
         color: $href-teal;
         font-weight: 800;
       }
+
+      @include media($bp-footer) {
+        padding-bottom: 1em;
+      }
     }
   }
 
@@ -75,7 +79,7 @@ $bp-footer: $default-768;
     margin: .75em 0;
 
     @include media($bp-footer) {
-      border-left: 1px solid $footer-offwhite;
+      border-left: 1px solid $href-offwhite;
       display: inline;
       float: left;
       margin: 0;

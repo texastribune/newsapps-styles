@@ -1,114 +1,156 @@
 /* Base Prose Theme */
+%prose {
+  @extend %font-base;
+  color: $bodytext-black;
+  display: block;
+  font-family: $base-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
 
 .prose {
-  @extend %content-block;
   @extend %prose;
   @include clearfix;
 
-  h1 { //headline
-    font-family: $base-sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin: 1.25em 0 .6em;
-  }
-
-  h2 { //block-quote text
-    font-family: $base-serif;
-    font-size: 1.5em;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 1.2em;
-    margin: .7em .5em;
-    position: relative;
-    text-align: left;
-  }
-
-  h3 { //paragraph header
-    @extend %paragraph-header;
-
-    &.data-header {
-      margin: 0 0 1em; 
-      text-transform: none;   
-    }
-  }
-
-  p {
-    margin-bottom: 1em;
-
-    &.byline { //byline
-      font-family: $base-sans-serif;
-      font-size: .85em;
-      margin-bottom: 0;
-
-      a {
-        font-weight: 800;
-      }
-    }
-
-    &.caption { 
-      color: $text-gray;
-      font-family: $base-sans-serif;
-      font-size: .85em;
-      font-weight: 400;
-      margin: .25em 0;
-    }
-
-    &.source {
-      font-family: $base-sans-serif;
-      font-weight: 300;
-      margin: 1em .5em;
-    }
-
-  }
-
-  img {
-    width: 100%;
-  }
-
   ul {
-    @extend %content-block;
+    @extend %font-s;
     font-family: $base-sans-serif;
-    font-size: .875em;
     font-weight: 600;
-    list-style-type: disc;
-    padding: 0 1em; 
+    list-style: disc;
+    padding: 0 1em;
+  }
 
-    @include media($default-768) {
-      line-height: 1.85em;
-    }
+  li {
+    margin-bottom: .5em;
 
-    li {
-      margin-bottom: .5em;
-
-      &:last-child {
-        margin-bottom: 2em;
-      }
+    &:last-child {
+      margin-bottom: 1em;
     }
   }
 
-  .block-text { 
-    border-color: $tribune-yellow;
-    border-style: solid;
-    border-width: 1px 0;
-    position: relative;
-  }
-
-  .explainer-header {
-    color: $bodytext-black;
-    font-family: $base-sans-serif;
-    font-weight: 800;
-    line-height: 1.2;
-    text-align: left;
-  }
-
-  .explainer-text {
-    background: $explainer-gray;
-    color: $bodytext-black;
-    font-family: $base-sans-serif;
-    font-weight: 300;
-    line-height: 1.3;
-    padding: 1em;
+  figure {
+    img {
+      width: 100%;
+    }
   }
 
 }
+
+.prose-block {
+  border-color: $tribune-yellow;
+  border-style: solid;
+  border-width: 1px 0;
+  margin-bottom: 1em;
+  padding: 1em 0 0;
+  position: relative;
+}
+
+.blockquote {
+  @extend %font-m;
+  font-family: $base-serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  text-align: left;
+}
+
+q.blockquote {
+  display: block;
+}
+
+.blockquote-source {
+  @extend %font-base;
+  font-family: $base-sans-serif;
+  font-weight: 300;
+}
+
+.byline {
+  @extend %font-s;
+  font-family: $base-sans-serif;
+  margin-bottom: 1em;
+
+  a {
+    font-weight: 800;
+  }
+}
+
+.graphic,
+.prose {
+  form,
+  select {
+    display: inline-block;
+    &.full-width {
+      width: 100%;
+    }
+  }
+
+  select,
+  input[type="text"],
+  input[type="radio"],
+  input[type="email"],
+  input[type="number"] {
+    @extend %font-base;
+    background: transparent;
+    border: 1px solid $line-gray;
+    display: inline-block;
+    font-family: $base-sans-serif;
+    font-weight: 400;
+    margin-bottom: .5em;
+    min-height: 2em;
+  }
+
+  option,
+  input[type="text"],
+  input[type="radio"],
+  input[type="email"],
+  input[type="number"] {
+    padding: .5em .25em;
+  }
+
+  input[type="submit"],
+  input[type="button"] {
+    @include button($tribune-yellow);
+  }
+
+}
+
+%caption,
+.caption {
+  @extend %font-s;
+  color: $text-gray;
+  font-family: $base-sans-serif;
+  font-weight: 400;
+  margin: .25em 0;
+}
+
+%explainer-text,
+.explainer-text {
+  background: $explainer-gray;
+  color: $bodytext-black;
+  font-family: $base-sans-serif;
+  font-weight: 300;
+  line-height: 1.3;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.headline {
+  @extend %font-l;
+  font-family: $base-sans-serif;
+  font-weight: 600;
+  margin: 1.25em 0 .6em;
+}
+
+%paragraph-header,
+.paragraph-header {
+  font-family: $base-sans-serif;
+  font-size: .875em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 1em;
+  text-transform: uppercase;
+}
+
 

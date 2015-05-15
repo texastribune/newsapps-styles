@@ -1,0 +1,208 @@
+// Responsive Table Styles
+// =======================
+
+$bp-table: $default-mobile;
+
+/** The responsive table mixin has the following attributes:
+
+$bp-table: Breakpoint to switch to mobile styles
+  Accepts = media query
+  Default = $default-mobile
+
+$hide-first-th: Hides data-title/header info for the first value,
+    and converts first <td> to header
+  Accepts = Boolean
+  Default = True
+
+$mobile-header-type: Display data-titles inline-block or block
+  Accepts = inline-block or block
+  Default = block
+
+$mobile-header-width: For inline-block data-titles, you'll
+    need to set the width of the header
+  Accepts = Number/Percent for width attribute
+  Default = 30%
+
+For optimal use, you'll also need
+to include the following attributes
+===================================
+
+data-title="Header Name":  The header that will appear with a <td> value on mobile views
+
+data-type="prose": Add to <th> or <td> to ensure text aligns left
+
+data-type="number": Add to <th> or <td> to ensure text aligns right
+
+**/
+
+@mixin responsive-table($bp-table:$default-mobile, $hide-first-th:true, $mobile-header-type:block, $mobile-header-width:30%) {
+  font-family: Helvetica;
+  margin-bottom: 2em;
+  width: 100%;
+
+  @include media($bp-table) {
+    border-top: 1px solid $line-gray;
+    display: block;
+    font-size: .875em;
+  }
+
+  thead {
+    @include media($bp-table) {
+      display: none;
+    }
+  }
+
+  tbody {
+    @include media($bp-table) {
+      display: block;
+    }
+  }
+
+  th,
+  td {
+    &:last-child,
+    &[data-type="prose"] {
+      text-align: left;
+    }
+
+    &:last-child,
+    &[data-type="number"] {
+      text-align: right;
+
+      @include media($bp-table) {
+        text-align: left;
+      }
+    }
+  }
+
+  th {
+    border-bottom: 1px solid $line-gray;
+    font-size: .9em;
+    font-weight: 800;
+    padding: 0 12px 8px;
+    text-align: left;
+    vertical-align: middle;
+
+    @include media($bp-table) {
+      display: block;
+    }
+  }
+
+  td {
+    font-size: .875em;
+    padding: 8px 12px;
+    text-align: left;
+
+    @include media($bp-table) {
+      @include clearfix;
+      display: block;
+      font-weight: 300;
+      padding: 0 12px 8px;
+      text-align: left;
+
+      @if attr(data-title) {
+        &:before {
+          content: attr(data-title) '\A';
+          display: block;
+          font-weight: 800;
+          white-space: pre-wrap;
+        }
+      }
+
+      &:first-child {
+        padding-top: 1em;
+      }
+
+      @if $hide-first-th {
+
+        &:first-child {
+          font-size: 1em;
+          font-weight: 800;
+          padding-top: 8px;
+        }
+
+        &[data-title] {
+          &:first-child:before {
+            content: none;
+          }
+        }
+      }
+
+      @if $mobile-header-type == inline-block {
+
+        &:before {
+          float: left;
+          display: inline-block;
+          margin: 0 1em .25em 0;
+          width: $mobile-header-width;
+        }
+      }
+
+    }
+  }
+
+  tr {
+    &:nth-child(odd) td {
+      background-color: $background-gray;
+
+      &.highlight {
+        background-color: none;
+        background-color: transparentize($tribune-yellow, .75);
+        font-weight: 600;
+      }
+    }
+
+    @include media($bp-table) {
+      display: block;
+    }
+  }
+
+  // Include .highlight to bring attention an entire row
+  // such as the total values or current year
+  tr {
+    &.highlight {
+      background-color: transparentize($tribune-yellow, .75);
+      font-weight: 600;
+
+      &:nth-child(odd) td {
+        background-color: transparentize($tribune-yellow, .75);
+      }
+    }
+  }
+
+  td {
+    &.highlight {
+      background-color: transparentize($tribune-yellow, .75);
+      font-weight: 600;
+
+      @include media($bp-table) {
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+
+// + Transforms first data cell to header on mobile
+// + Display mobile headers as blocks
+table.responsive {
+  @include responsive-table();
+}
+
+// + Transforms first data cell to header on mobile
+// + Display mobile headers inline, 30% width
+table.inline {
+  @include responsive-table($mobile-header-type:inline-block);
+}
+
+// + Includes all data-title headers on mobile
+// + Display mobile headers as blocks
+table.show-first-th {
+  @include responsive-table($hide-first-th:false);
+}
+
+// + Includes all data-title headers on mobile
+// + Display mobile headers inline, 30% width
+table.inline-show-first-th {
+  @include responsive-table($hide-first-th:false, $mobile-header-type:inline-block);
+}
