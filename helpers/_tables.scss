@@ -61,12 +61,12 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
   th,
   td {
     &:last-child,
-    &[data-type="prose"] {
+    &.table-prose {
       text-align: left;
     }
 
     &:last-child,
-    &[data-type="number"] {
+    &.table-number {
       text-align: right;
 
       @include media($bp-table) {
