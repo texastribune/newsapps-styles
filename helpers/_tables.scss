@@ -36,7 +36,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
 **/
 
 @mixin responsive-table($bp-table:$default-mobile, $hide-first-th:true, $mobile-header-type:block, $mobile-header-width:30%) {
-  font-family: Helvetica;
+  font-family: $base-sans-serif;
   margin-bottom: 2em;
   width: 100%;
 
@@ -61,12 +61,12 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
   th,
   td {
     &:last-child,
-    &[data-type="prose"] {
+    &.table-prose {
       text-align: left;
     }
 
     &:last-child,
-    &[data-type="number"] {
+    &.table-number {
       text-align: right;
 
       @include media($bp-table) {
