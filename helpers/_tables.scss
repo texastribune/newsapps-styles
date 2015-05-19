@@ -37,7 +37,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
 
 @mixin responsive-table($bp-table:$default-mobile, $hide-first-th:true, $mobile-header-type:block, $mobile-header-width:30%) {
   font-family: Helvetica;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width: 100%;
 
   @include media($bp-table) {
