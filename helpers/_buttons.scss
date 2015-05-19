@@ -7,13 +7,14 @@
     margin: 0 0 0.3em;
     text-align: center;
     vertical-align: middle;
+    border-radius: 4px;
+
 
     @if $type == ghost {
-      background: transparent;
       border: 2px solid $color;
+      background: transparent;
       color: $color;
-      text-transform: uppercase;
-      padding: 0.5em 0.75em;
+      padding: .4em .75em .5em;
     } @else {
       background: $color;
       @if $color == $teal {
