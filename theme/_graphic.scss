@@ -28,14 +28,10 @@
 
   // Explanatory subtext
   .subtext {
-    @extend %font-base;
+    @extend %font-s;
     color: lighten($bodytext-black, 25%);
     font-family: $base-serif;
     margin: 0 0 .715em; // 10px
-
-    &:last-child {
-      margin: 0;
-    }
   }
 
   .footer {
