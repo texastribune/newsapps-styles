@@ -2,6 +2,7 @@
   @include clearfix;
   line-height: 1.4;
   margin: 0 0 1.875em;
+  padding-bottom: 1em;
 
   h1,
   h2,
@@ -36,7 +37,7 @@
 
   .footer {
     @include clearfix;
-    @extend %font-xs;
+    @extend %font-s;
     background-color: $white;
     color: lighten($bodytext-black, 45%);
     margin: .5em 0;
