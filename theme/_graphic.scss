@@ -28,10 +28,11 @@
   }
 
   // Explanatory subtext
+  %subtext,
   .subtext {
     @extend %font-s;
     color: lighten($bodytext-black, 25%);
-    font-family: $base-serif;
+    font-family: $base-sans-serif;
     margin: 0 0 .715em; // 10px
   }
 
