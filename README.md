@@ -9,7 +9,7 @@ Base styles for all your News Apps needs. Comes with versioning and is installab
 
 ## Our Philosophy
 
-The goal of this style guide is to create a front-end framework to maintain consistency across News Apps projects, while giving each designer and developer the flexibility to code in their own unique and creative way.
+The goal of this [style guide](http://apps.texastribune.org/styles/) is to create a front-end framework to maintain consistency across News Apps projects, while giving each designer and developer the flexibility to code in their own unique and creative way.
 
 Our style files are written in SCSS — a Sass syntax that builds on the existing CSS syntax. With SCSS, we can use all the great features of Sass, such as @mixins, %placeholders and $variables, but can write in the more familiar (and more expressive) CSS syntax.
 
