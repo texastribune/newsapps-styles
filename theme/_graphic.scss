@@ -31,8 +31,10 @@
   %subtext,
   .subtext {
     @extend %font-s;
-    color: lighten($bodytext-black, 25%);
+    color: $bodytext-black;
     font-family: $base-sans-serif;
+    font-weight: 300;
+    letter-spacing: .03em;
     margin: 0 0 .715em; // 10px
   }
 
