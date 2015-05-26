@@ -1,21 +1,25 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'node', '/usr/local/bin/npm', 'link' ]
-2 info using npm@1.4.9
-3 info using node@v0.10.28
+2 info using npm@2.5.1
+3 info using node@v0.12.2
 4 verbose linkPkg /Users/BeccaAaronson/Documents/internetz/newsapps-styles
-5 error Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles'
-5 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles']
-5 error   errno: 3,
-5 error   code: 'EACCES',
-5 error   path: '/usr/local/lib/node_modules/newsapps-styles' }
-6 error Please try running this command again as root/Administrator.
-7 error System Darwin 14.0.0
-8 error command "node" "/usr/local/bin/npm" "link"
-9 error cwd /Users/BeccaAaronson/Documents/internetz/newsapps-styles
-10 error node -v v0.10.28
-11 error npm -v 1.4.9
-12 error path /usr/local/lib/node_modules/newsapps-styles
-13 error code EACCES
-14 error errno 3
-15 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles'
-16 verbose exit [ 3, true ]
+5 verbose gentlyRm vacuuming /usr/local/lib/node_modules/newsapps-styles
+6 silly gentlyRm purging /usr/local/lib/node_modules/newsapps-styles
+7 verbose stack Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles'
+7 verbose stack     at Error (native)
+8 verbose cwd /Users/BeccaAaronson/Documents/internetz/newsapps-styles
+9 error Darwin 14.0.0
+10 error argv "node" "/usr/local/bin/npm" "link"
+11 error node v0.12.2
+12 error npm  v2.5.1
+13 error path /usr/local/lib/node_modules/newsapps-styles
+14 error code EACCES
+15 error errno -13
+16 error Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles'
+16 error     at Error (native)
+16 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/newsapps-styles']
+16 error   errno: -13,
+16 error   code: 'EACCES',
+16 error   path: '/usr/local/lib/node_modules/newsapps-styles' }
+17 error Please try running this command again as root/Administrator.
+18 verbose exit [ -13, true ]
