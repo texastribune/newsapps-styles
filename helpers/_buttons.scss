@@ -1,5 +1,6 @@
 @mixin button($color, $type: null) {
     @include clearfix;
+    border-radius: 4px;
     cursor: pointer;
     display: inline-block;
     font-family: $base-sans-serif;
@@ -7,12 +8,11 @@
     margin: 0 0 0.3em;
     text-align: center;
     vertical-align: middle;
-    border-radius: 4px;
 
 
     @if $type == ghost {
-      border: 2px solid $color;
       background: transparent;
+      border: 2px solid $color;
       color: $color;
       padding: .4em .75em .5em;
     } @else {
