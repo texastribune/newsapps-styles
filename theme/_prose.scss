@@ -11,6 +11,7 @@
 
 .prose {
   @extend %prose;
+  @extend %forms;
   @include clearfix;
 
   ul {
@@ -28,7 +29,7 @@
       margin-bottom: 1em;
     }
   }
-  
+
 }
 
 }
@@ -70,46 +71,6 @@ q.blockquote {
   a {
     font-weight: 800;
   }
-}
-
-.graphic,
-.prose {
-  form,
-  select {
-    display: inline-block;
-    &.full-width {
-      width: 100%;
-    }
-  }
-
-  select,
-  input[type="text"],
-  input[type="radio"],
-  input[type="email"],
-  input[type="number"] {
-    @extend %font-base;
-    background: transparent;
-    border: 1px solid $line-gray;
-    display: inline-block;
-    font-family: $base-sans-serif;
-    font-weight: 400;
-    margin-bottom: .5em;
-    min-height: 2em;
-  }
-
-  option,
-  input[type="text"],
-  input[type="radio"],
-  input[type="email"],
-  input[type="number"] {
-    padding: .5em .25em;
-  }
-
-  input[type="submit"],
-  input[type="button"] {
-    @include button($tribune-yellow);
-  }
-
 }
 
 %caption,

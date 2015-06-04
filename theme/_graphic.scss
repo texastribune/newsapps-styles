@@ -1,5 +1,6 @@
 .graphic {
   @include clearfix;
+  @extend %forms;
   line-height: 1.4;
   margin: 0 0 1.875em;
   // padding-bottom: 1em;
