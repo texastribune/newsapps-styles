@@ -139,5 +139,19 @@ hr {
   input[type="submit"],
   input[type="button"] {
     @include button($tribune-yellow);
+    border: 0;
+    box-shadow: 0;
+    font-weight: normal;
+    text-shadow: none;
+    background-image: none;
+
+    &:hover,
+    &:hover:not(:disabled),
+    &:active,
+    &:active:not(:disabled) {
+      background-color: transparentize($tribune-yellow, .3);
+      background-image: none;
+      box-shadow: 0;
+    }
   }
 }
