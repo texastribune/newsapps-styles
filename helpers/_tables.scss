@@ -132,8 +132,8 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       @if $mobile-header-type == inline-block {
 
         &:before {
-          float: left;
           display: inline-block;
+          float: left;
           margin: 0 1em .25em 0;
           width: $mobile-header-width;
         }

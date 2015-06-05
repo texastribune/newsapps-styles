@@ -1,6 +1,6 @@
 .graphic {
-  @include clearfix;
   @extend %forms;
+  @include clearfix;
   line-height: 1.4;
   margin: 0 0 1.875em;
   // padding-bottom: 1em;
@@ -40,8 +40,8 @@
   }
 
   .footer {
-    @include clearfix;
     @extend %font-xs;
+    @include clearfix;
     background-color: $white;
     color: lighten($bodytext-black, 45%);
     font-family: $base-sans-serif;
@@ -56,6 +56,3 @@
   }
 
 }
-
-
-

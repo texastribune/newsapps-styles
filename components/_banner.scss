@@ -1,4 +1,4 @@
-/* Basic Banner */
+// Basic Banner
 
 $banner-height: 600px;
 $grand-header-image-url: 'http://placekitten.com/1000/800';
@@ -34,8 +34,8 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
       font-size: 2em;
       font-weight: 800;
       line-height: 1.15;
-      text-shadow: $black 3px 3px 0;
       margin-bottom: .25em;
+      text-shadow: $black 3px 3px 0;
 
       @include media($default-desktop) {
         font-size: 3.5em;
@@ -49,8 +49,8 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
       font-size: 1em;
       letter-spacing: .0625em;
       line-height: 1.15;
+      margin-bottom: 1.5em;
       text-shadow: none;
-      margin-bottom: 1.5em;;
 
       @include media($default-desktop) {
         font-size: 1.5em;
