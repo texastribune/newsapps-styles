@@ -1,4 +1,4 @@
-# News Apps Styles 2.0
+# News Apps Styles v1.0
 
 Base styles for all your News Apps needs. Comes with versioning and is installable via [bower](http://bower.io/).
 
