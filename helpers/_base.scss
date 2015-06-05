@@ -138,6 +138,6 @@ hr {
 
   input[type="submit"],
   input[type="button"] {
-    @include button($tribune-yellow);
+    @include btn($tribune-yellow);
   }
 }
