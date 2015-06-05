@@ -1,7 +1,11 @@
 {
   "name": "newsapps-styles",
-  "version": "0.8.1",
-  "dependencies": {},
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/texastribune/newsapps-styles"
+  },
   "devDependencies": {
     "browser-sync": "^2.0.0-rc1",
     "gulp": "^3.8.10",
@@ -14,5 +18,9 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.3",
+    "bourbon-neat": "^1.7.2"
   }
 }
