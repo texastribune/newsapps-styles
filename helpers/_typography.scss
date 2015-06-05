@@ -1,31 +1,73 @@
 // Typography
 // ==========
+
+// Base Typography Variables
 $base-sans-serif: $helvetica;
 $base-serif: $georgia;
 
-// Prose Settings
-%prose {
-  color: $bodytext-black;
-  display: block;
+// Font Sizes
+$base: 16;
+$xxl: 48;
+$xl: 36;
+$l: 22;
+$m: 18;
+$s: 14;
+$xs: 12;
+
+@mixin font-size($f, $pct:1, $bp:$default-mobile) {
+  font-size: $f+px; // for IE8
+  font-size: $f/$base+rem;
+
+  @if $pct != 1 {
+    @include media($bp) {
+      font-size: $f*$pct+px; // for IE8
+      font-size: $f*$pct/$base+rem;
+    }
+  }
+
+}
+
+.sans {
+  font-family: $base-sans-serif;
+}
+
+.serif {
   font-family: $base-serif;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: left;
 }
 
-%paragraph-header {
-  font-family: $base-sans-serif;
-  font-size: .875em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 1em 0;
-  text-transform: uppercase;
+// These classes can be applied to any element
+// to set the font-size.
+%font-xxl,
+.font-xxl {
+  @include font-size($xxl, .9);
 }
 
-// Data Viz text (Sans Serif)
-%dataviz-header {
-  font-family: $base-sans-serif;
-  font-size: 1.1em;
-  font-weight: 400;
+%font-xl,
+.font-xl {
+  @include font-size($xl, .9);
+}
+
+%font-l,
+.font-l {
+  @include font-size($l, .9);
+}
+
+%font-m,
+.font-m {
+  @include font-size($m, .9);
+}
+
+%font-base,
+.font-base {
+  @include font-size($base, .9);
+}
+
+%font-s,
+.font-s {
+  @include font-size($s, .9);
+}
+
+%font-xs,
+.font-xs {
+  @include font-size($xs, .9);
 }

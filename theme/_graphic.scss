@@ -1,0 +1,61 @@
+.graphic {
+  @include clearfix;
+  @extend %forms;
+  line-height: 1.4;
+  margin: 0 0 1.875em;
+  // padding-bottom: 1em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    margin: 0 0 .45em;
+  }
+
+  h1 {
+    @extend %font-l; // 22px
+  }
+
+  // For secondary header lines
+  // (typically applied to <p>)
+  .subhead {
+    @extend %font-m;
+    font-family: $base-sans-serif;
+    font-weight: 300;
+    margin: 0 0 .5em;
+  }
+
+  // Explanatory subtext
+  %subtext,
+  .subtext {
+    @extend %font-s;
+    color: $bodytext-black;
+    font-family: $base-sans-serif;
+    font-weight: 300;
+    letter-spacing: .03em;
+    margin: 0 0 .715em; // 10px
+  }
+
+  .footer {
+    @include clearfix;
+    @extend %font-xs;
+    background-color: $white;
+    color: lighten($bodytext-black, 45%);
+    font-family: $base-sans-serif;
+    margin: .5em 0;
+    text-align: left;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}
+
+
+
