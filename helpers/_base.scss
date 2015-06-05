@@ -108,16 +108,17 @@ hr {
   form,
   select {
     display: inline-block;
+
     &.full-width {
       width: 100%;
     }
   }
 
   select,
-  input[type="text"],
-  input[type="radio"],
-  input[type="email"],
-  input[type="number"] {
+  [type="text"],
+  [type="radio"],
+  [type="email"],
+  [type="number"] {
     @extend %font-base;
     background: transparent;
     border: 1px solid $line-gray;
@@ -129,15 +130,15 @@ hr {
   }
 
   option,
-  input[type="text"],
-  input[type="radio"],
-  input[type="email"],
-  input[type="number"] {
+  [type="text"],
+  [type="radio"],
+  [type="email"],
+  [type="number"] {
     padding: .5em .25em;
   }
 
-  input[type="submit"],
-  input[type="button"] {
+  [type="submit"],
+  [type="button"] {
     @include btn($tribune-yellow);
   }
 }

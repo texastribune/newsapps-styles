@@ -25,20 +25,20 @@ $max-width: 1081px;
   @include pad(0 10px);
 }
 
-/* Grid Mixins */
-/* =========== */
+// Grid Mixins
+// ===========
 
 // Clearfix
 // --------
 // Ensure elements don't accidentally overlap.
 @mixin clearfix {
   &:after {
-   visibility: hidden;
-   display: block;
-   font-size: 0;
-   content: " ";
-   clear: both;
-   height: 0;
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
  }
 }
 
@@ -48,7 +48,7 @@ $max-width: 1081px;
 // More info: http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-  &:nth-child(#{$nth}+1) { clear: none }
+  &:nth-child(#{$nth}+1) { clear: none; }
 }
 
 // Features-Layout

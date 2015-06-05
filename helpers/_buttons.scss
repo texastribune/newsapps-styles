@@ -7,7 +7,7 @@
   display: inline-block;
   font-family: $base-sans-serif;
   letter-spacing: .03rem;
-  margin: 0 0 0.3em;
+  margin: 0 0 .3em;
   text-align: center;
   vertical-align: middle;
 
@@ -20,7 +20,7 @@
   } @else {
     background: $color;
     @if $color == $teal {
-     color: $white;
+      color: $white;
     } @else {
       color: $bodytext-black;
     }
@@ -31,7 +31,7 @@
   &:active,
   &:hover {
     @if $type == ghost {
-      background-color: transparentize($color, 0.95);
+      background-color: transparentize($color, .95);
     } @else {
       background-color: transparentize($color, .3);
     }
