@@ -1,11 +1,17 @@
 # News Apps Styles v1.0
 
-Base styles for all your News Apps needs. Comes with versioning and is installable via [bower](http://bower.io/).
+Base styles for all your News Apps needs. Comes with versioning and is installable via [npm](https://www.npmjs.com/).
 
 ## Dependencies
 
 - [Bourbon](http://bourbon.io/)
 - [Neat](http://neat.bourbon.io/)
+
+## Installing
+
+```sh
+npm install --save-dev newsapps-styles
+```
 
 ## Our Philosophy
 
