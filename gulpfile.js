@@ -35,7 +35,7 @@ gulp.task('serve', ['styles'], function() {
     server: {
       baseDir: ['styleguide'],
       routes: {
-        '/bower_components': 'bower_components'
+        '/node_modules': 'node_modules'
       }
     }
   });
