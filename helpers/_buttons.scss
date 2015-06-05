@@ -1,4 +1,6 @@
-@mixin button($color, $type: null) {
+// FIXME Once Bourbon v5 lands, its button mixin will longer be available. At
+// that time, we are free to change the name back.
+@mixin btn($color, $type: null) {
   @include clearfix;
   border-radius: 4px;
   cursor: pointer;
@@ -22,7 +24,7 @@
     } @else {
       color: $bodytext-black;
     }
-    border: 0px;
+    border: 0;
     padding: .5em .75em .625em;
   }
 
@@ -37,9 +39,9 @@
 }
 
 .button {
-  @include button($tribune-yellow);
+  @include btn($tribune-yellow);
 }
 
 .ghost-button {
-  @include button($teal, ghost);
+  @include btn($teal, ghost);
 }
