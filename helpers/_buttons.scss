@@ -27,7 +27,9 @@
   }
 
   &:active,
-  &:hover {
+  &:active:not(:disabled),
+  &:hover,
+  &:hover:not(:disabled) {
     @if $type == ghost {
       background-color: transparentize($color, 0.95);
     } @else {
