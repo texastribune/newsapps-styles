@@ -2,8 +2,12 @@
 @import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
 
 @import 'base/normalize';
-
+@import 'helpers/grid';
 @import 'helpers/colors';
 @import 'helpers/typography';
-@import 'helpers/grid';
 @import 'helpers/base';
+
+.test {
+  background-color: blue;
+  color: yellow;
+}

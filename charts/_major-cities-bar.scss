@@ -1,0 +1,99 @@
+//bar chart
+.bar-chart {
+  margin-right: 1.5em;
+  .city {
+    position: relative;
+    margin-top: 0.5em;
+    .bar-label {
+      text-align: right;
+      width: 135px;
+      margin: 0.15em 0;
+      float: left;
+      h4 {
+        font-weight: 400;
+        margin: 0;
+        font-size: 0.95em;
+        line-height: 1em;
+      }
+      .pop {
+        font-size: 0.75em;
+        margin: 0;
+        color: $text-gray;
+        font-style: italic;
+      }
+    }
+    .bar {
+      margin-left: 140px;
+      .bar-fill {
+        background-color: $blue;
+        height: 2.2em;
+        position: relative;
+        @include media($mobile) {
+          height: 1.8em;
+        }
+        .data-label {
+          position: absolute;
+          right: 0.5em;
+          height: 2em;
+          top: 0.5em;
+          font-size: 0.9em;
+          padding-left: 10px;
+          color: $background-gray;
+          p {
+            margin: 0;
+            text-shadow: 0px 0px 0.125em rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+    }
+    @include media($min-480) {
+      &:hover {
+        .pop {
+          display: block;
+        }
+      }
+    }
+    @include media($mobile) {
+      margin-top: 0.25em;
+      font-size: 0.9em;
+      .bar-label {
+        width: 120px;
+        margin: 0.5em 0;
+        .pop {
+          display: none;
+        }
+      }
+      .bar {
+        margin-left: 125px;
+        .bar-fill .data-label {
+          top: 0.4em;
+        }
+      }
+    }
+  }
+  .texas {
+    .bar-label h4 {
+      font-weight: 700;
+    }
+    &.city .bar .bar-fill {
+      background-color: $orange;
+    }
+  }
+  .x-axis {
+    margin-left: 130px;
+    border-top: 1px solid $text-gray;
+    .ticks {
+      div {
+        float: left;
+        position: relative;
+        width: 25%;
+        text-align: right;
+        border-right: 1px solid;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+}
