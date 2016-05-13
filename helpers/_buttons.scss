@@ -1,5 +1,3 @@
-// FIXME Once Bourbon v5 lands, its button mixin will longer be available. At
-// that time, we are free to change the name back.
 @mixin btn($color, $type: null) {
   @include clearfix;
   border-radius: 4px;
