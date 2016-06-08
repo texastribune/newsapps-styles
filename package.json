@@ -8,5 +8,12 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "scripts": {
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
+  },
+  "devDependencies": {
+    "publish-please": "^2.1.4"
   }
 }
