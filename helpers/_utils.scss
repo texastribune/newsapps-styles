@@ -1,0 +1,54 @@
+// Default Breakpoints
+// ===================
+// These are fairly meaningless default settings.
+// Feel free to reset these variables
+// to fit the needs of your specific project.
+
+$default-desktop: 768px;
+$default-mobile: 480px;
+
+
+// Hide Mixin
+// =========================
+
+@mixin hide($bp, $type:'min-width') {
+  @media ($type: #{$bp}) {
+    display: none;
+  }
+}
+
+// Media Query Mixin
+// =========================
+
+@mixin media($bp, $type:'min-width') {
+  @media ($type: #{$bp}) {
+    @content;
+  }
+}
+
+
+// Clearfix
+// --------
+// Ensure elements don't accidentally overlap.
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+ }
+}
+
+%content-block,
+.content-block {
+  padding: 0 10px;
+}
+
+%clear-list-styles,
+.clear-list-styles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

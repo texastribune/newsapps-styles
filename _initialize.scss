@@ -1,18 +1,9 @@
-@import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
-@import 'node_modules/bourbon-neat/app/assets/stylesheets/neat';
-
-@import 'base/normalize';
-
+@import 'helpers/normalize';
+@import 'helpers/utils';
 @import 'helpers/colors';
-@import 'helpers/grid';
 @import 'helpers/typography';
 @import 'helpers/buttons';
-@import 'helpers/base';
 @import 'helpers/tables';
 
 @import 'theme/prose';
 @import 'theme/graphic';
-
-@import 'components/masthead';
-@import 'components/banner';
-@import 'components/footer';

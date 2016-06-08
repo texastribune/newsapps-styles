@@ -1,5 +1,4 @@
 .graphic {
-  @extend %forms;
   @include clearfix;
   line-height: 1.4;
   margin: 0 0 1.875em;
@@ -12,7 +11,7 @@
   h5,
   h6 {
     font-weight: 300;
-    margin: 0 0 .45em;
+    margin: 0 0 .25em;
   }
 
   h1 {
@@ -25,7 +24,7 @@
     @extend %font-m;
     font-family: $base-sans-serif;
     font-weight: 300;
-    margin: 0 0 .5em;
+    margin: 0 0 .25em;
   }
 
   // Explanatory subtext
@@ -45,7 +44,7 @@
     background-color: $white;
     color: lighten($bodytext-black, 45%);
     font-family: $base-sans-serif;
-    margin: .5em 0;
+    padding: .5em 0;
     text-align: left;
 
     ul {

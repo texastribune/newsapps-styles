@@ -40,20 +40,20 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
   margin-bottom: 1em;
   width: 100%;
 
-  @include media($bp-table) {
+  @include media($bp-table, 'max-width') {
     border-top: 1px solid $line-gray;
     display: block;
     font-size: .875em;
   }
 
   thead {
-    @include media($bp-table) {
+    @include media($bp-table, 'max-width') {
       display: none;
     }
   }
 
   tbody {
-    @include media($bp-table) {
+    @include media($bp-table, 'max-width') {
       display: block;
     }
   }
@@ -69,7 +69,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
     &.table-number {
       text-align: right;
 
-      @include media($bp-table) {
+      @include media($bp-table, 'max-width') {
         text-align: left;
       }
     }
@@ -83,7 +83,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
     text-align: left;
     vertical-align: middle;
 
-    @include media($bp-table) {
+    @include media($bp-table, 'max-width') {
       display: block;
     }
   }
@@ -93,7 +93,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
     padding: 8px 12px;
     text-align: left;
 
-    @include media($bp-table) {
+    @include media($bp-table, 'max-width') {
       @include clearfix;
       display: block;
       font-weight: 300;
@@ -153,7 +153,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       }
     }
 
-    @include media($bp-table) {
+    @include media($bp-table, 'max-width') {
       display: block;
     }
   }
@@ -181,7 +181,7 @@ data-type="number": Add to <th> or <td> to ensure text aligns right
       background-color: transparentize($tribune-yellow, .75);
       font-weight: 600;
 
-      @include media($bp-table) {
+      @include media($bp-table, 'max-width') {
         padding-top: 1em;
       }
     }
