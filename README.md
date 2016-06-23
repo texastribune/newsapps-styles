@@ -1,4 +1,4 @@
-# News Apps Styles v1.0.1
+# News Apps Styles v2.0.1
 
 Base styles for all your News Apps needs. Comes with versioning and is installable via [npm](https://www.npmjs.com/).
 
